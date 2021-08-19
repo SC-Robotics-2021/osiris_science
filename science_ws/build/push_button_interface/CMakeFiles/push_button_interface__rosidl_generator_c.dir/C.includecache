@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_c/push_button_interface/msg/detail/push_button__functions.c
+push_button_interface/msg/detail/push_button__functions.h
+/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_c/push_button_interface/msg/detail/push_button_interface/msg/detail/push_button__functions.h
+assert.h
+-
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+
+/home/parham/ros2_foxy/ros2-linux/include/rosidl_runtime_c/visibility_control.h
+
+rosidl_generator_c/push_button_interface/msg/detail/push_button__functions.h
+stdbool.h
+-
+stdlib.h
+-
+rosidl_runtime_c/visibility_control.h
+rosidl_generator_c/push_button_interface/msg/detail/rosidl_runtime_c/visibility_control.h
+push_button_interface/msg/rosidl_generator_c__visibility_control.h
+rosidl_generator_c/push_button_interface/msg/detail/push_button_interface/msg/rosidl_generator_c__visibility_control.h
+push_button_interface/msg/detail/push_button__struct.h
+rosidl_generator_c/push_button_interface/msg/detail/push_button_interface/msg/detail/push_button__struct.h
+
+rosidl_generator_c/push_button_interface/msg/detail/push_button__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+
+rosidl_generator_c/push_button_interface/msg/rosidl_generator_c__visibility_control.h
+

@@ -1,0 +1,738 @@
+[0.000000] (-) TimerEvent: {}
+[0.000190] (push_button) JobQueued: {'identifier': 'push_button', 'dependencies': OrderedDict()}
+[0.000444] (push_button_interface) JobQueued: {'identifier': 'push_button_interface', 'dependencies': OrderedDict()}
+[0.000769] (push_button) JobStarted: {'identifier': 'push_button'}
+[0.100290] (-) TimerEvent: {}
+[0.112952] (push_button_interface) JobStarted: {'identifier': 'push_button_interface'}
+[0.200517] (-) TimerEvent: {}
+[0.301029] (-) TimerEvent: {}
+[0.401366] (-) TimerEvent: {}
+[0.452338] (push_button_interface) JobProgress: {'identifier': 'push_button_interface', 'progress': 'cmake'}
+[0.452641] (push_button_interface) Command: {'cmd': ['/usr/bin/cmake', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface', '-DCMAKE_INSTALL_PREFIX=/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface'], 'cwd': '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('TERM_SESSION_ID', '3e91e4f0-125b-4747-8730-8e82bcab6d3e'), ('USER', 'parham'), ('SSH_AGENT_PID', '1873'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/home/parham/ws_moveit2/install/warehouse_ros_mongo/lib:/home/parham/ws_moveit2/install/moveit_servo/lib:/home/parham/ws_moveit2/install/moveit_ros_visualization/lib:/home/parham/ws_moveit2/install/moveit_ros_planning_interface/lib:/home/parham/ws_moveit2/install/moveit_ros_benchmarks/lib:/home/parham/ws_moveit2/install/moveit_ros_warehouse/lib:/home/parham/ws_moveit2/install/warehouse_ros/lib:/home/parham/ws_moveit2/install/velocity_controllers/lib:/home/parham/ws_moveit2/install/moveit_simple_controller_manager/lib:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction/lib:/home/parham/ws_moveit2/install/moveit_ros_perception/lib:/home/parham/ws_moveit2/install/moveit_ros_move_group/lib:/home/parham/ws_moveit2/install/moveit_planners_ompl/lib:/home/parham/ws_moveit2/install/moveit_ros_planning/lib:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor/lib:/home/parham/ws_moveit2/install/moveit_kinematics/lib:/home/parham/ws_moveit2/install/moveit_core/lib:/home/parham/ws_moveit2/install/srdfdom/lib:/home/parham/ws_moveit2/install/rviz_visual_tools/lib:/home/parham/ws_moveit2/install/position_controllers/lib:/home/parham/ws_moveit2/install/moveit_msgs/lib:/home/parham/ws_moveit2/install/joint_trajectory_controller/lib:/home/parham/ws_moveit2/install/joint_state_controller/lib:/home/parham/ws_moveit2/install/joint_state_broadcaster/lib:/home/parham/ws_moveit2/install/imu_sensor_broadcaster/lib:/home/parham/ws_moveit2/install/gripper_controllers/lib:/home/parham/ws_moveit2/install/effort_controllers/lib:/home/parham/ws_moveit2/install/forward_command_controller/lib:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster/lib:/home/parham/ws_moveit2/install/diff_drive_controller/lib:/home/parham/ws_moveit2/install/controller_manager/lib:/home/parham/ws_moveit2/install/controller_interface/lib:/home/parham/ws_moveit2/install/hardware_interface/lib:/home/parham/ws_moveit2/install/geometric_shapes/lib:/home/parham/ws_moveit2/install/controller_manager_msgs/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/parham/ros2_foxy/ros2-linux/opt/yaml_cpp_vendor/lib:/home/parham/ros2_foxy/ros2-linux/opt/rviz_ogre_vendor/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/home/parham/ros2_foxy/ros2-linux/lib'), ('SHLVL', '2'), ('OLDPWD', '/home/parham/Dev/ros2_foxy/science/sience_gui'), ('LESS', '-R'), ('HOME', '/home/parham'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/parham/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('TERMINAL_EMULATOR', 'JetBrains-JediTerm'), ('NDDSHOME', '/opt/rti.com/rti_connext_dds-5.3.1'), ('PAGER', 'less'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('MANAGERPID', '1681'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install:/home/parham/ws_moveit2/install:/home/parham/ros2_foxy/ros2-linux:/home/parham/ws_moveit2/install:/home/parham/ros2_foxy/ros2-linux'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'parham'), ('JOURNAL_STREAM', '8:49686'), ('_', '/usr/bin/colcon'), ('PKG_CONFIG_PATH', '/home/parham/ros2_foxy/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/parham/ros2_foxy/ros2-linux/lib/pkgconfig'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'parham'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/Users/parham/.local/bin:/Users/parham/Library/Python/3.8/bin:/home/parham/ws_moveit2/install/moveit_kinematics/bin:/home/parham/ws_moveit2/install/moveit_core/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/ros/foxy/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/home/parham/ros2_foxy/ros2-linux/bin:/Users/parham/.local/bin:/Users/parham/Library/Python/3.8/bin:/home/parham/.poetry/bin:/home/parham/.cargo/bin:/home/parham/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/parham/.local/bin:/home/parham/.local/bin'), ('INVOCATION_ID', 'c7255140dae445989b1517eb113d46c0'), ('__INTELLIJ_COMMAND_HISTFILE__', '/home/parham/.cache/JetBrains/PyCharmCE2021.2/terminal/history/sience_gui-history'), ('SESSION_MANAGER', 'local/Parham-CyberCity:@/tmp/.ICE-unix/1914,unix/Parham-CyberCity:/tmp/.ICE-unix/1914'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e015ff7_3547_49f7_b52e_7c768a8efd3c'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XMODIFIERS', '@im=ibus'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.107'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button:/home/parham/ws_moveit2/install/run_ompl_constrained_planning:/home/parham/ws_moveit2/install/run_moveit_cpp:/home/parham/ws_moveit2/install/run_move_group:/home/parham/ws_moveit2/install/warehouse_ros_mongo:/home/parham/ws_moveit2/install/moveit2_tutorials:/home/parham/ws_moveit2/install/moveit_servo:/home/parham/ws_moveit2/install/moveit_runtime:/home/parham/ws_moveit2/install/moveit:/home/parham/ws_moveit2/install/moveit_ros:/home/parham/ws_moveit2/install/moveit_ros_visualization:/home/parham/ws_moveit2/install/moveit_ros_planning_interface:/home/parham/ws_moveit2/install/moveit_ros_benchmarks:/home/parham/ws_moveit2/install/moveit_ros_warehouse:/home/parham/ws_moveit2/install/warehouse_ros:/home/parham/ws_moveit2/install/ros2_controllers:/home/parham/ws_moveit2/install/velocity_controllers:/home/parham/ws_moveit2/install/transmission_interface:/home/parham/ws_moveit2/install/moveit_plugins:/home/parham/ws_moveit2/install/moveit_simple_controller_manager:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction:/home/parham/ws_moveit2/install/moveit_ros_perception:/home/parham/ws_moveit2/install/moveit_ros_move_group:/home/parham/ws_moveit2/install/moveit_planners:/home/parham/ws_moveit2/install/moveit_planners_ompl:/home/parham/ws_moveit2/install/moveit_ros_planning:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/parham/ws_moveit2/install/moveit_kinematics:/home/parham/ws_moveit2/install/moveit_core:/home/parham/ws_moveit2/install/srdfdom:/home/parham/ws_moveit2/install/rviz_visual_tools:/home/parham/ws_moveit2/install/ros2_control:/home/parham/ws_moveit2/install/ros2controlcli:/home/parham/ws_moveit2/install/ros2_control_test_assets:/home/parham/ws_moveit2/install/position_controllers:/home/parham/ws_moveit2/install/moveit_resources:/home/parham/ws_moveit2/install/moveit_resources_pr2_description:/home/parham/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_panda_description:/home/parham/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_fanuc_description:/home/parham/ws_moveit2/install/moveit_msgs:/home/parham/ws_moveit2/install/moveit_common:/home/parham/ws_moveit2/install/joint_trajectory_controller:/home/parham/ws_moveit2/install/joint_state_controller:/home/parham/ws_moveit2/install/joint_state_broadcaster:/home/parham/ws_moveit2/install/imu_sensor_broadcaster:/home/parham/ws_moveit2/install/gripper_controllers:/home/parham/ws_moveit2/install/effort_controllers:/home/parham/ws_moveit2/install/forward_command_controller:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster:/home/parham/ws_moveit2/install/diff_drive_controller:/home/parham/ws_moveit2/install/controller_manager:/home/parham/ws_moveit2/install/controller_interface:/home/parham/ws_moveit2/install/hardware_interface:/home/parham/ws_moveit2/install/geometric_shapes:/home/parham/ws_moveit2/install/controller_manager_msgs:/opt/ros/foxy:/home/parham/ros2_foxy/ros2-linux'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/usr/bin/zsh'), ('GDMSESSION', 'ubuntu'), ('QT_ACCESSIBILITY', '1'), ('CMAKE_MODULE_PATH', '/home/parham/ws_moveit2/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('PYTHONPATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/warehouse_ros_mongo/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/srdfdom/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/ros2controlcli/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/moveit_msgs/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/controller_manager/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/controller_manager_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/parham/ros2_foxy/ros2-linux/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface:/home/parham/ws_moveit2/install/run_ompl_constrained_planning:/home/parham/ws_moveit2/install/run_moveit_cpp:/home/parham/ws_moveit2/install/run_move_group:/home/parham/ws_moveit2/install/warehouse_ros_mongo:/home/parham/ws_moveit2/install/moveit2_tutorials:/home/parham/ws_moveit2/install/moveit_servo:/home/parham/ws_moveit2/install/moveit_runtime:/home/parham/ws_moveit2/install/moveit:/home/parham/ws_moveit2/install/moveit_ros:/home/parham/ws_moveit2/install/moveit_ros_visualization:/home/parham/ws_moveit2/install/moveit_ros_planning_interface:/home/parham/ws_moveit2/install/moveit_ros_benchmarks:/home/parham/ws_moveit2/install/moveit_ros_warehouse:/home/parham/ws_moveit2/install/warehouse_ros:/home/parham/ws_moveit2/install/ros2_controllers:/home/parham/ws_moveit2/install/velocity_controllers:/home/parham/ws_moveit2/install/transmission_interface:/home/parham/ws_moveit2/install/moveit_plugins:/home/parham/ws_moveit2/install/moveit_simple_controller_manager:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction:/home/parham/ws_moveit2/install/moveit_ros_perception:/home/parham/ws_moveit2/install/moveit_ros_move_group:/home/parham/ws_moveit2/install/moveit_planners:/home/parham/ws_moveit2/install/moveit_planners_ompl:/home/parham/ws_moveit2/install/moveit_ros_planning:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/parham/ws_moveit2/install/moveit_kinematics:/home/parham/ws_moveit2/install/moveit_core:/home/parham/ws_moveit2/install/srdfdom:/home/parham/ws_moveit2/install/rviz_visual_tools:/home/parham/ws_moveit2/install/ros2_control:/home/parham/ws_moveit2/install/ros2_control_test_assets:/home/parham/ws_moveit2/install/position_controllers:/home/parham/ws_moveit2/install/moveit_resources:/home/parham/ws_moveit2/install/moveit_resources_pr2_description:/home/parham/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_panda_description:/home/parham/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_fanuc_description:/home/parham/ws_moveit2/install/moveit_msgs:/home/parham/ws_moveit2/install/moveit_common:/home/parham/ws_moveit2/install/joint_trajectory_controller:/home/parham/ws_moveit2/install/joint_state_controller:/home/parham/ws_moveit2/install/joint_state_broadcaster:/home/parham/ws_moveit2/install/imu_sensor_broadcaster:/home/parham/ws_moveit2/install/gripper_controllers:/home/parham/ws_moveit2/install/effort_controllers:/home/parham/ws_moveit2/install/forward_command_controller:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster:/home/parham/ws_moveit2/install/diff_drive_controller:/home/parham/ws_moveit2/install/controller_manager:/home/parham/ws_moveit2/install/controller_interface:/home/parham/ws_moveit2/install/hardware_interface:/home/parham/ws_moveit2/install/geometric_shapes:/home/parham/ws_moveit2/install/controller_manager_msgs:/home/parham/ros2_foxy/ros2-linux:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button:/home/parham/ws_moveit2/install/ros2controlcli:/opt/ros/foxy')]), 'shell': False}
+[0.506435] (-) TimerEvent: {}
+[0.512007] (push_button) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/push_button', 'build', '--build-base', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/build', 'install', '--prefix', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button', '--record', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/install.log', '--single-version-externally-managed'], 'cwd': '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'TERM_SESSION_ID': '3e91e4f0-125b-4747-8730-8e82bcab6d3e', 'USER': 'parham', 'SSH_AGENT_PID': '1873', 'XDG_SESSION_TYPE': 'x11', 'LD_LIBRARY_PATH': '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/home/parham/ws_moveit2/install/warehouse_ros_mongo/lib:/home/parham/ws_moveit2/install/moveit_servo/lib:/home/parham/ws_moveit2/install/moveit_ros_visualization/lib:/home/parham/ws_moveit2/install/moveit_ros_planning_interface/lib:/home/parham/ws_moveit2/install/moveit_ros_benchmarks/lib:/home/parham/ws_moveit2/install/moveit_ros_warehouse/lib:/home/parham/ws_moveit2/install/warehouse_ros/lib:/home/parham/ws_moveit2/install/velocity_controllers/lib:/home/parham/ws_moveit2/install/moveit_simple_controller_manager/lib:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction/lib:/home/parham/ws_moveit2/install/moveit_ros_perception/lib:/home/parham/ws_moveit2/install/moveit_ros_move_group/lib:/home/parham/ws_moveit2/install/moveit_planners_ompl/lib:/home/parham/ws_moveit2/install/moveit_ros_planning/lib:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor/lib:/home/parham/ws_moveit2/install/moveit_kinematics/lib:/home/parham/ws_moveit2/install/moveit_core/lib:/home/parham/ws_moveit2/install/srdfdom/lib:/home/parham/ws_moveit2/install/rviz_visual_tools/lib:/home/parham/ws_moveit2/install/position_controllers/lib:/home/parham/ws_moveit2/install/moveit_msgs/lib:/home/parham/ws_moveit2/install/joint_trajectory_controller/lib:/home/parham/ws_moveit2/install/joint_state_controller/lib:/home/parham/ws_moveit2/install/joint_state_broadcaster/lib:/home/parham/ws_moveit2/install/imu_sensor_broadcaster/lib:/home/parham/ws_moveit2/install/gripper_controllers/lib:/home/parham/ws_moveit2/install/effort_controllers/lib:/home/parham/ws_moveit2/install/forward_command_controller/lib:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster/lib:/home/parham/ws_moveit2/install/diff_drive_controller/lib:/home/parham/ws_moveit2/install/controller_manager/lib:/home/parham/ws_moveit2/install/controller_interface/lib:/home/parham/ws_moveit2/install/hardware_interface/lib:/home/parham/ws_moveit2/install/geometric_shapes/lib:/home/parham/ws_moveit2/install/controller_manager_msgs/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/parham/ros2_foxy/ros2-linux/opt/yaml_cpp_vendor/lib:/home/parham/ros2_foxy/ros2-linux/opt/rviz_ogre_vendor/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/home/parham/ros2_foxy/ros2-linux/lib', 'SHLVL': '2', 'OLDPWD': '/home/parham/Dev/ros2_foxy/science/sience_gui', 'LESS': '-R', 'HOME': '/home/parham', 'DESKTOP_SESSION': 'ubuntu', 'ZSH': '/home/parham/.oh-my-zsh', 'LSCOLORS': 'Gxfxcxdxbxegedabagacad', 'TERMINAL_EMULATOR': 'JetBrains-JediTerm', 'NDDSHOME': '/opt/rti.com/rti_connext_dds-5.3.1', 'PAGER': 'less', 'GTK_MODULES': 'gail:atk-bridge', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'MANAGERPID': '1681', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install:/home/parham/ws_moveit2/install:/home/parham/ros2_foxy/ros2-linux:/home/parham/ws_moveit2/install:/home/parham/ros2_foxy/ros2-linux', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'parham', 'JOURNAL_STREAM': '8:49686', '_': '/usr/bin/colcon', 'PKG_CONFIG_PATH': '/home/parham/ros2_foxy/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/parham/ros2_foxy/ros2-linux/lib/pkgconfig', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'parham', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/Users/parham/.local/bin:/Users/parham/Library/Python/3.8/bin:/home/parham/ws_moveit2/install/moveit_kinematics/bin:/home/parham/ws_moveit2/install/moveit_core/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/ros/foxy/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/home/parham/ros2_foxy/ros2-linux/bin:/Users/parham/.local/bin:/Users/parham/Library/Python/3.8/bin:/home/parham/.poetry/bin:/home/parham/.cargo/bin:/home/parham/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/parham/.local/bin:/home/parham/.local/bin', 'INVOCATION_ID': 'c7255140dae445989b1517eb113d46c0', '__INTELLIJ_COMMAND_HISTFILE__': '/home/parham/.cache/JetBrains/PyCharmCE2021.2/terminal/history/sience_gui-history', 'SESSION_MANAGER': 'local/Parham-CyberCity:@/tmp/.ICE-unix/1914,unix/Parham-CyberCity:/tmp/.ICE-unix/1914', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/3e015ff7_3547_49f7_b52e_7c768a8efd3c', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LANG': 'en_US.UTF-8', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'XMODIFIERS': '@im=ibus', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'XDG_SESSION_DESKTOP': 'ubuntu', 'GNOME_TERMINAL_SERVICE': ':1.107', 'ROS_DOMAIN_ID': '1', 'AMENT_PREFIX_PATH': '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button:/home/parham/ws_moveit2/install/run_ompl_constrained_planning:/home/parham/ws_moveit2/install/run_moveit_cpp:/home/parham/ws_moveit2/install/run_move_group:/home/parham/ws_moveit2/install/warehouse_ros_mongo:/home/parham/ws_moveit2/install/moveit2_tutorials:/home/parham/ws_moveit2/install/moveit_servo:/home/parham/ws_moveit2/install/moveit_runtime:/home/parham/ws_moveit2/install/moveit:/home/parham/ws_moveit2/install/moveit_ros:/home/parham/ws_moveit2/install/moveit_ros_visualization:/home/parham/ws_moveit2/install/moveit_ros_planning_interface:/home/parham/ws_moveit2/install/moveit_ros_benchmarks:/home/parham/ws_moveit2/install/moveit_ros_warehouse:/home/parham/ws_moveit2/install/warehouse_ros:/home/parham/ws_moveit2/install/ros2_controllers:/home/parham/ws_moveit2/install/velocity_controllers:/home/parham/ws_moveit2/install/transmission_interface:/home/parham/ws_moveit2/install/moveit_plugins:/home/parham/ws_moveit2/install/moveit_simple_controller_manager:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction:/home/parham/ws_moveit2/install/moveit_ros_perception:/home/parham/ws_moveit2/install/moveit_ros_move_group:/home/parham/ws_moveit2/install/moveit_planners:/home/parham/ws_moveit2/install/moveit_planners_ompl:/home/parham/ws_moveit2/install/moveit_ros_planning:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/parham/ws_moveit2/install/moveit_kinematics:/home/parham/ws_moveit2/install/moveit_core:/home/parham/ws_moveit2/install/srdfdom:/home/parham/ws_moveit2/install/rviz_visual_tools:/home/parham/ws_moveit2/install/ros2_control:/home/parham/ws_moveit2/install/ros2controlcli:/home/parham/ws_moveit2/install/ros2_control_test_assets:/home/parham/ws_moveit2/install/position_controllers:/home/parham/ws_moveit2/install/moveit_resources:/home/parham/ws_moveit2/install/moveit_resources_pr2_description:/home/parham/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_panda_description:/home/parham/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_fanuc_description:/home/parham/ws_moveit2/install/moveit_msgs:/home/parham/ws_moveit2/install/moveit_common:/home/parham/ws_moveit2/install/joint_trajectory_controller:/home/parham/ws_moveit2/install/joint_state_controller:/home/parham/ws_moveit2/install/joint_state_broadcaster:/home/parham/ws_moveit2/install/imu_sensor_broadcaster:/home/parham/ws_moveit2/install/gripper_controllers:/home/parham/ws_moveit2/install/effort_controllers:/home/parham/ws_moveit2/install/forward_command_controller:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster:/home/parham/ws_moveit2/install/diff_drive_controller:/home/parham/ws_moveit2/install/controller_manager:/home/parham/ws_moveit2/install/controller_interface:/home/parham/ws_moveit2/install/hardware_interface:/home/parham/ws_moveit2/install/geometric_shapes:/home/parham/ws_moveit2/install/controller_manager_msgs:/opt/ros/foxy:/home/parham/ros2_foxy/ros2-linux', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'SHELL': '/usr/bin/zsh', 'GDMSESSION': 'ubuntu', 'QT_ACCESSIBILITY': '1', 'CMAKE_MODULE_PATH': '/home/parham/ws_moveit2/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button', 'LC_ALL': 'en_US.UTF-8', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'PYTHONPATH': '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/warehouse_ros_mongo/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/srdfdom/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/ros2controlcli/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/moveit_msgs/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/controller_manager/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/controller_manager_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/parham/ros2_foxy/ros2-linux/lib/python3.8/site-packages', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface:/home/parham/ws_moveit2/install/run_ompl_constrained_planning:/home/parham/ws_moveit2/install/run_moveit_cpp:/home/parham/ws_moveit2/install/run_move_group:/home/parham/ws_moveit2/install/warehouse_ros_mongo:/home/parham/ws_moveit2/install/moveit2_tutorials:/home/parham/ws_moveit2/install/moveit_servo:/home/parham/ws_moveit2/install/moveit_runtime:/home/parham/ws_moveit2/install/moveit:/home/parham/ws_moveit2/install/moveit_ros:/home/parham/ws_moveit2/install/moveit_ros_visualization:/home/parham/ws_moveit2/install/moveit_ros_planning_interface:/home/parham/ws_moveit2/install/moveit_ros_benchmarks:/home/parham/ws_moveit2/install/moveit_ros_warehouse:/home/parham/ws_moveit2/install/warehouse_ros:/home/parham/ws_moveit2/install/ros2_controllers:/home/parham/ws_moveit2/install/velocity_controllers:/home/parham/ws_moveit2/install/transmission_interface:/home/parham/ws_moveit2/install/moveit_plugins:/home/parham/ws_moveit2/install/moveit_simple_controller_manager:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction:/home/parham/ws_moveit2/install/moveit_ros_perception:/home/parham/ws_moveit2/install/moveit_ros_move_group:/home/parham/ws_moveit2/install/moveit_planners:/home/parham/ws_moveit2/install/moveit_planners_ompl:/home/parham/ws_moveit2/install/moveit_ros_planning:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/parham/ws_moveit2/install/moveit_kinematics:/home/parham/ws_moveit2/install/moveit_core:/home/parham/ws_moveit2/install/srdfdom:/home/parham/ws_moveit2/install/rviz_visual_tools:/home/parham/ws_moveit2/install/ros2_control:/home/parham/ws_moveit2/install/ros2_control_test_assets:/home/parham/ws_moveit2/install/position_controllers:/home/parham/ws_moveit2/install/moveit_resources:/home/parham/ws_moveit2/install/moveit_resources_pr2_description:/home/parham/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_panda_description:/home/parham/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_fanuc_description:/home/parham/ws_moveit2/install/moveit_msgs:/home/parham/ws_moveit2/install/moveit_common:/home/parham/ws_moveit2/install/joint_trajectory_controller:/home/parham/ws_moveit2/install/joint_state_controller:/home/parham/ws_moveit2/install/joint_state_broadcaster:/home/parham/ws_moveit2/install/imu_sensor_broadcaster:/home/parham/ws_moveit2/install/gripper_controllers:/home/parham/ws_moveit2/install/effort_controllers:/home/parham/ws_moveit2/install/forward_command_controller:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster:/home/parham/ws_moveit2/install/diff_drive_controller:/home/parham/ws_moveit2/install/controller_manager:/home/parham/ws_moveit2/install/controller_interface:/home/parham/ws_moveit2/install/hardware_interface:/home/parham/ws_moveit2/install/geometric_shapes:/home/parham/ws_moveit2/install/controller_manager_msgs:/home/parham/ros2_foxy/ros2-linux'}, 'shell': False}
+[0.608214] (-) TimerEvent: {}
+[0.708671] (-) TimerEvent: {}
+[0.808927] (-) TimerEvent: {}
+[0.909407] (-) TimerEvent: {}
+[0.931525] (push_button) StdoutLine: {'line': b'running egg_info\n'}
+[0.932173] (push_button) StdoutLine: {'line': b'creating ../../build/push_button/push_button.egg-info\n'}
+[0.932428] (push_button) StdoutLine: {'line': b'writing ../../build/push_button/push_button.egg-info/PKG-INFO\n'}
+[0.932736] (push_button) StdoutLine: {'line': b'writing dependency_links to ../../build/push_button/push_button.egg-info/dependency_links.txt\n'}
+[0.933003] (push_button) StdoutLine: {'line': b'writing entry points to ../../build/push_button/push_button.egg-info/entry_points.txt\n'}
+[0.933208] (push_button) StdoutLine: {'line': b'writing requirements to ../../build/push_button/push_button.egg-info/requires.txt\n'}
+[0.933418] (push_button) StdoutLine: {'line': b'writing top-level names to ../../build/push_button/push_button.egg-info/top_level.txt\n'}
+[0.960815] (push_button) StdoutLine: {'line': b"writing manifest file '../../build/push_button/push_button.egg-info/SOURCES.txt'\n"}
+[1.009610] (-) TimerEvent: {}
+[1.110294] (-) TimerEvent: {}
+[1.128243] (push_button) StdoutLine: {'line': b"reading manifest file '../../build/push_button/push_button.egg-info/SOURCES.txt'\n"}
+[1.129069] (push_button) StdoutLine: {'line': b"writing manifest file '../../build/push_button/push_button.egg-info/SOURCES.txt'\n"}
+[1.129308] (push_button) StdoutLine: {'line': b'running build\n'}
+[1.129493] (push_button) StdoutLine: {'line': b'running build_py\n'}
+[1.129678] (push_button) StdoutLine: {'line': b'creating /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/build\n'}
+[1.129831] (push_button) StdoutLine: {'line': b'creating /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/build/lib\n'}
+[1.129990] (push_button) StdoutLine: {'line': b'creating /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/build/lib/push_button\n'}
+[1.130120] (push_button) StdoutLine: {'line': b'copying push_button/__init__.py -> /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/build/lib/push_button\n'}
+[1.130269] (push_button) StdoutLine: {'line': b'copying push_button/button_publisher.py -> /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/build/lib/push_button\n'}
+[1.130392] (push_button) StdoutLine: {'line': b'copying push_button/button_subscriber.py -> /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/build/lib/push_button\n'}
+[1.130514] (push_button) StdoutLine: {'line': b'running install\n'}
+[1.131474] (push_button) StdoutLine: {'line': b'running install_lib\n'}
+[1.142587] (push_button) StdoutLine: {'line': b'creating /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button\n'}
+[1.142775] (push_button) StdoutLine: {'line': b'copying /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/build/lib/push_button/__init__.py -> /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button\n'}
+[1.142900] (push_button) StdoutLine: {'line': b'copying /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/build/lib/push_button/button_publisher.py -> /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button\n'}
+[1.143064] (push_button) StdoutLine: {'line': b'copying /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/build/lib/push_button/button_subscriber.py -> /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button\n'}
+[1.144007] (push_button) StdoutLine: {'line': b'byte-compiling /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button/__init__.py to __init__.cpython-38.pyc\n'}
+[1.145353] (push_button) StdoutLine: {'line': b'byte-compiling /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button/button_publisher.py to button_publisher.cpython-38.pyc\n'}
+[1.145757] (push_button) StdoutLine: {'line': b'byte-compiling /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button/button_subscriber.py to button_subscriber.cpython-38.pyc\n'}
+[1.146115] (push_button) StdoutLine: {'line': b'running install_data\n'}
+[1.147569] (push_button) StdoutLine: {'line': b'creating /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/share/ament_index\n'}
+[1.147821] (push_button) StdoutLine: {'line': b'creating /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/share/ament_index/resource_index\n'}
+[1.148026] (push_button) StdoutLine: {'line': b'creating /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/share/ament_index/resource_index/packages\n'}
+[1.148144] (push_button) StdoutLine: {'line': b'copying resource/push_button -> /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/share/ament_index/resource_index/packages\n'}
+[1.148258] (push_button) StdoutLine: {'line': b'copying package.xml -> /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/share/push_button\n'}
+[1.148365] (push_button) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.170702] (push_button) StdoutLine: {'line': b'Copying ../../build/push_button/push_button.egg-info to /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button-0.0.0-py3.8.egg-info\n'}
+[1.172091] (push_button) StdoutLine: {'line': b'running install_scripts\n'}
+[1.210462] (-) TimerEvent: {}
+[1.230700] (push_button) StdoutLine: {'line': b"writing list of installed files to '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button/install.log'\n"}
+[1.304712] (push_button) CommandEnded: {'returncode': 0}
+[1.310569] (-) TimerEvent: {}
+[1.411129] (-) TimerEvent: {}
+[1.479611] (push_button) JobEnded: {'identifier': 'push_button', 'rc': 0}
+[1.511854] (-) TimerEvent: {}
+[1.612669] (-) TimerEvent: {}
+[1.713060] (-) TimerEvent: {}
+[1.813771] (-) TimerEvent: {}
+[1.914427] (-) TimerEvent: {}
+[2.015311] (-) TimerEvent: {}
+[2.016143] (push_button_interface) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[2.115435] (-) TimerEvent: {}
+[2.215976] (-) TimerEvent: {}
+[2.316925] (-) TimerEvent: {}
+[2.417547] (-) TimerEvent: {}
+[2.515439] (push_button_interface) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[2.517682] (-) TimerEvent: {}
+[2.555643] (push_button_interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[2.617904] (-) TimerEvent: {}
+[2.718262] (-) TimerEvent: {}
+[2.734047] (push_button_interface) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[2.736096] (push_button_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.818831] (-) TimerEvent: {}
+[2.919616] (-) TimerEvent: {}
+[2.943158] (push_button_interface) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.960162] (push_button_interface) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.960427] (push_button_interface) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.965548] (push_button_interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[3.019708] (-) TimerEvent: {}
+[3.081900] (push_button_interface) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[3.083008] (push_button_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.119957] (-) TimerEvent: {}
+[3.218142] (push_button_interface) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.220039] (-) TimerEvent: {}
+[3.234240] (push_button_interface) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.234920] (push_button_interface) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.320219] (-) TimerEvent: {}
+[3.358534] (push_button_interface) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.8 (/home/parham/ros2_foxy/ros2-linux/share/ament_cmake/cmake)\n'}
+[3.420317] (-) TimerEvent: {}
+[3.481507] (push_button_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[3.481867] (push_button_interface) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.520401] (-) TimerEvent: {}
+[3.620659] (-) TimerEvent: {}
+[3.720963] (-) TimerEvent: {}
+[3.821282] (-) TimerEvent: {}
+[3.922166] (-) TimerEvent: {}
+[4.022788] (-) TimerEvent: {}
+[4.123337] (-) TimerEvent: {}
+[4.127092] (push_button_interface) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/home/parham/ros2_foxy/ros2-linux/share/ament_lint_auto/cmake)\n'}
+[4.223437] (-) TimerEvent: {}
+[4.323823] (-) TimerEvent: {}
+[4.424547] (-) TimerEvent: {}
+[4.512534] (push_button_interface) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.0 (/home/parham/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake)\n'}
+[4.524726] (-) TimerEvent: {}
+[4.625509] (-) TimerEvent: {}
+[4.726004] (-) TimerEvent: {}
+[4.826513] (-) TimerEvent: {}
+[4.927039] (-) TimerEvent: {}
+[5.027552] (-) TimerEvent: {}
+[5.127924] (-) TimerEvent: {}
+[5.228309] (-) TimerEvent: {}
+[5.328751] (-) TimerEvent: {}
+[5.361570] (push_button_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_connext_c\n'}
+[5.428851] (-) TimerEvent: {}
+[5.442254] (push_button_interface) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.0 (/home/parham/ros2_foxy/ros2-linux/share/rosidl_adapter/cmake)\n'}
+[5.529031] (-) TimerEvent: {}
+[5.629728] (-) TimerEvent: {}
+[5.730140] (-) TimerEvent: {}
+[5.830501] (-) TimerEvent: {}
+[5.931118] (-) TimerEvent: {}
+[6.031728] (-) TimerEvent: {}
+[6.132229] (-) TimerEvent: {}
+[6.232802] (-) TimerEvent: {}
+[6.333226] (-) TimerEvent: {}
+[6.434226] (-) TimerEvent: {}
+[6.534760] (-) TimerEvent: {}
+[6.585414] (push_button_interface) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[6.634916] (-) TimerEvent: {}
+[6.690843] (push_button_interface) StdoutLine: {'line': b'-- Found FastRTPS: /home/parham/ros2_foxy/ros2-linux/include  \n'}
+[6.734996] (-) TimerEvent: {}
+[6.835389] (-) TimerEvent: {}
+[6.936172] (-) TimerEvent: {}
+[7.036508] (-) TimerEvent: {}
+[7.136867] (-) TimerEvent: {}
+[7.174551] (push_button_interface) StdoutLine: {'line': b'-- Found RTI Connext: /opt/rti.com/rti_connext_dds-5.3.1\n'}
+[7.237015] (-) TimerEvent: {}
+[7.337615] (-) TimerEvent: {}
+[7.439624] (-) TimerEvent: {}
+[7.540045] (-) TimerEvent: {}
+[7.640431] (-) TimerEvent: {}
+[7.740899] (-) TimerEvent: {}
+[7.841247] (-) TimerEvent: {}
+[7.942884] (-) TimerEvent: {}
+[8.043212] (-) TimerEvent: {}
+[8.143531] (-) TimerEvent: {}
+[8.243894] (-) TimerEvent: {}
+[8.344167] (-) TimerEvent: {}
+[8.444482] (-) TimerEvent: {}
+[8.544793] (-) TimerEvent: {}
+[8.645148] (-) TimerEvent: {}
+[8.745711] (-) TimerEvent: {}
+[8.846363] (-) TimerEvent: {}
+[8.946983] (-) TimerEvent: {}
+[9.047842] (-) TimerEvent: {}
+[9.163338] (-) TimerEvent: {}
+[9.264214] (-) TimerEvent: {}
+[9.470257] (-) TimerEvent: {}
+[9.570904] (-) TimerEvent: {}
+[9.671597] (-) TimerEvent: {}
+[9.772129] (-) TimerEvent: {}
+[9.873266] (-) TimerEvent: {}
+[9.974076] (-) TimerEvent: {}
+[10.074480] (-) TimerEvent: {}
+[10.175198] (-) TimerEvent: {}
+[10.275622] (-) TimerEvent: {}
+[10.376453] (-) TimerEvent: {}
+[10.476966] (-) TimerEvent: {}
+[10.577334] (-) TimerEvent: {}
+[10.677633] (-) TimerEvent: {}
+[10.777938] (-) TimerEvent: {}
+[10.878376] (-) TimerEvent: {}
+[10.978775] (-) TimerEvent: {}
+[11.079573] (-) TimerEvent: {}
+[11.180113] (-) TimerEvent: {}
+[11.280500] (-) TimerEvent: {}
+[11.381197] (-) TimerEvent: {}
+[11.481674] (-) TimerEvent: {}
+[11.582379] (-) TimerEvent: {}
+[11.682799] (-) TimerEvent: {}
+[11.787922] (-) TimerEvent: {}
+[11.888606] (-) TimerEvent: {}
+[11.988989] (-) TimerEvent: {}
+[12.089669] (-) TimerEvent: {}
+[12.189991] (-) TimerEvent: {}
+[12.290394] (-) TimerEvent: {}
+[12.391639] (-) TimerEvent: {}
+[12.492283] (-) TimerEvent: {}
+[12.592686] (-) TimerEvent: {}
+[12.693362] (-) TimerEvent: {}
+[12.793804] (-) TimerEvent: {}
+[12.858644] (push_button_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp;rosidl_typesupport_connext_cpp\n'}
+[12.893933] (-) TimerEvent: {}
+[12.994335] (-) TimerEvent: {}
+[13.085093] (push_button_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[13.094390] (-) TimerEvent: {}
+[13.194754] (-) TimerEvent: {}
+[13.295675] (-) TimerEvent: {}
+[13.333296] (push_button_interface) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.0 (/home/parham/ros2_foxy/ros2-linux/share/ament_cmake_ros/cmake)\n'}
+[13.395869] (-) TimerEvent: {}
+[13.496294] (-) TimerEvent: {}
+[13.596941] (-) TimerEvent: {}
+[13.697636] (-) TimerEvent: {}
+[13.798322] (-) TimerEvent: {}
+[13.836365] (push_button_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_connext_c\n'}
+[13.856930] (push_button_interface) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp;rosidl_typesupport_connext_cpp\n'}
+[13.890677] (push_button_interface) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[13.898531] (-) TimerEvent: {}
+[13.919403] (push_button_interface) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.0 (/home/parham/ros2_foxy/ros2-linux/share/python_cmake_module/cmake)\n'}
+[13.998633] (-) TimerEvent: {}
+[14.097036] (push_button_interface) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[14.098455] (push_button_interface) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[14.099094] (-) TimerEvent: {}
+[14.099609] (push_button_interface) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[14.100149] (push_button_interface) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[14.186021] (push_button_interface) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[14.199173] (-) TimerEvent: {}
+[14.299832] (-) TimerEvent: {}
+[14.337546] (push_button_interface) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[14.400018] (-) TimerEvent: {}
+[14.487056] (push_button_interface) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[14.490082] (push_button_interface) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[14.490333] (push_button_interface) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[14.500089] (-) TimerEvent: {}
+[14.586712] (push_button_interface) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[14.587090] (push_button_interface) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[14.600178] (-) TimerEvent: {}
+[14.700459] (-) TimerEvent: {}
+[14.800816] (-) TimerEvent: {}
+[14.818829] (push_button_interface) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[14.885836] (push_button_interface) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[14.900952] (-) TimerEvent: {}
+[14.903075] (push_button_interface) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[15.001056] (-) TimerEvent: {}
+[15.012978] (push_button_interface) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[15.013494] (push_button_interface) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[15.025679] (push_button_interface) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[15.101223] (-) TimerEvent: {}
+[15.132204] (push_button_interface) StdoutLine: {'line': b'-- Configuring done\n'}
+[15.201421] (-) TimerEvent: {}
+[15.302236] (-) TimerEvent: {}
+[15.377692] (push_button_interface) StdoutLine: {'line': b'-- Generating done\n'}
+[15.383132] (push_button_interface) StdoutLine: {'line': b'-- Build files have been written to: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface\n'}
+[15.393413] (push_button_interface) CommandEnded: {'returncode': 0}
+[15.394054] (push_button_interface) JobProgress: {'identifier': 'push_button_interface', 'progress': 'build'}
+[15.394727] (push_button_interface) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface', '--', '-j4', '-l4'], 'cwd': '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('TERM_SESSION_ID', '3e91e4f0-125b-4747-8730-8e82bcab6d3e'), ('USER', 'parham'), ('SSH_AGENT_PID', '1873'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/home/parham/ws_moveit2/install/warehouse_ros_mongo/lib:/home/parham/ws_moveit2/install/moveit_servo/lib:/home/parham/ws_moveit2/install/moveit_ros_visualization/lib:/home/parham/ws_moveit2/install/moveit_ros_planning_interface/lib:/home/parham/ws_moveit2/install/moveit_ros_benchmarks/lib:/home/parham/ws_moveit2/install/moveit_ros_warehouse/lib:/home/parham/ws_moveit2/install/warehouse_ros/lib:/home/parham/ws_moveit2/install/velocity_controllers/lib:/home/parham/ws_moveit2/install/moveit_simple_controller_manager/lib:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction/lib:/home/parham/ws_moveit2/install/moveit_ros_perception/lib:/home/parham/ws_moveit2/install/moveit_ros_move_group/lib:/home/parham/ws_moveit2/install/moveit_planners_ompl/lib:/home/parham/ws_moveit2/install/moveit_ros_planning/lib:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor/lib:/home/parham/ws_moveit2/install/moveit_kinematics/lib:/home/parham/ws_moveit2/install/moveit_core/lib:/home/parham/ws_moveit2/install/srdfdom/lib:/home/parham/ws_moveit2/install/rviz_visual_tools/lib:/home/parham/ws_moveit2/install/position_controllers/lib:/home/parham/ws_moveit2/install/moveit_msgs/lib:/home/parham/ws_moveit2/install/joint_trajectory_controller/lib:/home/parham/ws_moveit2/install/joint_state_controller/lib:/home/parham/ws_moveit2/install/joint_state_broadcaster/lib:/home/parham/ws_moveit2/install/imu_sensor_broadcaster/lib:/home/parham/ws_moveit2/install/gripper_controllers/lib:/home/parham/ws_moveit2/install/effort_controllers/lib:/home/parham/ws_moveit2/install/forward_command_controller/lib:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster/lib:/home/parham/ws_moveit2/install/diff_drive_controller/lib:/home/parham/ws_moveit2/install/controller_manager/lib:/home/parham/ws_moveit2/install/controller_interface/lib:/home/parham/ws_moveit2/install/hardware_interface/lib:/home/parham/ws_moveit2/install/geometric_shapes/lib:/home/parham/ws_moveit2/install/controller_manager_msgs/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/parham/ros2_foxy/ros2-linux/opt/yaml_cpp_vendor/lib:/home/parham/ros2_foxy/ros2-linux/opt/rviz_ogre_vendor/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/home/parham/ros2_foxy/ros2-linux/lib'), ('SHLVL', '2'), ('OLDPWD', '/home/parham/Dev/ros2_foxy/science/sience_gui'), ('LESS', '-R'), ('HOME', '/home/parham'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/parham/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('TERMINAL_EMULATOR', 'JetBrains-JediTerm'), ('NDDSHOME', '/opt/rti.com/rti_connext_dds-5.3.1'), ('PAGER', 'less'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('MANAGERPID', '1681'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install:/home/parham/ws_moveit2/install:/home/parham/ros2_foxy/ros2-linux:/home/parham/ws_moveit2/install:/home/parham/ros2_foxy/ros2-linux'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'parham'), ('JOURNAL_STREAM', '8:49686'), ('_', '/usr/bin/colcon'), ('PKG_CONFIG_PATH', '/home/parham/ros2_foxy/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/parham/ros2_foxy/ros2-linux/lib/pkgconfig'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'parham'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/Users/parham/.local/bin:/Users/parham/Library/Python/3.8/bin:/home/parham/ws_moveit2/install/moveit_kinematics/bin:/home/parham/ws_moveit2/install/moveit_core/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/ros/foxy/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/home/parham/ros2_foxy/ros2-linux/bin:/Users/parham/.local/bin:/Users/parham/Library/Python/3.8/bin:/home/parham/.poetry/bin:/home/parham/.cargo/bin:/home/parham/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/parham/.local/bin:/home/parham/.local/bin'), ('INVOCATION_ID', 'c7255140dae445989b1517eb113d46c0'), ('__INTELLIJ_COMMAND_HISTFILE__', '/home/parham/.cache/JetBrains/PyCharmCE2021.2/terminal/history/sience_gui-history'), ('SESSION_MANAGER', 'local/Parham-CyberCity:@/tmp/.ICE-unix/1914,unix/Parham-CyberCity:/tmp/.ICE-unix/1914'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e015ff7_3547_49f7_b52e_7c768a8efd3c'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XMODIFIERS', '@im=ibus'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.107'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button:/home/parham/ws_moveit2/install/run_ompl_constrained_planning:/home/parham/ws_moveit2/install/run_moveit_cpp:/home/parham/ws_moveit2/install/run_move_group:/home/parham/ws_moveit2/install/warehouse_ros_mongo:/home/parham/ws_moveit2/install/moveit2_tutorials:/home/parham/ws_moveit2/install/moveit_servo:/home/parham/ws_moveit2/install/moveit_runtime:/home/parham/ws_moveit2/install/moveit:/home/parham/ws_moveit2/install/moveit_ros:/home/parham/ws_moveit2/install/moveit_ros_visualization:/home/parham/ws_moveit2/install/moveit_ros_planning_interface:/home/parham/ws_moveit2/install/moveit_ros_benchmarks:/home/parham/ws_moveit2/install/moveit_ros_warehouse:/home/parham/ws_moveit2/install/warehouse_ros:/home/parham/ws_moveit2/install/ros2_controllers:/home/parham/ws_moveit2/install/velocity_controllers:/home/parham/ws_moveit2/install/transmission_interface:/home/parham/ws_moveit2/install/moveit_plugins:/home/parham/ws_moveit2/install/moveit_simple_controller_manager:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction:/home/parham/ws_moveit2/install/moveit_ros_perception:/home/parham/ws_moveit2/install/moveit_ros_move_group:/home/parham/ws_moveit2/install/moveit_planners:/home/parham/ws_moveit2/install/moveit_planners_ompl:/home/parham/ws_moveit2/install/moveit_ros_planning:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/parham/ws_moveit2/install/moveit_kinematics:/home/parham/ws_moveit2/install/moveit_core:/home/parham/ws_moveit2/install/srdfdom:/home/parham/ws_moveit2/install/rviz_visual_tools:/home/parham/ws_moveit2/install/ros2_control:/home/parham/ws_moveit2/install/ros2controlcli:/home/parham/ws_moveit2/install/ros2_control_test_assets:/home/parham/ws_moveit2/install/position_controllers:/home/parham/ws_moveit2/install/moveit_resources:/home/parham/ws_moveit2/install/moveit_resources_pr2_description:/home/parham/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_panda_description:/home/parham/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_fanuc_description:/home/parham/ws_moveit2/install/moveit_msgs:/home/parham/ws_moveit2/install/moveit_common:/home/parham/ws_moveit2/install/joint_trajectory_controller:/home/parham/ws_moveit2/install/joint_state_controller:/home/parham/ws_moveit2/install/joint_state_broadcaster:/home/parham/ws_moveit2/install/imu_sensor_broadcaster:/home/parham/ws_moveit2/install/gripper_controllers:/home/parham/ws_moveit2/install/effort_controllers:/home/parham/ws_moveit2/install/forward_command_controller:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster:/home/parham/ws_moveit2/install/diff_drive_controller:/home/parham/ws_moveit2/install/controller_manager:/home/parham/ws_moveit2/install/controller_interface:/home/parham/ws_moveit2/install/hardware_interface:/home/parham/ws_moveit2/install/geometric_shapes:/home/parham/ws_moveit2/install/controller_manager_msgs:/opt/ros/foxy:/home/parham/ros2_foxy/ros2-linux'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/usr/bin/zsh'), ('GDMSESSION', 'ubuntu'), ('QT_ACCESSIBILITY', '1'), ('CMAKE_MODULE_PATH', '/home/parham/ws_moveit2/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('PYTHONPATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/warehouse_ros_mongo/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/srdfdom/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/ros2controlcli/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/moveit_msgs/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/controller_manager/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/controller_manager_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/parham/ros2_foxy/ros2-linux/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface:/home/parham/ws_moveit2/install/run_ompl_constrained_planning:/home/parham/ws_moveit2/install/run_moveit_cpp:/home/parham/ws_moveit2/install/run_move_group:/home/parham/ws_moveit2/install/warehouse_ros_mongo:/home/parham/ws_moveit2/install/moveit2_tutorials:/home/parham/ws_moveit2/install/moveit_servo:/home/parham/ws_moveit2/install/moveit_runtime:/home/parham/ws_moveit2/install/moveit:/home/parham/ws_moveit2/install/moveit_ros:/home/parham/ws_moveit2/install/moveit_ros_visualization:/home/parham/ws_moveit2/install/moveit_ros_planning_interface:/home/parham/ws_moveit2/install/moveit_ros_benchmarks:/home/parham/ws_moveit2/install/moveit_ros_warehouse:/home/parham/ws_moveit2/install/warehouse_ros:/home/parham/ws_moveit2/install/ros2_controllers:/home/parham/ws_moveit2/install/velocity_controllers:/home/parham/ws_moveit2/install/transmission_interface:/home/parham/ws_moveit2/install/moveit_plugins:/home/parham/ws_moveit2/install/moveit_simple_controller_manager:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction:/home/parham/ws_moveit2/install/moveit_ros_perception:/home/parham/ws_moveit2/install/moveit_ros_move_group:/home/parham/ws_moveit2/install/moveit_planners:/home/parham/ws_moveit2/install/moveit_planners_ompl:/home/parham/ws_moveit2/install/moveit_ros_planning:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/parham/ws_moveit2/install/moveit_kinematics:/home/parham/ws_moveit2/install/moveit_core:/home/parham/ws_moveit2/install/srdfdom:/home/parham/ws_moveit2/install/rviz_visual_tools:/home/parham/ws_moveit2/install/ros2_control:/home/parham/ws_moveit2/install/ros2_control_test_assets:/home/parham/ws_moveit2/install/position_controllers:/home/parham/ws_moveit2/install/moveit_resources:/home/parham/ws_moveit2/install/moveit_resources_pr2_description:/home/parham/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_panda_description:/home/parham/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_fanuc_description:/home/parham/ws_moveit2/install/moveit_msgs:/home/parham/ws_moveit2/install/moveit_common:/home/parham/ws_moveit2/install/joint_trajectory_controller:/home/parham/ws_moveit2/install/joint_state_controller:/home/parham/ws_moveit2/install/joint_state_broadcaster:/home/parham/ws_moveit2/install/imu_sensor_broadcaster:/home/parham/ws_moveit2/install/gripper_controllers:/home/parham/ws_moveit2/install/effort_controllers:/home/parham/ws_moveit2/install/forward_command_controller:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster:/home/parham/ws_moveit2/install/diff_drive_controller:/home/parham/ws_moveit2/install/controller_manager:/home/parham/ws_moveit2/install/controller_interface:/home/parham/ws_moveit2/install/hardware_interface:/home/parham/ws_moveit2/install/geometric_shapes:/home/parham/ws_moveit2/install/controller_manager_msgs:/home/parham/ros2_foxy/ros2-linux:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button:/home/parham/ws_moveit2/install/ros2controlcli:/opt/ros/foxy')]), 'shell': False}
+[15.402541] (-) TimerEvent: {}
+[15.470703] (push_button_interface) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[15.474604] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__cpp\x1b[0m\n'}
+[15.477009] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__dds_connext_idl\x1b[0m\n'}
+[15.497086] (push_button_interface) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating DDS interfaces\x1b[0m\n'}
+[15.502492] (push_button_interface) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[15.502803] (-) TimerEvent: {}
+[15.603480] (-) TimerEvent: {}
+[15.704256] (-) TimerEvent: {}
+[15.805043] (-) TimerEvent: {}
+[15.905799] (-) TimerEvent: {}
+[16.006544] (-) TimerEvent: {}
+[16.106890] (-) TimerEvent: {}
+[16.207254] (-) TimerEvent: {}
+[16.307746] (-) TimerEvent: {}
+[16.392103] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_generator_c\x1b[0m\n'}
+[16.407852] (-) TimerEvent: {}
+[16.414871] (push_button_interface) StdoutLine: {'line': b'[  6%] Built target push_button_interface__cpp\n'}
+[16.433674] (push_button_interface) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[16.434050] (push_button_interface) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[16.508023] (-) TimerEvent: {}
+[16.608771] (-) TimerEvent: {}
+[16.709759] (-) TimerEvent: {}
+[16.810524] (-) TimerEvent: {}
+[16.911459] (-) TimerEvent: {}
+[16.940125] (push_button_interface) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/push_button_interface__rosidl_generator_c.dir/rosidl_generator_c/push_button_interface/msg/detail/push_button__functions.c.o\x1b[0m\n'}
+[17.011587] (-) TimerEvent: {}
+[17.112261] (-) TimerEvent: {}
+[17.213242] (-) TimerEvent: {}
+[17.264265] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_cpp\x1b[0m\n'}
+[17.282678] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[17.283410] (push_button_interface) StdoutLine: {'line': b'[ 14%] \x1b[32m\x1b[1mLinking C shared library libpush_button_interface__rosidl_generator_c.so\x1b[0m\n'}
+[17.313328] (-) TimerEvent: {}
+[17.325689] (push_button_interface) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/push_button_interface/msg/detail/push_button__type_support.cpp.o\x1b[0m\n'}
+[17.346789] (push_button_interface) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/push_button_interface/msg/push_button__type_support.cpp.o\x1b[0m\n'}
+[17.374676] (push_button_interface) StdoutLine: {'line': b'[ 18%] Built target push_button_interface__rosidl_generator_c\n'}
+[17.397140] (push_button_interface) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[17.413721] (-) TimerEvent: {}
+[17.468896] (push_button_interface) StdoutLine: {'line': b'[ 20%] Built target push_button_interface__dds_connext_idl\n'}
+[17.490176] (push_button_interface) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[17.513812] (-) TimerEvent: {}
+[17.616229] (-) TimerEvent: {}
+[17.716587] (-) TimerEvent: {}
+[17.817087] (-) TimerEvent: {}
+[17.917467] (-) TimerEvent: {}
+[17.993179] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[18.015334] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[18.017571] (-) TimerEvent: {}
+[18.060230] (push_button_interface) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding C object CMakeFiles/push_button_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/push_button_interface/msg/detail/push_button__type_support.c.o\x1b[0m\n'}
+[18.101072] (push_button_interface) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/push_button_interface/msg/detail/dds_fastrtps/push_button__type_support.cpp.o\x1b[0m\n'}
+[18.113338] (push_button_interface) StdoutLine: {'line': b'[ 28%] \x1b[32m\x1b[1mLinking CXX shared library libpush_button_interface__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[18.117675] (-) TimerEvent: {}
+[18.147634] (push_button_interface) StdoutLine: {'line': b'[ 30%] \x1b[32m\x1b[1mLinking C shared library libpush_button_interface__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[18.160884] (push_button_interface) StdoutLine: {'line': b'[ 32%] \x1b[32m\x1b[1mLinking CXX shared library libpush_button_interface__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[18.211767] (push_button_interface) StdoutLine: {'line': b'[ 32%] Built target push_button_interface__rosidl_typesupport_introspection_cpp\n'}
+[18.217788] (-) TimerEvent: {}
+[18.228525] (push_button_interface) StdoutLine: {'line': b'[ 32%] Built target push_button_interface__rosidl_typesupport_introspection_c\n'}
+[18.246275] (push_button_interface) StdoutLine: {'line': b'[ 34%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[18.262328] (push_button_interface) StdoutLine: {'line': b"[ 36%] \x1b[34m\x1b[1mGenerating C++ type support for RTI Connext (using '/opt/rti.com/rti_connext_dds-5.3.1/bin/rtiddsgen_server')\x1b[0m\n"}
+[18.263314] (push_button_interface) StdoutLine: {'line': b'[ 36%] Built target push_button_interface__rosidl_typesupport_cpp\n'}
+[18.317874] (-) TimerEvent: {}
+[18.418155] (-) TimerEvent: {}
+[18.522189] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_c\x1b[0m\n'}
+[18.522432] (-) TimerEvent: {}
+[18.549799] (push_button_interface) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/push_button_interface/msg/push_button__type_support.cpp.o\x1b[0m\n'}
+[18.615894] (push_button_interface) StdoutLine: {'line': b'[ 40%] \x1b[32m\x1b[1mLinking CXX shared library libpush_button_interface__rosidl_typesupport_c.so\x1b[0m\n'}
+[18.622533] (-) TimerEvent: {}
+[18.697172] (push_button_interface) StdoutLine: {'line': b'[ 40%] Built target push_button_interface__rosidl_typesupport_c\n'}
+[18.722637] (-) TimerEvent: {}
+[18.822995] (-) TimerEvent: {}
+[18.923256] (-) TimerEvent: {}
+[18.977369] (push_button_interface) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking CXX shared library libpush_button_interface__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[19.023409] (-) TimerEvent: {}
+[19.124058] (-) TimerEvent: {}
+[19.224878] (-) TimerEvent: {}
+[19.325513] (-) TimerEvent: {}
+[19.415075] (push_button_interface) StdoutLine: {'line': b'[ 42%] Built target push_button_interface__rosidl_typesupport_fastrtps_cpp\n'}
+[19.425622] (-) TimerEvent: {}
+[19.434902] (push_button_interface) StdoutLine: {'line': b'[ 44%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[19.525705] (-) TimerEvent: {}
+[19.625976] (-) TimerEvent: {}
+[19.726312] (-) TimerEvent: {}
+[19.826987] (-) TimerEvent: {}
+[19.846726] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[19.927185] (-) TimerEvent: {}
+[19.971421] (push_button_interface) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button__type_support_c.cpp.o\x1b[0m\n'}
+[20.027268] (-) TimerEvent: {}
+[20.127873] (-) TimerEvent: {}
+[20.228214] (-) TimerEvent: {}
+[20.328529] (-) TimerEvent: {}
+[20.428904] (-) TimerEvent: {}
+[20.529384] (-) TimerEvent: {}
+[20.564242] (push_button_interface) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libpush_button_interface__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[20.633417] (-) TimerEvent: {}
+[20.733847] (-) TimerEvent: {}
+[20.751861] (push_button_interface) StdoutLine: {'line': b'[ 48%] Built target push_button_interface__rosidl_typesupport_fastrtps_c\n'}
+[20.833943] (-) TimerEvent: {}
+[20.934532] (-) TimerEvent: {}
+[21.035119] (-) TimerEvent: {}
+[21.135619] (-) TimerEvent: {}
+[21.236429] (-) TimerEvent: {}
+[21.337992] (-) TimerEvent: {}
+[21.436091] (push_button_interface) StdoutLine: {'line': b'INFO com.rti.ndds.nddsgen.Main Running rtiddsgen version 2.5.2, please wait ...\n'}
+[21.436329] (push_button_interface) StdoutLine: {'line': b'INFO com.rti.ndds.nddsgen.Main Done\n'}
+[21.438442] (-) TimerEvent: {}
+[21.540731] (-) TimerEvent: {}
+[21.577052] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_connext_cpp\x1b[0m\n'}
+[21.640918] (-) TimerEvent: {}
+[21.741608] (-) TimerEvent: {}
+[21.780344] (push_button_interface) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_connext_cpp.dir/rosidl_typesupport_connext_cpp/push_button_interface/msg/dds_connext/push_button__type_support.cpp.o\x1b[0m\n'}
+[21.787979] (push_button_interface) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_connext_cpp.dir/rosidl_typesupport_connext_cpp/push_button_interface/msg/dds_connext/PushButton_Support.cxx.o\x1b[0m\n'}
+[21.789898] (push_button_interface) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_connext_cpp.dir/rosidl_typesupport_connext_cpp/push_button_interface/msg/dds_connext/PushButton_Plugin.cxx.o\x1b[0m\n'}
+[21.798230] (push_button_interface) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_connext_cpp.dir/rosidl_typesupport_connext_cpp/push_button_interface/msg/dds_connext/PushButton_.cxx.o\x1b[0m\n'}
+[21.841688] (-) TimerEvent: {}
+[21.942209] (-) TimerEvent: {}
+[22.042527] (-) TimerEvent: {}
+[22.142853] (-) TimerEvent: {}
+[22.243173] (-) TimerEvent: {}
+[22.343605] (-) TimerEvent: {}
+[22.444027] (-) TimerEvent: {}
+[22.544410] (-) TimerEvent: {}
+[22.644807] (-) TimerEvent: {}
+[22.745387] (-) TimerEvent: {}
+[22.845885] (-) TimerEvent: {}
+[22.899416] (push_button_interface) StdoutLine: {'line': b'[ 59%] \x1b[32m\x1b[1mLinking CXX shared library libpush_button_interface__rosidl_typesupport_connext_cpp.so\x1b[0m\n'}
+[22.946094] (-) TimerEvent: {}
+[23.046768] (-) TimerEvent: {}
+[23.147442] (-) TimerEvent: {}
+[23.227401] (push_button_interface) StdoutLine: {'line': b'[ 61%] Built target push_button_interface__rosidl_typesupport_connext_cpp\n'}
+[23.244435] (push_button_interface) StdoutLine: {'line': b'[ 63%] \x1b[34m\x1b[1mGenerating C type support for RTI Connext\x1b[0m\n'}
+[23.247557] (-) TimerEvent: {}
+[23.347888] (-) TimerEvent: {}
+[23.448251] (-) TimerEvent: {}
+[23.548593] (-) TimerEvent: {}
+[23.636494] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_connext_c\x1b[0m\n'}
+[23.648734] (-) TimerEvent: {}
+[23.708499] (push_button_interface) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_connext_c.dir/rosidl_typesupport_connext_c/push_button_interface/msg/dds_connext/push_button__type_support_c.cpp.o\x1b[0m\n'}
+[23.709276] (push_button_interface) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_connext_c.dir/rosidl_typesupport_connext_cpp/push_button_interface/msg/dds_connext/PushButton_.cxx.o\x1b[0m\n'}
+[23.712220] (push_button_interface) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_connext_c.dir/rosidl_typesupport_connext_cpp/push_button_interface/msg/dds_connext/PushButton_Support.cxx.o\x1b[0m\n'}
+[23.715469] (push_button_interface) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/push_button_interface__rosidl_typesupport_connext_c.dir/rosidl_typesupport_connext_cpp/push_button_interface/msg/dds_connext/PushButton_Plugin.cxx.o\x1b[0m\n'}
+[23.748824] (-) TimerEvent: {}
+[23.849374] (-) TimerEvent: {}
+[23.950273] (-) TimerEvent: {}
+[24.050992] (-) TimerEvent: {}
+[24.151946] (-) TimerEvent: {}
+[24.252522] (-) TimerEvent: {}
+[24.353145] (-) TimerEvent: {}
+[24.453724] (-) TimerEvent: {}
+[24.554658] (-) TimerEvent: {}
+[24.655255] (-) TimerEvent: {}
+[24.755844] (-) TimerEvent: {}
+[24.810794] (push_button_interface) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libpush_button_interface__rosidl_typesupport_connext_c.so\x1b[0m\n'}
+[24.855954] (-) TimerEvent: {}
+[24.956377] (-) TimerEvent: {}
+[25.015049] (push_button_interface) StdoutLine: {'line': b'[ 77%] Built target push_button_interface__rosidl_typesupport_connext_c\n'}
+[25.030835] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface\x1b[0m\n'}
+[25.049258] (push_button_interface) StdoutLine: {'line': b'[ 77%] Built target push_button_interface\n'}
+[25.056498] (-) TimerEvent: {}
+[25.067193] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__py\x1b[0m\n'}
+[25.087122] (push_button_interface) StdoutLine: {'line': b'[ 79%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[25.156588] (-) TimerEvent: {}
+[25.256863] (-) TimerEvent: {}
+[25.357141] (-) TimerEvent: {}
+[25.457522] (-) TimerEvent: {}
+[25.557977] (-) TimerEvent: {}
+[25.658216] (-) TimerEvent: {}
+[25.678903] (push_button_interface) StdoutLine: {'line': b'[ 79%] Built target push_button_interface__py\n'}
+[25.694956] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__python\x1b[0m\n'}
+[25.758413] (-) TimerEvent: {}
+[25.859260] (-) TimerEvent: {}
+[25.946999] (push_button_interface) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding C object CMakeFiles/push_button_interface__python.dir/rosidl_generator_py/push_button_interface/msg/_push_button_s.c.o\x1b[0m\n'}
+[25.959340] (-) TimerEvent: {}
+[26.059702] (-) TimerEvent: {}
+[26.160461] (-) TimerEvent: {}
+[26.260929] (-) TimerEvent: {}
+[26.361730] (-) TimerEvent: {}
+[26.406094] (push_button_interface) StdoutLine: {'line': b'[ 83%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/push_button_interface/libpush_button_interface__python.so\x1b[0m\n'}
+[26.461856] (-) TimerEvent: {}
+[26.469645] (push_button_interface) StdoutLine: {'line': b'[ 83%] Built target push_button_interface__python\n'}
+[26.494049] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[26.495581] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_connext_c__pyext\x1b[0m\n'}
+[26.510105] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[26.515919] (push_button_interface) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target push_button_interface__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[26.538799] (push_button_interface) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/push_button_interface__rosidl_typesupport_connext_c__pyext.dir/rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_connext_c.c.o\x1b[0m\n'}
+[26.554318] (push_button_interface) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/push_button_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[26.561967] (-) TimerEvent: {}
+[26.563905] (push_button_interface) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/push_button_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[26.572084] (push_button_interface) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/push_button_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[26.662182] (-) TimerEvent: {}
+[26.737554] (push_button_interface) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/push_button_interface/push_button_interface_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[26.738675] (push_button_interface) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/push_button_interface/push_button_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[26.742194] (push_button_interface) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/push_button_interface/push_button_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[26.743854] (push_button_interface) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/push_button_interface/push_button_interface_s__rosidl_typesupport_connext_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[26.762270] (-) TimerEvent: {}
+[26.814040] (push_button_interface) StdoutLine: {'line': b'[100%] Built target push_button_interface__rosidl_typesupport_introspection_c__pyext\n'}
+[26.833535] (push_button_interface) StdoutLine: {'line': b'[100%] Built target push_button_interface__rosidl_typesupport_c__pyext\n'}
+[26.862387] (-) TimerEvent: {}
+[26.881230] (push_button_interface) StdoutLine: {'line': b'[100%] Built target push_button_interface__rosidl_typesupport_connext_c__pyext\n'}
+[26.884928] (push_button_interface) StdoutLine: {'line': b'[100%] Built target push_button_interface__rosidl_typesupport_fastrtps_c__pyext\n'}
+[26.962516] (-) TimerEvent: {}
+[27.063034] (-) TimerEvent: {}
+[27.164045] (-) TimerEvent: {}
+[27.264703] (-) TimerEvent: {}
+[27.365455] (-) TimerEvent: {}
+[27.466226] (-) TimerEvent: {}
+[27.567079] (-) TimerEvent: {}
+[27.667670] (-) TimerEvent: {}
+[27.768062] (-) TimerEvent: {}
+[27.868464] (-) TimerEvent: {}
+[27.969109] (-) TimerEvent: {}
+[28.069647] (-) TimerEvent: {}
+[28.170016] (-) TimerEvent: {}
+[28.270866] (-) TimerEvent: {}
+[28.371495] (-) TimerEvent: {}
+[28.472203] (-) TimerEvent: {}
+[28.572652] (-) TimerEvent: {}
+[28.673007] (-) TimerEvent: {}
+[28.773688] (-) TimerEvent: {}
+[28.874402] (-) TimerEvent: {}
+[28.975009] (-) TimerEvent: {}
+[29.075510] (-) TimerEvent: {}
+[29.176004] (-) TimerEvent: {}
+[29.276847] (-) TimerEvent: {}
+[29.377342] (-) TimerEvent: {}
+[29.477810] (-) TimerEvent: {}
+[29.578393] (-) TimerEvent: {}
+[29.678774] (-) TimerEvent: {}
+[29.779211] (-) TimerEvent: {}
+[29.879915] (-) TimerEvent: {}
+[29.980238] (-) TimerEvent: {}
+[30.080722] (-) TimerEvent: {}
+[30.181428] (-) TimerEvent: {}
+[30.281841] (-) TimerEvent: {}
+[30.382312] (-) TimerEvent: {}
+[30.482881] (-) TimerEvent: {}
+[30.583260] (-) TimerEvent: {}
+[30.683967] (-) TimerEvent: {}
+[30.784615] (-) TimerEvent: {}
+[30.885007] (-) TimerEvent: {}
+[30.985423] (-) TimerEvent: {}
+[31.086218] (-) TimerEvent: {}
+[31.186561] (-) TimerEvent: {}
+[31.287169] (-) TimerEvent: {}
+[31.387559] (-) TimerEvent: {}
+[31.488018] (-) TimerEvent: {}
+[31.588361] (-) TimerEvent: {}
+[31.688825] (-) TimerEvent: {}
+[31.789128] (-) TimerEvent: {}
+[31.889545] (-) TimerEvent: {}
+[31.990146] (-) TimerEvent: {}
+[32.090519] (-) TimerEvent: {}
+[32.190943] (-) TimerEvent: {}
+[32.291293] (-) TimerEvent: {}
+[32.391802] (-) TimerEvent: {}
+[32.492472] (-) TimerEvent: {}
+[32.592913] (-) TimerEvent: {}
+[32.693492] (-) TimerEvent: {}
+[32.794177] (-) TimerEvent: {}
+[32.894624] (-) TimerEvent: {}
+[32.995016] (-) TimerEvent: {}
+[33.095442] (-) TimerEvent: {}
+[33.196000] (-) TimerEvent: {}
+[33.296355] (-) TimerEvent: {}
+[33.396809] (-) TimerEvent: {}
+[33.497475] (-) TimerEvent: {}
+[33.597986] (-) TimerEvent: {}
+[33.698693] (-) TimerEvent: {}
+[33.799182] (-) TimerEvent: {}
+[33.899553] (-) TimerEvent: {}
+[33.999907] (-) TimerEvent: {}
+[34.100304] (-) TimerEvent: {}
+[34.201126] (-) TimerEvent: {}
+[34.301534] (-) TimerEvent: {}
+[34.402037] (-) TimerEvent: {}
+[34.502443] (-) TimerEvent: {}
+[34.602750] (-) TimerEvent: {}
+[34.703148] (-) TimerEvent: {}
+[34.803594] (-) TimerEvent: {}
+[34.904167] (-) TimerEvent: {}
+[35.004486] (-) TimerEvent: {}
+[35.105102] (-) TimerEvent: {}
+[35.205481] (-) TimerEvent: {}
+[35.306306] (-) TimerEvent: {}
+[35.406900] (-) TimerEvent: {}
+[35.507818] (-) TimerEvent: {}
+[35.608217] (-) TimerEvent: {}
+[35.708715] (-) TimerEvent: {}
+[35.809185] (-) TimerEvent: {}
+[35.909586] (-) TimerEvent: {}
+[36.010014] (-) TimerEvent: {}
+[36.110395] (-) TimerEvent: {}
+[36.210779] (-) TimerEvent: {}
+[36.311268] (-) TimerEvent: {}
+[36.411951] (-) TimerEvent: {}
+[36.512648] (-) TimerEvent: {}
+[36.613309] (-) TimerEvent: {}
+[36.713685] (-) TimerEvent: {}
+[36.814278] (-) TimerEvent: {}
+[36.914893] (-) TimerEvent: {}
+[37.015206] (-) TimerEvent: {}
+[37.115652] (-) TimerEvent: {}
+[37.216433] (-) TimerEvent: {}
+[37.317138] (-) TimerEvent: {}
+[37.417563] (-) TimerEvent: {}
+[37.518351] (-) TimerEvent: {}
+[37.618781] (-) TimerEvent: {}
+[37.719127] (-) TimerEvent: {}
+[37.819494] (-) TimerEvent: {}
+[37.919839] (-) TimerEvent: {}
+[38.020127] (-) TimerEvent: {}
+[38.120403] (-) TimerEvent: {}
+[38.220827] (-) TimerEvent: {}
+[38.321466] (-) TimerEvent: {}
+[38.421948] (-) TimerEvent: {}
+[38.522585] (-) TimerEvent: {}
+[38.623319] (-) TimerEvent: {}
+[38.723827] (-) TimerEvent: {}
+[38.824503] (-) TimerEvent: {}
+[38.925231] (-) TimerEvent: {}
+[39.025666] (-) TimerEvent: {}
+[39.126078] (-) TimerEvent: {}
+[39.226507] (-) TimerEvent: {}
+[39.326849] (-) TimerEvent: {}
+[39.427147] (-) TimerEvent: {}
+[39.527449] (-) TimerEvent: {}
+[39.627794] (-) TimerEvent: {}
+[39.728153] (-) TimerEvent: {}
+[39.828531] (-) TimerEvent: {}
+[39.928958] (-) TimerEvent: {}
+[40.029380] (-) TimerEvent: {}
+[40.129758] (-) TimerEvent: {}
+[40.230115] (-) TimerEvent: {}
+[40.330685] (-) TimerEvent: {}
+[40.431448] (-) TimerEvent: {}
+[40.531943] (-) TimerEvent: {}
+[40.632721] (-) TimerEvent: {}
+[40.733087] (-) TimerEvent: {}
+[40.833468] (-) TimerEvent: {}
+[40.933945] (-) TimerEvent: {}
+[41.034338] (-) TimerEvent: {}
+[41.134980] (-) TimerEvent: {}
+[41.235337] (-) TimerEvent: {}
+[41.335773] (-) TimerEvent: {}
+[41.436074] (-) TimerEvent: {}
+[41.536420] (-) TimerEvent: {}
+[41.568240] (push_button_interface) CommandEnded: {'returncode': 0}
+[41.636572] (-) TimerEvent: {}
+[41.712236] (push_button_interface) JobProgress: {'identifier': 'push_button_interface', 'progress': 'install'}
+[41.729169] (push_button_interface) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface'], 'cwd': '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('TERM_SESSION_ID', '3e91e4f0-125b-4747-8730-8e82bcab6d3e'), ('USER', 'parham'), ('SSH_AGENT_PID', '1873'), ('XDG_SESSION_TYPE', 'x11'), ('LD_LIBRARY_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/home/parham/ws_moveit2/install/warehouse_ros_mongo/lib:/home/parham/ws_moveit2/install/moveit_servo/lib:/home/parham/ws_moveit2/install/moveit_ros_visualization/lib:/home/parham/ws_moveit2/install/moveit_ros_planning_interface/lib:/home/parham/ws_moveit2/install/moveit_ros_benchmarks/lib:/home/parham/ws_moveit2/install/moveit_ros_warehouse/lib:/home/parham/ws_moveit2/install/warehouse_ros/lib:/home/parham/ws_moveit2/install/velocity_controllers/lib:/home/parham/ws_moveit2/install/moveit_simple_controller_manager/lib:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction/lib:/home/parham/ws_moveit2/install/moveit_ros_perception/lib:/home/parham/ws_moveit2/install/moveit_ros_move_group/lib:/home/parham/ws_moveit2/install/moveit_planners_ompl/lib:/home/parham/ws_moveit2/install/moveit_ros_planning/lib:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor/lib:/home/parham/ws_moveit2/install/moveit_kinematics/lib:/home/parham/ws_moveit2/install/moveit_core/lib:/home/parham/ws_moveit2/install/srdfdom/lib:/home/parham/ws_moveit2/install/rviz_visual_tools/lib:/home/parham/ws_moveit2/install/position_controllers/lib:/home/parham/ws_moveit2/install/moveit_msgs/lib:/home/parham/ws_moveit2/install/joint_trajectory_controller/lib:/home/parham/ws_moveit2/install/joint_state_controller/lib:/home/parham/ws_moveit2/install/joint_state_broadcaster/lib:/home/parham/ws_moveit2/install/imu_sensor_broadcaster/lib:/home/parham/ws_moveit2/install/gripper_controllers/lib:/home/parham/ws_moveit2/install/effort_controllers/lib:/home/parham/ws_moveit2/install/forward_command_controller/lib:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster/lib:/home/parham/ws_moveit2/install/diff_drive_controller/lib:/home/parham/ws_moveit2/install/controller_manager/lib:/home/parham/ws_moveit2/install/controller_interface/lib:/home/parham/ws_moveit2/install/hardware_interface/lib:/home/parham/ws_moveit2/install/geometric_shapes/lib:/home/parham/ws_moveit2/install/controller_manager_msgs/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/home/parham/ros2_foxy/ros2-linux/opt/yaml_cpp_vendor/lib:/home/parham/ros2_foxy/ros2-linux/opt/rviz_ogre_vendor/lib:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/home/parham/ros2_foxy/ros2-linux/lib'), ('SHLVL', '2'), ('OLDPWD', '/home/parham/Dev/ros2_foxy/science/sience_gui'), ('LESS', '-R'), ('HOME', '/home/parham'), ('DESKTOP_SESSION', 'ubuntu'), ('ZSH', '/home/parham/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('TERMINAL_EMULATOR', 'JetBrains-JediTerm'), ('NDDSHOME', '/opt/rti.com/rti_connext_dds-5.3.1'), ('PAGER', 'less'), ('GTK_MODULES', 'gail:atk-bridge'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('MANAGERPID', '1681'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install:/home/parham/ws_moveit2/install:/home/parham/ros2_foxy/ros2-linux:/home/parham/ws_moveit2/install:/home/parham/ros2_foxy/ros2-linux'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'parham'), ('JOURNAL_STREAM', '8:49686'), ('_', '/usr/bin/colcon'), ('PKG_CONFIG_PATH', '/home/parham/ros2_foxy/ros2-linux/lib/x86_64-linux-gnu/pkgconfig:/home/parham/ros2_foxy/ros2-linux/lib/pkgconfig'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'parham'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/Users/parham/.local/bin:/Users/parham/Library/Python/3.8/bin:/home/parham/ws_moveit2/install/moveit_kinematics/bin:/home/parham/ws_moveit2/install/moveit_core/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/opt/ros/foxy/bin:/opt/rti.com/rti_connext_dds-5.3.1/lib/x64Linux3gcc5.4.0:/opt/rti.com/rti_connext_dds-5.3.1/bin:/home/parham/ros2_foxy/ros2-linux/bin:/Users/parham/.local/bin:/Users/parham/Library/Python/3.8/bin:/home/parham/.poetry/bin:/home/parham/.cargo/bin:/home/parham/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/parham/.local/bin:/home/parham/.local/bin'), ('INVOCATION_ID', 'c7255140dae445989b1517eb113d46c0'), ('__INTELLIJ_COMMAND_HISTFILE__', '/home/parham/.cache/JetBrains/PyCharmCE2021.2/terminal/history/sience_gui-history'), ('SESSION_MANAGER', 'local/Parham-CyberCity:@/tmp/.ICE-unix/1914,unix/Parham-CyberCity:/tmp/.ICE-unix/1914'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/3e015ff7_3547_49f7_b52e_7c768a8efd3c'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LANG', 'en_US.UTF-8'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XMODIFIERS', '@im=ibus'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('GNOME_TERMINAL_SERVICE', ':1.107'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button:/home/parham/ws_moveit2/install/run_ompl_constrained_planning:/home/parham/ws_moveit2/install/run_moveit_cpp:/home/parham/ws_moveit2/install/run_move_group:/home/parham/ws_moveit2/install/warehouse_ros_mongo:/home/parham/ws_moveit2/install/moveit2_tutorials:/home/parham/ws_moveit2/install/moveit_servo:/home/parham/ws_moveit2/install/moveit_runtime:/home/parham/ws_moveit2/install/moveit:/home/parham/ws_moveit2/install/moveit_ros:/home/parham/ws_moveit2/install/moveit_ros_visualization:/home/parham/ws_moveit2/install/moveit_ros_planning_interface:/home/parham/ws_moveit2/install/moveit_ros_benchmarks:/home/parham/ws_moveit2/install/moveit_ros_warehouse:/home/parham/ws_moveit2/install/warehouse_ros:/home/parham/ws_moveit2/install/ros2_controllers:/home/parham/ws_moveit2/install/velocity_controllers:/home/parham/ws_moveit2/install/transmission_interface:/home/parham/ws_moveit2/install/moveit_plugins:/home/parham/ws_moveit2/install/moveit_simple_controller_manager:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction:/home/parham/ws_moveit2/install/moveit_ros_perception:/home/parham/ws_moveit2/install/moveit_ros_move_group:/home/parham/ws_moveit2/install/moveit_planners:/home/parham/ws_moveit2/install/moveit_planners_ompl:/home/parham/ws_moveit2/install/moveit_ros_planning:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/parham/ws_moveit2/install/moveit_kinematics:/home/parham/ws_moveit2/install/moveit_core:/home/parham/ws_moveit2/install/srdfdom:/home/parham/ws_moveit2/install/rviz_visual_tools:/home/parham/ws_moveit2/install/ros2_control:/home/parham/ws_moveit2/install/ros2controlcli:/home/parham/ws_moveit2/install/ros2_control_test_assets:/home/parham/ws_moveit2/install/position_controllers:/home/parham/ws_moveit2/install/moveit_resources:/home/parham/ws_moveit2/install/moveit_resources_pr2_description:/home/parham/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_panda_description:/home/parham/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_fanuc_description:/home/parham/ws_moveit2/install/moveit_msgs:/home/parham/ws_moveit2/install/moveit_common:/home/parham/ws_moveit2/install/joint_trajectory_controller:/home/parham/ws_moveit2/install/joint_state_controller:/home/parham/ws_moveit2/install/joint_state_broadcaster:/home/parham/ws_moveit2/install/imu_sensor_broadcaster:/home/parham/ws_moveit2/install/gripper_controllers:/home/parham/ws_moveit2/install/effort_controllers:/home/parham/ws_moveit2/install/forward_command_controller:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster:/home/parham/ws_moveit2/install/diff_drive_controller:/home/parham/ws_moveit2/install/controller_manager:/home/parham/ws_moveit2/install/controller_interface:/home/parham/ws_moveit2/install/hardware_interface:/home/parham/ws_moveit2/install/geometric_shapes:/home/parham/ws_moveit2/install/controller_manager_msgs:/opt/ros/foxy:/home/parham/ros2_foxy/ros2-linux'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('SHELL', '/usr/bin/zsh'), ('GDMSESSION', 'ubuntu'), ('QT_ACCESSIBILITY', '1'), ('CMAKE_MODULE_PATH', '/home/parham/ws_moveit2/install/warehouse_ros_mongo/share/warehouse_ros_mongo/cmake'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('PYTHONPATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/warehouse_ros_mongo/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/srdfdom/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/ros2controlcli/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/moveit_msgs/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/controller_manager/lib/python3.8/site-packages:/home/parham/ws_moveit2/install/controller_manager_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages:/home/parham/ros2_foxy/ros2-linux/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface:/home/parham/ws_moveit2/install/run_ompl_constrained_planning:/home/parham/ws_moveit2/install/run_moveit_cpp:/home/parham/ws_moveit2/install/run_move_group:/home/parham/ws_moveit2/install/warehouse_ros_mongo:/home/parham/ws_moveit2/install/moveit2_tutorials:/home/parham/ws_moveit2/install/moveit_servo:/home/parham/ws_moveit2/install/moveit_runtime:/home/parham/ws_moveit2/install/moveit:/home/parham/ws_moveit2/install/moveit_ros:/home/parham/ws_moveit2/install/moveit_ros_visualization:/home/parham/ws_moveit2/install/moveit_ros_planning_interface:/home/parham/ws_moveit2/install/moveit_ros_benchmarks:/home/parham/ws_moveit2/install/moveit_ros_warehouse:/home/parham/ws_moveit2/install/warehouse_ros:/home/parham/ws_moveit2/install/ros2_controllers:/home/parham/ws_moveit2/install/velocity_controllers:/home/parham/ws_moveit2/install/transmission_interface:/home/parham/ws_moveit2/install/moveit_plugins:/home/parham/ws_moveit2/install/moveit_simple_controller_manager:/home/parham/ws_moveit2/install/moveit_ros_robot_interaction:/home/parham/ws_moveit2/install/moveit_ros_perception:/home/parham/ws_moveit2/install/moveit_ros_move_group:/home/parham/ws_moveit2/install/moveit_planners:/home/parham/ws_moveit2/install/moveit_planners_ompl:/home/parham/ws_moveit2/install/moveit_ros_planning:/home/parham/ws_moveit2/install/moveit_ros_occupancy_map_monitor:/home/parham/ws_moveit2/install/moveit_kinematics:/home/parham/ws_moveit2/install/moveit_core:/home/parham/ws_moveit2/install/srdfdom:/home/parham/ws_moveit2/install/rviz_visual_tools:/home/parham/ws_moveit2/install/ros2_control:/home/parham/ws_moveit2/install/ros2_control_test_assets:/home/parham/ws_moveit2/install/position_controllers:/home/parham/ws_moveit2/install/moveit_resources:/home/parham/ws_moveit2/install/moveit_resources_pr2_description:/home/parham/ws_moveit2/install/moveit_resources_panda_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_panda_description:/home/parham/ws_moveit2/install/moveit_resources_fanuc_moveit_config:/home/parham/ws_moveit2/install/moveit_resources_fanuc_description:/home/parham/ws_moveit2/install/moveit_msgs:/home/parham/ws_moveit2/install/moveit_common:/home/parham/ws_moveit2/install/joint_trajectory_controller:/home/parham/ws_moveit2/install/joint_state_controller:/home/parham/ws_moveit2/install/joint_state_broadcaster:/home/parham/ws_moveit2/install/imu_sensor_broadcaster:/home/parham/ws_moveit2/install/gripper_controllers:/home/parham/ws_moveit2/install/effort_controllers:/home/parham/ws_moveit2/install/forward_command_controller:/home/parham/ws_moveit2/install/force_torque_sensor_broadcaster:/home/parham/ws_moveit2/install/diff_drive_controller:/home/parham/ws_moveit2/install/controller_manager:/home/parham/ws_moveit2/install/controller_interface:/home/parham/ws_moveit2/install/hardware_interface:/home/parham/ws_moveit2/install/geometric_shapes:/home/parham/ws_moveit2/install/controller_manager_msgs:/home/parham/ros2_foxy/ros2-linux:/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button:/home/parham/ws_moveit2/install/ros2controlcli:/opt/ros/foxy')]), 'shell': False}
+[41.736695] (-) TimerEvent: {}
+[41.744563] (push_button_interface) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[41.744956] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/ament_index/resource_index/rosidl_interfaces/push_button_interface\n'}
+[41.745295] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface\n'}
+[41.745580] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg\n'}
+[41.745739] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/push_button.h\n'}
+[41.745927] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/rosidl_generator_c__visibility_control.h\n'}
+[41.746800] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail\n'}
+[41.746978] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__functions.h\n'}
+[41.747114] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__functions.c\n'}
+[41.747305] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__type_support.h\n'}
+[41.747434] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__struct.h\n'}
+[41.747611] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/environment/library_path.sh\n'}
+[41.747823] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/environment/library_path.dsv\n'}
+[41.747958] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_generator_c.so\n'}
+[41.748110] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_generator_c.so" to ""\n'}
+[41.748233] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface\n'}
+[41.748355] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg\n'}
+[41.748524] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[41.748708] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail\n'}
+[41.748875] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__rosidl_typesupport_fastrtps_c.h\n'}
+[41.748998] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_fastrtps_c.so\n'}
+[41.749145] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[41.749267] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface\n'}
+[41.749423] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg\n'}
+[41.749608] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[41.749810] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail\n'}
+[41.749980] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[41.750126] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/dds_fastrtps\n'}
+[41.750239] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_fastrtps_cpp.so\n'}
+[41.750352] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[41.750495] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface\n'}
+[41.750681] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg\n'}
+[41.750846] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[41.751627] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail\n'}
+[41.751853] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__rosidl_typesupport_introspection_c.h\n'}
+[41.752012] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__type_support.c\n'}
+[41.752158] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_introspection_c.so\n'}
+[41.752327] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_introspection_c.so" to ""\n'}
+[41.752493] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface\n'}
+[41.752641] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg\n'}
+[41.752786] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/push_button__rosidl_typesupport_connext_c.h\n'}
+[41.753147] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/rosidl_typesupport_connext_c__visibility_control.h\n'}
+[41.753411] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/dds_connext\n'}
+[41.753538] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_connext_c.so\n'}
+[41.753651] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_connext_c.so" to ""\n'}
+[41.753987] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/msg/dds_connext\n'}
+[41.754189] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/msg/dds_connext/PushButton_.idl\n'}
+[41.754328] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface\n'}
+[41.754483] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg\n'}
+[41.754640] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/rosidl_typesupport_connext_cpp__visibility_control.h\n'}
+[41.754799] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/dds_connext\n'}
+[41.754920] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/dds_connext/PushButton_Plugin.cxx\n'}
+[41.755091] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/dds_connext/PushButton_Support.h\n'}
+[41.755197] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/dds_connext/PushButton_Plugin.h\n'}
+[41.755296] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/dds_connext/PushButton_Support.cxx\n'}
+[41.755392] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/dds_connext/PushButton_.cxx\n'}
+[41.755487] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/dds_connext/PushButton_.h\n'}
+[41.755583] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/push_button__rosidl_typesupport_connext_cpp.hpp\n'}
+[41.755695] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_connext_cpp.so\n'}
+[41.755829] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_connext_cpp.so" to ""\n'}
+[41.755997] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_c.so\n'}
+[41.756208] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_c.so" to ""\n'}
+[41.756367] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface\n'}
+[41.756554] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg\n'}
+[41.756717] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/push_button.hpp\n'}
+[41.756842] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail\n'}
+[41.757069] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__traits.hpp\n'}
+[41.757215] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__builder.hpp\n'}
+[41.757328] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__struct.hpp\n'}
+[41.757512] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface\n'}
+[41.757633] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg\n'}
+[41.757756] (push_button_interface) StdoutLine: {'line': b'-- Up-to-date: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail\n'}
+[41.757889] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__rosidl_typesupport_introspection_cpp.hpp\n'}
+[41.758081] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/include/push_button_interface/msg/detail/push_button__type_support.cpp\n'}
+[41.758252] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_introspection_cpp.so\n'}
+[41.758367] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[41.758491] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_cpp.so\n'}
+[41.758694] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__rosidl_typesupport_cpp.so" to ""\n'}
+[41.758832] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/environment/pythonpath.sh\n'}
+[41.758977] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/environment/pythonpath.dsv\n'}
+[41.759168] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/__init__.py\n'}
+[41.813731] (push_button_interface) StdoutLine: {'line': b"Compiling '/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/__init__.py'...\n"}
+[41.818471] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/msg\n'}
+[41.818793] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/msg/_push_button.py\n'}
+[41.818880] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/msg/__init__.py\n'}
+[41.818959] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/msg/_push_button_s.c\n'}
+[41.819068] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/push_button_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[41.819626] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/push_button_interface_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[41.819867] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/push_button_interface_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[41.820428] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/push_button_interface_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[41.820718] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/push_button_interface_s__rosidl_typesupport_connext_c.cpython-38-x86_64-linux-gnu.so\n'}
+[41.821361] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/push_button_interface_s__rosidl_typesupport_connext_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[41.821661] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/push_button_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[41.822206] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/python3.8/site-packages/push_button_interface/push_button_interface_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[41.822393] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__python.so\n'}
+[41.822717] (push_button_interface) StdoutLine: {'line': b'-- Set runtime path of "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/lib/libpush_button_interface__python.so" to ""\n'}
+[41.822975] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/msg/PushButton.idl\n'}
+[41.823146] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/msg/PushButton.msg\n'}
+[41.823296] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/ament_index/resource_index/package_run_dependencies/push_button_interface\n'}
+[41.823512] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/ament_index/resource_index/parent_prefix_path/push_button_interface\n'}
+[41.823691] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/environment/ament_prefix_path.sh\n'}
+[41.823872] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/environment/ament_prefix_path.dsv\n'}
+[41.824054] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/environment/path.sh\n'}
+[41.824232] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/environment/path.dsv\n'}
+[41.824409] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/local_setup.bash\n'}
+[41.824585] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/local_setup.sh\n'}
+[41.824769] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/local_setup.zsh\n'}
+[41.824990] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/local_setup.dsv\n'}
+[41.825161] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/package.dsv\n'}
+[41.825381] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/ament_index/resource_index/packages/push_button_interface\n'}
+[41.825601] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_generator_cExport.cmake\n'}
+[41.825780] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_generator_cExport-noconfig.cmake\n'}
+[41.826020] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_typesupport_introspection_cExport.cmake\n'}
+[41.826221] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[41.826501] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_typesupport_cExport.cmake\n'}
+[41.826691] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[41.826888] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_generator_cppExport.cmake\n'}
+[41.827139] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[41.827379] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[41.827631] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_typesupport_cppExport.cmake\n'}
+[41.827769] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interface__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[41.827902] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/rosidl_cmake-extras.cmake\n'}
+[41.828030] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[41.828149] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[41.828278] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[41.828401] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[41.828520] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[41.828645] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[41.828772] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interfaceConfig.cmake\n'}
+[41.828879] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/cmake/push_button_interfaceConfig-version.cmake\n'}
+[41.828978] (push_button_interface) StdoutLine: {'line': b'-- Installing: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface/share/push_button_interface/package.xml\n'}
+[41.831142] (push_button_interface) CommandEnded: {'returncode': 0}
+[41.836765] (-) TimerEvent: {}
+[41.937127] (-) TimerEvent: {}
+[42.002350] (push_button_interface) JobEnded: {'identifier': 'push_button_interface', 'rc': 0}
+[42.003154] (-) EventReactorShutdown: {}

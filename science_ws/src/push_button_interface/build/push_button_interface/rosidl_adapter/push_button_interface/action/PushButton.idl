@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from push_button_interface/action/PushButton.action
+// generated code does not contain a copyright notice
+
+
+module push_button_interface {
+  module action {
+    struct PushButton_Goal {
+      boolean msg;
+    };
+    struct PushButton_Result {
+      boolean result;
+    };
+    struct PushButton_Feedback {
+      boolean feedback;
+    };
+  };
+};

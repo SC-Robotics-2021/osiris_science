@@ -1,0 +1,33 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from push_button_interface:msg/PushButton.idl
+// generated code does not contain a copyright notice
+
+#ifndef __push_button_interface__msg__push_button__idl__
+#define __push_button_interface__msg__push_button__idl__
+
+
+module push_button_interface {
+
+module msg {
+
+module dds_ {
+
+
+struct PushButton_ {
+boolean collect_sample_;
+boolean platform_;
+boolean microscope_;
+boolean flashlight_;
+boolean uv_cam_;
+
+};
+
+
+};  // module dds_
+
+};  // module msg
+
+};  // module push_button_interface
+
+
+#endif  // __push_button_interface__msg__push_button__idl__

@@ -1,0 +1,175 @@
+// generated from rosidl_generator_dds_idl/resource/idl.idl.em
+// with input from push_button_interface:action/PushButton.idl
+// generated code does not contain a copyright notice
+#include "builtin_interfaces/msg/dds_connext/Time_.idl"
+#include "unique_identifier_msgs/msg/dds_connext/UUID_.idl"
+
+#ifndef __push_button_interface__action__push_button__idl__
+#define __push_button_interface__action__push_button__idl__
+
+
+module push_button_interface {
+
+module action {
+
+module dds_ {
+
+
+struct PushButton_Goal_ {
+boolean msg_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module push_button_interface
+
+
+module push_button_interface {
+
+module action {
+
+module dds_ {
+
+
+struct PushButton_SendGoal_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+push_button_interface::action::dds_::PushButton_Goal_ goal_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module push_button_interface
+
+
+module push_button_interface {
+
+module action {
+
+module dds_ {
+
+
+struct PushButton_SendGoal_Response_ {
+boolean accepted_;
+builtin_interfaces::msg::dds_::Time_ stamp_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module push_button_interface
+
+
+module push_button_interface {
+
+module action {
+
+module dds_ {
+
+
+struct PushButton_Result_ {
+boolean result_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module push_button_interface
+
+
+module push_button_interface {
+
+module action {
+
+module dds_ {
+
+
+struct PushButton_GetResult_Request_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module push_button_interface
+
+
+module push_button_interface {
+
+module action {
+
+module dds_ {
+
+
+struct PushButton_GetResult_Response_ {
+octet status_;
+push_button_interface::action::dds_::PushButton_Result_ result_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module push_button_interface
+
+
+module push_button_interface {
+
+module action {
+
+module dds_ {
+
+
+struct PushButton_Feedback_ {
+boolean feedback_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module push_button_interface
+
+
+module push_button_interface {
+
+module action {
+
+module dds_ {
+
+
+struct PushButton_FeedbackMessage_ {
+unique_identifier_msgs::msg::dds_::UUID_ goal_id_;
+push_button_interface::action::dds_::PushButton_Feedback_ feedback_;
+
+};
+
+
+};  // module dds_
+
+};  // module action
+
+};  // module push_button_interface
+
+
+#endif  // __push_button_interface__action__push_button__idl__

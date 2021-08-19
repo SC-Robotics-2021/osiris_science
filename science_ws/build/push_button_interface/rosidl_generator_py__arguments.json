@@ -1,0 +1,24 @@
+{
+  "package_name": "push_button_interface",
+  "output_dir": "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface",
+  "template_dir": "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource",
+  "idl_tuples": [
+    "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface:msg/PushButton.idl"
+  ],
+  "target_dependencies": [
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py",
+    "/home/parham/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_generator_py/__init__.py",
+    "/home/parham/ros2_foxy/ros2-linux/lib/python3.8/site-packages/rosidl_generator_py/generate_py_impl.py",
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_action_pkg_typesupport_entry_point.c.em",
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_action.py.em",
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl_pkg_typesupport_entry_point.c.em",
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl_support.c.em",
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_idl.py.em",
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg_pkg_typesupport_entry_point.c.em",
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg_support.c.em",
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_msg.py.em",
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_srv_pkg_typesupport_entry_point.c.em",
+    "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../resource/_srv.py.em",
+    "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface/msg/PushButton.idl"
+  ]
+}
