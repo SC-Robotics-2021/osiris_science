@@ -31,7 +31,7 @@ void PushButton__rosidl_typesupport_introspection_c__PushButton_fini_function(vo
   push_button_interface__msg__PushButton__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember PushButton__rosidl_typesupport_introspection_c__PushButton_message_member_array[5] = {
+static rosidl_typesupport_introspection_c__MessageMember PushButton__rosidl_typesupport_introspection_c__PushButton_message_member_array[8] = {
   {
     "collect_sample",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
@@ -48,14 +48,14 @@ static rosidl_typesupport_introspection_c__MessageMember PushButton__rosidl_type
     NULL  // resize(index) function pointer
   },
   {
-    "platform",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    "platform_height",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(push_button_interface__msg__PushButton, platform),  // bytes offset in struct
+    offsetof(push_button_interface__msg__PushButton, platform_height),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -93,14 +93,59 @@ static rosidl_typesupport_introspection_c__MessageMember PushButton__rosidl_type
     NULL  // resize(index) function pointer
   },
   {
-    "uv_cam",  // name
+    "brush",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(push_button_interface__msg__PushButton, uv_cam),  // bytes offset in struct
+    offsetof(push_button_interface__msg__PushButton, brush),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "water_pump",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(push_button_interface__msg__PushButton, water_pump),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "uv_camera",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(push_button_interface__msg__PushButton, uv_camera),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "pump_pos",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT16,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(push_button_interface__msg__PushButton, pump_pos),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -112,7 +157,7 @@ static rosidl_typesupport_introspection_c__MessageMember PushButton__rosidl_type
 static const rosidl_typesupport_introspection_c__MessageMembers PushButton__rosidl_typesupport_introspection_c__PushButton_message_members = {
   "push_button_interface__msg",  // message namespace
   "PushButton",  // message name
-  5,  // number of fields
+  8,  // number of fields
   sizeof(push_button_interface__msg__PushButton),
   PushButton__rosidl_typesupport_introspection_c__PushButton_message_member_array,  // message members
   PushButton__rosidl_typesupport_introspection_c__PushButton_init_function,  // function to initialize message memory (memory has to be allocated)

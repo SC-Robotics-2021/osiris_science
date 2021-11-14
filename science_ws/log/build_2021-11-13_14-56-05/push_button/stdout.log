@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/push_button/push_button.egg-info/PKG-INFO
+writing dependency_links to ../../build/push_button/push_button.egg-info/dependency_links.txt
+writing entry points to ../../build/push_button/push_button.egg-info/entry_points.txt
+writing requirements to ../../build/push_button/push_button.egg-info/requires.txt
+writing top-level names to ../../build/push_button/push_button.egg-info/top_level.txt
+reading manifest file '../../build/push_button/push_button.egg-info/SOURCES.txt'
+writing manifest file '../../build/push_button/push_button.egg-info/SOURCES.txt'
+running build
+running build_py
+copying push_button/button_subscriber.py -> /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/build/lib/push_button
+running install
+running install_lib
+copying /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/build/lib/push_button/button_subscriber.py -> /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button
+byte-compiling /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button/button_subscriber.py to button_subscriber.cpython-38.pyc
+running install_data
+running install_egg_info
+removing '/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/push_button/push_button.egg-info to /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button-0.0.0-py3.8.egg-info
+running install_scripts
+writing list of installed files to '/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/install.log'

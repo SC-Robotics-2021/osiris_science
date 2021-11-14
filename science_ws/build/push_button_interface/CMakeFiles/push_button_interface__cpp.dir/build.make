@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface
+CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface
+CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface
 
 # Utility rule file for push_button_interface__cpp.
 
@@ -75,8 +75,8 @@ rosidl_generator_cpp/push_button_interface/msg/push_button.hpp: /home/parham/ros
 rosidl_generator_cpp/push_button_interface/msg/push_button.hpp: /home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/push_button_interface/msg/push_button.hpp: /home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/push_button_interface/msg/push_button.hpp: rosidl_adapter/push_button_interface/msg/PushButton.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/push_button_interface/msg/detail/push_button__builder.hpp: rosidl_generator_cpp/push_button_interface/msg/push_button.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/push_button_interface/msg/detail/push_button__builder.hpp
@@ -106,6 +106,6 @@ CMakeFiles/push_button_interface__cpp.dir/clean:
 .PHONY : CMakeFiles/push_button_interface__cpp.dir/clean
 
 CMakeFiles/push_button_interface__cpp.dir/depend:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/push_button_interface__cpp.dir/depend
 

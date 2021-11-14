@@ -7,8 +7,8 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
-  "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/3.16.3/CMakeSystem.cmake"
+  "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/3.16.3/CMakeCXXCompiler.cmake"
+  "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/3.16.3/CMakeSystem.cmake"
   "../CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"

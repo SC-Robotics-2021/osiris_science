@@ -59,13 +59,13 @@ bool push_button_interface__msg__push_button__convert_from_py(PyObject * _pymsg,
     ros_message->collect_sample = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // platform
-    PyObject * field = PyObject_GetAttrString(_pymsg, "platform");
+  {  // platform_height
+    PyObject * field = PyObject_GetAttrString(_pymsg, "platform_height");
     if (!field) {
       return false;
     }
-    assert(PyBool_Check(field));
-    ros_message->platform = (Py_True == field);
+    assert(PyLong_Check(field));
+    ros_message->platform_height = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
   {  // microscope
@@ -86,13 +86,40 @@ bool push_button_interface__msg__push_button__convert_from_py(PyObject * _pymsg,
     ros_message->flashlight = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // uv_cam
-    PyObject * field = PyObject_GetAttrString(_pymsg, "uv_cam");
+  {  // brush
+    PyObject * field = PyObject_GetAttrString(_pymsg, "brush");
     if (!field) {
       return false;
     }
     assert(PyBool_Check(field));
-    ros_message->uv_cam = (Py_True == field);
+    ros_message->brush = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // water_pump
+    PyObject * field = PyObject_GetAttrString(_pymsg, "water_pump");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->water_pump = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // uv_camera
+    PyObject * field = PyObject_GetAttrString(_pymsg, "uv_camera");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->uv_camera = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // pump_pos
+    PyObject * field = PyObject_GetAttrString(_pymsg, "pump_pos");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->pump_pos = (int16_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
 
@@ -128,11 +155,11 @@ PyObject * push_button_interface__msg__push_button__convert_to_py(void * raw_ros
       }
     }
   }
-  {  // platform
+  {  // platform_height
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->platform ? 1 : 0);
+    field = PyLong_FromLong(ros_message->platform_height);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "platform", field);
+      int rc = PyObject_SetAttrString(_pymessage, "platform_height", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -161,11 +188,44 @@ PyObject * push_button_interface__msg__push_button__convert_to_py(void * raw_ros
       }
     }
   }
-  {  // uv_cam
+  {  // brush
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->uv_cam ? 1 : 0);
+    field = PyBool_FromLong(ros_message->brush ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "uv_cam", field);
+      int rc = PyObject_SetAttrString(_pymessage, "brush", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // water_pump
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->water_pump ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "water_pump", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // uv_camera
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->uv_camera ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "uv_camera", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // pump_pos
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->pump_pos);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "pump_pos", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

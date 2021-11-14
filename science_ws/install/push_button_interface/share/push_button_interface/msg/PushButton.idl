@@ -8,13 +8,19 @@ module push_button_interface {
     struct PushButton {
       boolean collect_sample;
 
-      boolean platform;
+      int32 platform_height;
 
       boolean microscope;
 
       boolean flashlight;
 
-      boolean uv_cam;
+      boolean brush;
+
+      boolean water_pump;
+
+      boolean uv_camera;
+
+      int16 pump_pos;
     };
   };
 };

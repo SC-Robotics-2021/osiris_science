@@ -21,10 +21,13 @@ extern "C"
 typedef struct push_button_interface__msg__PushButton
 {
   bool collect_sample;
-  bool platform;
+  int32_t platform_height;
   bool microscope;
   bool flashlight;
-  bool uv_cam;
+  bool brush;
+  bool water_pump;
+  bool uv_camera;
+  int16_t pump_pos;
 } push_button_interface__msg__PushButton;
 
 // Struct for a sequence of push_button_interface__msg__PushButton.

@@ -54,26 +54,35 @@ class PushButton(metaclass=Metaclass_PushButton):
 
     __slots__ = [
         '_collect_sample',
-        '_platform',
+        '_platform_height',
         '_microscope',
         '_flashlight',
-        '_uv_cam',
+        '_brush',
+        '_water_pump',
+        '_uv_camera',
+        '_pump_pos',
     ]
 
     _fields_and_field_types = {
         'collect_sample': 'boolean',
-        'platform': 'boolean',
+        'platform_height': 'int32',
         'microscope': 'boolean',
         'flashlight': 'boolean',
-        'uv_cam': 'boolean',
+        'brush': 'boolean',
+        'water_pump': 'boolean',
+        'uv_camera': 'boolean',
+        'pump_pos': 'int16',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
         rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int16'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -81,10 +90,13 @@ class PushButton(metaclass=Metaclass_PushButton):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.collect_sample = kwargs.get('collect_sample', bool())
-        self.platform = kwargs.get('platform', bool())
+        self.platform_height = kwargs.get('platform_height', int())
         self.microscope = kwargs.get('microscope', bool())
         self.flashlight = kwargs.get('flashlight', bool())
-        self.uv_cam = kwargs.get('uv_cam', bool())
+        self.brush = kwargs.get('brush', bool())
+        self.water_pump = kwargs.get('water_pump', bool())
+        self.uv_camera = kwargs.get('uv_camera', bool())
+        self.pump_pos = kwargs.get('pump_pos', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -117,13 +129,19 @@ class PushButton(metaclass=Metaclass_PushButton):
             return False
         if self.collect_sample != other.collect_sample:
             return False
-        if self.platform != other.platform:
+        if self.platform_height != other.platform_height:
             return False
         if self.microscope != other.microscope:
             return False
         if self.flashlight != other.flashlight:
             return False
-        if self.uv_cam != other.uv_cam:
+        if self.brush != other.brush:
+            return False
+        if self.water_pump != other.water_pump:
+            return False
+        if self.uv_camera != other.uv_camera:
+            return False
+        if self.pump_pos != other.pump_pos:
             return False
         return True
 
@@ -146,17 +164,19 @@ class PushButton(metaclass=Metaclass_PushButton):
         self._collect_sample = value
 
     @property
-    def platform(self):
-        """Message field 'platform'."""
-        return self._platform
+    def platform_height(self):
+        """Message field 'platform_height'."""
+        return self._platform_height
 
-    @platform.setter
-    def platform(self, value):
+    @platform_height.setter
+    def platform_height(self, value):
         if __debug__:
             assert \
-                isinstance(value, bool), \
-                "The 'platform' field must be of type 'bool'"
-        self._platform = value
+                isinstance(value, int), \
+                "The 'platform_height' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'platform_height' field must be an integer in [-2147483648, 2147483647]"
+        self._platform_height = value
 
     @property
     def microscope(self):
@@ -185,14 +205,55 @@ class PushButton(metaclass=Metaclass_PushButton):
         self._flashlight = value
 
     @property
-    def uv_cam(self):
-        """Message field 'uv_cam'."""
-        return self._uv_cam
+    def brush(self):
+        """Message field 'brush'."""
+        return self._brush
 
-    @uv_cam.setter
-    def uv_cam(self, value):
+    @brush.setter
+    def brush(self, value):
         if __debug__:
             assert \
                 isinstance(value, bool), \
-                "The 'uv_cam' field must be of type 'bool'"
-        self._uv_cam = value
+                "The 'brush' field must be of type 'bool'"
+        self._brush = value
+
+    @property
+    def water_pump(self):
+        """Message field 'water_pump'."""
+        return self._water_pump
+
+    @water_pump.setter
+    def water_pump(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'water_pump' field must be of type 'bool'"
+        self._water_pump = value
+
+    @property
+    def uv_camera(self):
+        """Message field 'uv_camera'."""
+        return self._uv_camera
+
+    @uv_camera.setter
+    def uv_camera(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'uv_camera' field must be of type 'bool'"
+        self._uv_camera = value
+
+    @property
+    def pump_pos(self):
+        """Message field 'pump_pos'."""
+        return self._pump_pos
+
+    @pump_pos.setter
+    def pump_pos(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'pump_pos' field must be of type 'int'"
+            assert value >= -32768 and value < 32768, \
+                "The 'pump_pos' field must be an integer in [-32768, 32767]"
+        self._pump_pos = value

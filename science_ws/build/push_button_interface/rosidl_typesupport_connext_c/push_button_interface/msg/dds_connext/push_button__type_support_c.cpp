@@ -64,9 +64,9 @@ _PushButton__convert_ros_to_dds(const void * untyped_ros_message, void * untyped
   {
     dds_message->collect_sample_ = ros_message->collect_sample;
   }
-  // Member name: platform
+  // Member name: platform_height
   {
-    dds_message->platform_ = ros_message->platform;
+    dds_message->platform_height_ = ros_message->platform_height;
   }
   // Member name: microscope
   {
@@ -76,9 +76,21 @@ _PushButton__convert_ros_to_dds(const void * untyped_ros_message, void * untyped
   {
     dds_message->flashlight_ = ros_message->flashlight;
   }
-  // Member name: uv_cam
+  // Member name: brush
   {
-    dds_message->uv_cam_ = ros_message->uv_cam;
+    dds_message->brush_ = ros_message->brush;
+  }
+  // Member name: water_pump
+  {
+    dds_message->water_pump_ = ros_message->water_pump;
+  }
+  // Member name: uv_camera
+  {
+    dds_message->uv_camera_ = ros_message->uv_camera;
+  }
+  // Member name: pump_pos
+  {
+    dds_message->pump_pos_ = ros_message->pump_pos;
   }
   return true;
 }
@@ -102,9 +114,9 @@ _PushButton__convert_dds_to_ros(const void * untyped_dds_message, void * untyped
   {
     ros_message->collect_sample = dds_message->collect_sample_ == static_cast<DDS_Boolean>(true);
   }
-  // Member name: platform
+  // Member name: platform_height
   {
-    ros_message->platform = dds_message->platform_ == static_cast<DDS_Boolean>(true);
+    ros_message->platform_height = dds_message->platform_height_;
   }
   // Member name: microscope
   {
@@ -114,9 +126,21 @@ _PushButton__convert_dds_to_ros(const void * untyped_dds_message, void * untyped
   {
     ros_message->flashlight = dds_message->flashlight_ == static_cast<DDS_Boolean>(true);
   }
-  // Member name: uv_cam
+  // Member name: brush
   {
-    ros_message->uv_cam = dds_message->uv_cam_ == static_cast<DDS_Boolean>(true);
+    ros_message->brush = dds_message->brush_ == static_cast<DDS_Boolean>(true);
+  }
+  // Member name: water_pump
+  {
+    ros_message->water_pump = dds_message->water_pump_ == static_cast<DDS_Boolean>(true);
+  }
+  // Member name: uv_camera
+  {
+    ros_message->uv_camera = dds_message->uv_camera_ == static_cast<DDS_Boolean>(true);
+  }
+  // Member name: pump_pos
+  {
+    ros_message->pump_pos = dds_message->pump_pos_;
   }
   return true;
 }

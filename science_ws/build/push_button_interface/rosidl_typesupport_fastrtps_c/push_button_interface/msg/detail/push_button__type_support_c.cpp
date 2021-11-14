@@ -54,9 +54,9 @@ static bool _PushButton__cdr_serialize(
     cdr << (ros_message->collect_sample ? true : false);
   }
 
-  // Field name: platform
+  // Field name: platform_height
   {
-    cdr << (ros_message->platform ? true : false);
+    cdr << ros_message->platform_height;
   }
 
   // Field name: microscope
@@ -69,9 +69,24 @@ static bool _PushButton__cdr_serialize(
     cdr << (ros_message->flashlight ? true : false);
   }
 
-  // Field name: uv_cam
+  // Field name: brush
   {
-    cdr << (ros_message->uv_cam ? true : false);
+    cdr << (ros_message->brush ? true : false);
+  }
+
+  // Field name: water_pump
+  {
+    cdr << (ros_message->water_pump ? true : false);
+  }
+
+  // Field name: uv_camera
+  {
+    cdr << (ros_message->uv_camera ? true : false);
+  }
+
+  // Field name: pump_pos
+  {
+    cdr << ros_message->pump_pos;
   }
 
   return true;
@@ -93,11 +108,9 @@ static bool _PushButton__cdr_deserialize(
     ros_message->collect_sample = tmp ? true : false;
   }
 
-  // Field name: platform
+  // Field name: platform_height
   {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->platform = tmp ? true : false;
+    cdr >> ros_message->platform_height;
   }
 
   // Field name: microscope
@@ -114,11 +127,30 @@ static bool _PushButton__cdr_deserialize(
     ros_message->flashlight = tmp ? true : false;
   }
 
-  // Field name: uv_cam
+  // Field name: brush
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message->uv_cam = tmp ? true : false;
+    ros_message->brush = tmp ? true : false;
+  }
+
+  // Field name: water_pump
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->water_pump = tmp ? true : false;
+  }
+
+  // Field name: uv_camera
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->uv_camera = tmp ? true : false;
+  }
+
+  // Field name: pump_pos
+  {
+    cdr >> ros_message->pump_pos;
   }
 
   return true;
@@ -144,9 +176,9 @@ size_t get_serialized_size_push_button_interface__msg__PushButton(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name platform
+  // field.name platform_height
   {
-    size_t item_size = sizeof(ros_message->platform);
+    size_t item_size = sizeof(ros_message->platform_height);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -162,9 +194,27 @@ size_t get_serialized_size_push_button_interface__msg__PushButton(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name uv_cam
+  // field.name brush
   {
-    size_t item_size = sizeof(ros_message->uv_cam);
+    size_t item_size = sizeof(ros_message->brush);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name water_pump
+  {
+    size_t item_size = sizeof(ros_message->water_pump);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name uv_camera
+  {
+    size_t item_size = sizeof(ros_message->uv_camera);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name pump_pos
+  {
+    size_t item_size = sizeof(ros_message->pump_pos);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -198,11 +248,12 @@ size_t max_serialized_size_push_button_interface__msg__PushButton(
 
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // member: platform
+  // member: platform_height
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // member: microscope
   {
@@ -216,11 +267,30 @@ size_t max_serialized_size_push_button_interface__msg__PushButton(
 
     current_alignment += array_size * sizeof(uint8_t);
   }
-  // member: uv_cam
+  // member: brush
   {
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: water_pump
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: uv_camera
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+  // member: pump_pos
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
 
   return current_alignment - initial_alignment;

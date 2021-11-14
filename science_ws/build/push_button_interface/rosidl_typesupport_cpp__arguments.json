@@ -1,9 +1,9 @@
 {
   "package_name": "push_button_interface",
-  "output_dir": "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_cpp/push_button_interface",
+  "output_dir": "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_cpp/push_button_interface",
   "template_dir": "/home/parham/ros2_foxy/ros2-linux/share/rosidl_typesupport_cpp/resource",
   "idl_tuples": [
-    "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface:msg/PushButton.idl"
+    "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface:msg/PushButton.idl"
   ],
   "target_dependencies": [
     "/home/parham/ros2_foxy/ros2-linux/lib/rosidl_typesupport_cpp/rosidl_typesupport_cpp",
@@ -12,6 +12,6 @@
     "/home/parham/ros2_foxy/ros2-linux/share/rosidl_typesupport_cpp/resource/idl__type_support.cpp.em",
     "/home/parham/ros2_foxy/ros2-linux/share/rosidl_typesupport_cpp/resource/msg__type_support.cpp.em",
     "/home/parham/ros2_foxy/ros2-linux/share/rosidl_typesupport_cpp/resource/srv__type_support.cpp.em",
-    "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface/msg/PushButton.idl"
+    "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface/msg/PushButton.idl"
   ]
 }

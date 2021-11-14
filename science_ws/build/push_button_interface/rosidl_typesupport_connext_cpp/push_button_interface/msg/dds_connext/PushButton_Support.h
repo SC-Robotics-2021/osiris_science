@@ -8,8 +8,8 @@ For more information, type 'rtiddsgen -help' at a command shell
 or consult the RTI Connext manual.
 */
 
-#ifndef PushButton_Support_1906255193_h
-#define PushButton_Support_1906255193_h
+#ifndef PushButton_Support_1906255254_h
+#define PushButton_Support_1906255254_h
 
 /* Uses */
 #include "PushButton_.h"
@@ -64,5 +64,5 @@ namespace push_button_interface {
     } /* namespace msg  */
 } /* namespace push_button_interface  */
 
-#endif  /* PushButton_Support_1906255193_h */
+#endif  /* PushButton_Support_1906255254_h */
 

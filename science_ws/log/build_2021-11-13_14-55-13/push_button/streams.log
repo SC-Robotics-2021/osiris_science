@@ -1,0 +1,27 @@
+[0.453s] Invoking command in '/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button': PYTHONPATH=/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/push_button build --build-base /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/build install --prefix /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button --record /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/install.log --single-version-externally-managed
+[0.803s] running egg_info
+[0.804s] writing ../../build/push_button/push_button.egg-info/PKG-INFO
+[0.804s] writing dependency_links to ../../build/push_button/push_button.egg-info/dependency_links.txt
+[0.804s] writing entry points to ../../build/push_button/push_button.egg-info/entry_points.txt
+[0.804s] writing requirements to ../../build/push_button/push_button.egg-info/requires.txt
+[0.804s] writing top-level names to ../../build/push_button/push_button.egg-info/top_level.txt
+[0.846s] reading manifest file '../../build/push_button/push_button.egg-info/SOURCES.txt'
+[0.848s] writing manifest file '../../build/push_button/push_button.egg-info/SOURCES.txt'
+[0.848s] running build
+[0.848s] running build_py
+[0.848s] copying push_button/button_publisher.py -> /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/build/lib/push_button
+[0.849s] copying push_button/button_subscriber.py -> /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/build/lib/push_button
+[0.849s] running install
+[0.850s] running install_lib
+[0.852s] copying /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/build/lib/push_button/button_publisher.py -> /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button
+[0.852s] copying /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/build/lib/push_button/button_subscriber.py -> /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button
+[0.853s] byte-compiling /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button/button_publisher.py to button_publisher.cpython-38.pyc
+[0.856s] byte-compiling /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button/button_subscriber.py to button_subscriber.cpython-38.pyc
+[0.857s] Sorry: IndentationError: unexpected indent (button_subscriber.py, line 20)
+[0.857s] running install_data
+[0.858s] running install_egg_info
+[0.860s] removing '/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button-0.0.0-py3.8.egg-info' (and everything under it)
+[0.860s] Copying ../../build/push_button/push_button.egg-info to /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages/push_button-0.0.0-py3.8.egg-info
+[0.862s] running install_scripts
+[0.890s] writing list of installed files to '/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/install.log'
+[0.929s] Invoked command in '/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button' returned '0': PYTHONPATH=/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/push_button build --build-base /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/build install --prefix /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button --record /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button/install.log --single-version-externally-managed

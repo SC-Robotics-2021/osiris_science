@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface
+CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface
+CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface
 
 # Utility rule file for push_button_interface__dds_connext_idl.
 
@@ -63,8 +63,8 @@ rosidl_generator_dds_idl/push_button_interface/msg/dds_connext/PushButton_.idl: 
 rosidl_generator_dds_idl/push_button_interface/msg/dds_connext/PushButton_.idl: /home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_dds_idl/resource/msg.idl.em
 rosidl_generator_dds_idl/push_button_interface/msg/dds_connext/PushButton_.idl: /home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_dds_idl/resource/srv.idl.em
 rosidl_generator_dds_idl/push_button_interface/msg/dds_connext/PushButton_.idl: rosidl_adapter/push_button_interface/msg/PushButton.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating DDS interfaces"
-	/usr/bin/python3 /home/parham/ros2_foxy/ros2-linux/lib/rosidl_generator_dds_idl/rosidl_generator_dds_idl --additional-service-templates --generator-arguments-file /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_dds_idl__dds_connext__arguments.json --subfolders dds_connext --extension
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating DDS interfaces"
+	/usr/bin/python3 /home/parham/ros2_foxy/ros2-linux/lib/rosidl_generator_dds_idl/rosidl_generator_dds_idl --additional-service-templates --generator-arguments-file /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_dds_idl__dds_connext__arguments.json --subfolders dds_connext --extension
 
 push_button_interface__dds_connext_idl: CMakeFiles/push_button_interface__dds_connext_idl
 push_button_interface__dds_connext_idl: rosidl_generator_dds_idl/push_button_interface/msg/dds_connext/PushButton_.idl
@@ -82,6 +82,6 @@ CMakeFiles/push_button_interface__dds_connext_idl.dir/clean:
 .PHONY : CMakeFiles/push_button_interface__dds_connext_idl.dir/clean
 
 CMakeFiles/push_button_interface__dds_connext_idl.dir/depend:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__dds_connext_idl.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__dds_connext_idl.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/push_button_interface__dds_connext_idl.dir/depend
 

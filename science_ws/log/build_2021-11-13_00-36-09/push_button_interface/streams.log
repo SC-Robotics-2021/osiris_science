@@ -1,0 +1,63 @@
+[0.296s] Invoking command in '/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button:/home/parham/Dev/ros2_foxy/science/science-gui/install/push_button:/home/parham/ws_moveit2/install/ros2controlcli:/opt/ros/foxy /usr/bin/cmake /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface -DCMAKE_INSTALL_PREFIX=/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button_interface
+[0.324s] -- Found ament_cmake: 0.9.8 (/home/parham/ros2_foxy/ros2-linux/share/ament_cmake/cmake)
+[0.352s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.352s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.701s] -- Found ament_lint_auto: 0.9.6 (/home/parham/ros2_foxy/ros2-linux/share/ament_lint_auto/cmake)
+[0.776s] -- Found rosidl_default_generators: 1.0.0 (/home/parham/ros2_foxy/ros2-linux/share/rosidl_default_generators/cmake)
+[0.794s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_connext_c
+[0.799s] -- Found rosidl_adapter: 1.2.0 (/home/parham/ros2_foxy/ros2-linux/share/rosidl_adapter/cmake)
+[0.948s] -- Found RTI Connext: /opt/rti.com/rti_connext_dds-5.3.1
+[1.342s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp;rosidl_typesupport_connext_cpp
+[1.396s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[1.586s] CMake Error at /home/parham/ros2_foxy/ros2-linux/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[1.586s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name
+[1.586s]   push_button_interface --arguments-file
+[1.587s]   /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_adapter__arguments__push_button_interface.json
+[1.587s]   --output-dir
+[1.587s]   /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface
+[1.587s]   --output-file
+[1.587s]   /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface.idls)
+[1.587s]   returned error code 1:
+[1.587s] 
+[1.587s]   Error processing 'int pump_pos' of 'push_button_interface/PushButton':
+[1.587s]   ''int' is an invalid message name.  It should have the pattern
+[1.587s]   '^[A-Z][A-Za-z0-9]*$''
+[1.587s] 
+[1.587s]   /usr/lib/python3/dist-packages/requests/__init__.py:89:
+[1.587s]   RequestsDependencyWarning: urllib3 (1.26.7) or chardet (3.0.4) doesn't
+[1.587s]   match a supported version!
+[1.587s] 
+[1.587s]     warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+[1.588s] 
+[1.588s]   Traceback (most recent call last):
+[1.588s] 
+[1.588s]     File "/usr/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[1.588s]       return _run_code(code, main_globals, None,
+[1.588s]     File "/usr/lib/python3.8/runpy.py", line 87, in _run_code
+[1.588s]       exec(code, run_globals)
+[1.588s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.588s]       sys.exit(main())
+[1.588s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.588s]       abs_idl_file = convert_to_idl(
+[1.588s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[1.588s]       return convert_msg_to_idl(
+[1.588s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[1.588s]       msg = parse_message_string(package_name, input_file.stem, content)
+[1.588s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 516, in parse_message_string
+[1.588s]       Type(type_string, context_package_name=pkg_name),
+[1.589s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 276, in __init__
+[1.589s]       super(Type, self).__init__(
+[1.589s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 204, in __init__
+[1.589s]       raise InvalidResourceName(
+[1.589s] 
+[1.589s]   rosidl_adapter.parser.InvalidResourceName: 'int' is an invalid message
+[1.589s]   name.  It should have the pattern '^[A-Z][A-Za-z0-9]*$'
+[1.589s] 
+[1.589s] Call Stack (most recent call first):
+[1.589s]   /home/parham/ros2_foxy/ros2-linux/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.589s]   CMakeLists.txt:37 (rosidl_generate_interfaces)
+[1.589s] 
+[1.589s] 
+[1.589s] -- Configuring incomplete, errors occurred!
+[1.589s] See also "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/CMakeOutput.log".
+[1.742s] Invoked command in '/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button:/home/parham/Dev/ros2_foxy/science/science-gui/install/push_button:/home/parham/ws_moveit2/install/ros2controlcli:/opt/ros/foxy /usr/bin/cmake /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface -DCMAKE_INSTALL_PREFIX=/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button_interface

@@ -1,3 +1,0 @@
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface/build/push_button_interface/connext_cmake_module/check_abi/build/CMakeFiles/rebuild_cache.dir
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface/build/push_button_interface/connext_cmake_module/check_abi/build/CMakeFiles/edit_cache.dir
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface/build/push_button_interface/connext_cmake_module/check_abi/build/CMakeFiles/exe.dir

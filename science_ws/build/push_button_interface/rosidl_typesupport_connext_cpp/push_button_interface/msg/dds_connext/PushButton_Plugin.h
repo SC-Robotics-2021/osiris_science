@@ -9,8 +9,8 @@ For more information, type 'rtiddsgen -help' at a command shell
 or consult the RTI Connext manual.
 */
 
-#ifndef PushButton_Plugin_1906255193_h
-#define PushButton_Plugin_1906255193_h
+#ifndef PushButton_Plugin_1906255254_h
+#define PushButton_Plugin_1906255254_h
 
 #include "PushButton_.h"
 
@@ -281,5 +281,5 @@ namespace push_button_interface {
 #define NDDSUSERDllExport
 #endif
 
-#endif /* PushButton_Plugin_1906255193_h */
+#endif /* PushButton_Plugin_1906255254_h */
 

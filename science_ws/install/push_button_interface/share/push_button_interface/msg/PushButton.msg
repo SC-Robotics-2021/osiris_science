@@ -1,5 +1,8 @@
 bool collect_sample
-bool platform
+int32 platform_height
 bool microscope
 bool flashlight
-bool uv_cam
+bool brush
+bool water_pump
+bool uv_camera
+int16 pump_pos

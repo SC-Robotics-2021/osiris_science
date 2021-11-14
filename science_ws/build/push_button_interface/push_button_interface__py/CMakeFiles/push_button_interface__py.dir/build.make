@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface
+CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface
+CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface
 
 # Utility rule file for push_button_interface__py.
 
@@ -76,8 +76,8 @@ rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typ
 rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_fastrtps_c.c: /home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/push_button_interface/msg/PushButton.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/push_button_interface__py && /usr/bin/python3 /home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_connext_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/push_button_interface__py && /usr/bin/python3 /home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_connext_c;rosidl_typesupport_c"
 
 rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_introspection_c.c
@@ -115,10 +115,10 @@ push_button_interface__py/CMakeFiles/push_button_interface__py.dir/build: push_b
 .PHONY : push_button_interface__py/CMakeFiles/push_button_interface__py.dir/build
 
 push_button_interface__py/CMakeFiles/push_button_interface__py.dir/clean:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/push_button_interface__py && $(CMAKE_COMMAND) -P CMakeFiles/push_button_interface__py.dir/cmake_clean.cmake
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/push_button_interface__py && $(CMAKE_COMMAND) -P CMakeFiles/push_button_interface__py.dir/cmake_clean.cmake
 .PHONY : push_button_interface__py/CMakeFiles/push_button_interface__py.dir/clean
 
 push_button_interface__py/CMakeFiles/push_button_interface__py.dir/depend:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/push_button_interface__py /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/push_button_interface__py /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/push_button_interface__py/CMakeFiles/push_button_interface__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/push_button_interface__py /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/push_button_interface__py /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/push_button_interface__py/CMakeFiles/push_button_interface__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : push_button_interface__py/CMakeFiles/push_button_interface__py.dir/depend
 

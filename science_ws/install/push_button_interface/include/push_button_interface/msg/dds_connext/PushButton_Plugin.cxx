@@ -170,8 +170,8 @@ namespace push_button_interface {
                 RTICdrType_printBoolean(
                     &sample->collect_sample_, "collect_sample_", indent_level + 1);    
 
-                RTICdrType_printBoolean(
-                    &sample->platform_, "platform_", indent_level + 1);    
+                RTICdrType_printLong(
+                    &sample->platform_height_, "platform_height_", indent_level + 1);    
 
                 RTICdrType_printBoolean(
                     &sample->microscope_, "microscope_", indent_level + 1);    
@@ -180,7 +180,16 @@ namespace push_button_interface {
                     &sample->flashlight_, "flashlight_", indent_level + 1);    
 
                 RTICdrType_printBoolean(
-                    &sample->uv_cam_, "uv_cam_", indent_level + 1);    
+                    &sample->brush_, "brush_", indent_level + 1);    
+
+                RTICdrType_printBoolean(
+                    &sample->water_pump_, "water_pump_", indent_level + 1);    
+
+                RTICdrType_printBoolean(
+                    &sample->uv_camera_, "uv_camera_", indent_level + 1);    
+
+                RTICdrType_printShort(
+                    &sample->pump_pos_, "pump_pos_", indent_level + 1);    
 
             }
 
@@ -335,8 +344,8 @@ namespace push_button_interface {
                         return RTI_FALSE;
                     }
 
-                    if (!RTICdrStream_serializeBoolean(
-                        stream, &sample->platform_)) {
+                    if (!RTICdrStream_serializeLong(
+                        stream, &sample->platform_height_)) {
                         return RTI_FALSE;
                     }
 
@@ -351,7 +360,22 @@ namespace push_button_interface {
                     }
 
                     if (!RTICdrStream_serializeBoolean(
-                        stream, &sample->uv_cam_)) {
+                        stream, &sample->brush_)) {
+                        return RTI_FALSE;
+                    }
+
+                    if (!RTICdrStream_serializeBoolean(
+                        stream, &sample->water_pump_)) {
+                        return RTI_FALSE;
+                    }
+
+                    if (!RTICdrStream_serializeBoolean(
+                        stream, &sample->uv_camera_)) {
+                        return RTI_FALSE;
+                    }
+
+                    if (!RTICdrStream_serializeShort(
+                        stream, &sample->pump_pos_)) {
                         return RTI_FALSE;
                     }
 
@@ -398,8 +422,8 @@ namespace push_button_interface {
                             stream, &sample->collect_sample_)) {
                             goto fin; 
                         }
-                        if (!RTICdrStream_deserializeBoolean(
-                            stream, &sample->platform_)) {
+                        if (!RTICdrStream_deserializeLong(
+                            stream, &sample->platform_height_)) {
                             goto fin; 
                         }
                         if (!RTICdrStream_deserializeBoolean(
@@ -411,7 +435,19 @@ namespace push_button_interface {
                             goto fin; 
                         }
                         if (!RTICdrStream_deserializeBoolean(
-                            stream, &sample->uv_cam_)) {
+                            stream, &sample->brush_)) {
+                            goto fin; 
+                        }
+                        if (!RTICdrStream_deserializeBoolean(
+                            stream, &sample->water_pump_)) {
+                            goto fin; 
+                        }
+                        if (!RTICdrStream_deserializeBoolean(
+                            stream, &sample->uv_camera_)) {
+                            goto fin; 
+                        }
+                        if (!RTICdrStream_deserializeShort(
+                            stream, &sample->pump_pos_)) {
                             goto fin; 
                         }
                     }
@@ -648,7 +684,7 @@ namespace push_button_interface {
                     if (!RTICdrStream_skipBoolean (stream)) {
                         goto fin; 
                     }
-                    if (!RTICdrStream_skipBoolean (stream)) {
+                    if (!RTICdrStream_skipLong (stream)) {
                         goto fin; 
                     }
                     if (!RTICdrStream_skipBoolean (stream)) {
@@ -658,6 +694,15 @@ namespace push_button_interface {
                         goto fin; 
                     }
                     if (!RTICdrStream_skipBoolean (stream)) {
+                        goto fin; 
+                    }
+                    if (!RTICdrStream_skipBoolean (stream)) {
+                        goto fin; 
+                    }
+                    if (!RTICdrStream_skipBoolean (stream)) {
+                        goto fin; 
+                    }
+                    if (!RTICdrStream_skipShort (stream)) {
                         goto fin; 
                     }
                 }
@@ -706,7 +751,7 @@ namespace push_button_interface {
                 current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
                     current_alignment);
 
-                current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
+                current_alignment +=RTICdrType_getLongMaxSizeSerialized(
                     current_alignment);
 
                 current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
@@ -716,6 +761,15 @@ namespace push_button_interface {
                     current_alignment);
 
                 current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
+                    current_alignment);
+
+                current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
+                    current_alignment);
+
+                current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
+                    current_alignment);
+
+                current_alignment +=RTICdrType_getShortMaxSizeSerialized(
                     current_alignment);
 
                 if (include_encapsulation) {
@@ -771,13 +825,19 @@ namespace push_button_interface {
 
                 current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
                     current_alignment);
-                current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
+                current_alignment +=RTICdrType_getLongMaxSizeSerialized(
                     current_alignment);
                 current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
                     current_alignment);
                 current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
                     current_alignment);
                 current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
+                    current_alignment);
+                current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
+                    current_alignment);
+                current_alignment +=RTICdrType_getBooleanMaxSizeSerialized(
+                    current_alignment);
+                current_alignment +=RTICdrType_getShortMaxSizeSerialized(
                     current_alignment);
 
                 if (include_encapsulation) {
@@ -834,7 +894,7 @@ namespace push_button_interface {
                     PRESTypePluginDefaultEndpointData_getAlignment(
                         endpoint_data, current_alignment));
 
-                current_alignment += RTICdrType_getBooleanMaxSizeSerialized(
+                current_alignment += RTICdrType_getLongMaxSizeSerialized(
                     PRESTypePluginDefaultEndpointData_getAlignment(
                         endpoint_data, current_alignment));
 
@@ -847,6 +907,18 @@ namespace push_button_interface {
                         endpoint_data, current_alignment));
 
                 current_alignment += RTICdrType_getBooleanMaxSizeSerialized(
+                    PRESTypePluginDefaultEndpointData_getAlignment(
+                        endpoint_data, current_alignment));
+
+                current_alignment += RTICdrType_getBooleanMaxSizeSerialized(
+                    PRESTypePluginDefaultEndpointData_getAlignment(
+                        endpoint_data, current_alignment));
+
+                current_alignment += RTICdrType_getBooleanMaxSizeSerialized(
+                    PRESTypePluginDefaultEndpointData_getAlignment(
+                        endpoint_data, current_alignment));
+
+                current_alignment += RTICdrType_getShortMaxSizeSerialized(
                     PRESTypePluginDefaultEndpointData_getAlignment(
                         endpoint_data, current_alignment));
 

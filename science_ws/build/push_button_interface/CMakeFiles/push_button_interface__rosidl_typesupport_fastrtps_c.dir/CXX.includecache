@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button__type_support_c.cpp
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button__type_support_c.cpp
 push_button_interface/msg/detail/push_button__rosidl_typesupport_fastrtps_c.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button_interface/msg/detail/push_button__rosidl_typesupport_fastrtps_c.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button_interface/msg/detail/push_button__rosidl_typesupport_fastrtps_c.h
 cassert
 -
 limits
@@ -16,19 +16,19 @@ limits
 string
 -
 rosidl_typesupport_fastrtps_c/identifier.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/rosidl_typesupport_fastrtps_c/identifier.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/rosidl_typesupport_fastrtps_c/identifier.h
 rosidl_typesupport_fastrtps_c/wstring_conversion.hpp
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/rosidl_typesupport_fastrtps_c/wstring_conversion.hpp
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/rosidl_typesupport_fastrtps_c/wstring_conversion.hpp
 rosidl_typesupport_fastrtps_cpp/message_type_support.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/rosidl_typesupport_fastrtps_cpp/message_type_support.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/rosidl_typesupport_fastrtps_cpp/message_type_support.h
 push_button_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
 push_button_interface/msg/detail/push_button__struct.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button_interface/msg/detail/push_button__struct.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button_interface/msg/detail/push_button__struct.h
 push_button_interface/msg/detail/push_button__functions.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button_interface/msg/detail/push_button__functions.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/push_button_interface/msg/detail/push_button__functions.h
 fastcdr/Cdr.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/fastcdr/Cdr.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_c/push_button_interface/msg/detail/fastcdr/Cdr.h
 
 /home/parham/ros2_foxy/ros2-linux/include/fastcdr/Cdr.h
 fastcdr_dll.h

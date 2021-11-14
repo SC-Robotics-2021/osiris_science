@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface
+CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface
+CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +137,9 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

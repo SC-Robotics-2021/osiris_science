@@ -16,10 +16,13 @@ push_button_interface__msg__PushButton__init(push_button_interface__msg__PushBut
     return false;
   }
   // collect_sample
-  // platform
+  // platform_height
   // microscope
   // flashlight
-  // uv_cam
+  // brush
+  // water_pump
+  // uv_camera
+  // pump_pos
   return true;
 }
 
@@ -30,10 +33,13 @@ push_button_interface__msg__PushButton__fini(push_button_interface__msg__PushBut
     return;
   }
   // collect_sample
-  // platform
+  // platform_height
   // microscope
   // flashlight
-  // uv_cam
+  // brush
+  // water_pump
+  // uv_camera
+  // pump_pos
 }
 
 push_button_interface__msg__PushButton *

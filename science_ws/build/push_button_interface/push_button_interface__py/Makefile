@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface
+CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface
+CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_progress_start /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/push_button_interface__py/CMakeFiles/progress.marks
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(MAKE) -f CMakeFiles/Makefile2 push_button_interface__py/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles 0
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_progress_start /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/push_button_interface__py/CMakeFiles/progress.marks
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(MAKE) -f CMakeFiles/Makefile2 push_button_interface__py/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(MAKE) -f CMakeFiles/Makefile2 push_button_interface__py/clean
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(MAKE) -f CMakeFiles/Makefile2 push_button_interface__py/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(MAKE) -f CMakeFiles/Makefile2 push_button_interface__py/preinstall
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(MAKE) -f CMakeFiles/Makefile2 push_button_interface__py/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(MAKE) -f CMakeFiles/Makefile2 push_button_interface__py/preinstall
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(MAKE) -f CMakeFiles/Makefile2 push_button_interface__py/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 push_button_interface__py/CMakeFiles/push_button_interface__py.dir/rule:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(MAKE) -f CMakeFiles/Makefile2 push_button_interface__py/CMakeFiles/push_button_interface__py.dir/rule
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(MAKE) -f CMakeFiles/Makefile2 push_button_interface__py/CMakeFiles/push_button_interface__py.dir/rule
 .PHONY : push_button_interface__py/CMakeFiles/push_button_interface__py.dir/rule
 
 # Convenience name for target.
@@ -179,7 +179,7 @@ push_button_interface__py: push_button_interface__py/CMakeFiles/push_button_inte
 
 # fast build rule for target.
 push_button_interface__py/fast:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(MAKE) -f push_button_interface__py/CMakeFiles/push_button_interface__py.dir/build.make push_button_interface__py/CMakeFiles/push_button_interface__py.dir/build
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(MAKE) -f push_button_interface__py/CMakeFiles/push_button_interface__py.dir/build.make push_button_interface__py/CMakeFiles/push_button_interface__py.dir/build
 .PHONY : push_button_interface__py/fast
 
 # Help Target
@@ -207,6 +207,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

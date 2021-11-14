@@ -37,7 +37,7 @@ void PushButton_fini_function(void * message_memory)
   typed_message->~PushButton();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember PushButton_message_member_array[5] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember PushButton_message_member_array[8] = {
   {
     "collect_sample",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
@@ -54,14 +54,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PushButton_me
     nullptr  // resize(index) function pointer
   },
   {
-    "platform",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    "platform_height",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(push_button_interface::msg::PushButton, platform),  // bytes offset in struct
+    offsetof(push_button_interface::msg::PushButton, platform_height),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -99,14 +99,59 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PushButton_me
     nullptr  // resize(index) function pointer
   },
   {
-    "uv_cam",  // name
+    "brush",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(push_button_interface::msg::PushButton, uv_cam),  // bytes offset in struct
+    offsetof(push_button_interface::msg::PushButton, brush),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "water_pump",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(push_button_interface::msg::PushButton, water_pump),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "uv_camera",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(push_button_interface::msg::PushButton, uv_camera),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "pump_pos",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT16,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(push_button_interface::msg::PushButton, pump_pos),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -118,7 +163,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PushButton_me
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers PushButton_message_members = {
   "push_button_interface::msg",  // message namespace
   "PushButton",  // message name
-  5,  // number of fields
+  8,  // number of fields
   sizeof(push_button_interface::msg::PushButton),
   PushButton_message_member_array,  // message members
   PushButton_init_function,  // function to initialize message memory (memory has to be allocated)

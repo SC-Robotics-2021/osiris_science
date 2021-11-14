@@ -6,95 +6,247 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1227</width>
-    <height>666</height>
+    <width>1291</width>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainView</string>
   </property>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>70</y>
-     <width>201</width>
-     <height>481</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
-     <widget class="QPushButton" name="collect_sample_button">
-      <property name="text">
-       <string>Collect Sample</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="platform_down_button">
-      <property name="text">
-       <string>Platform down</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="platform_up_button">
-      <property name="text">
-       <string>Platform up</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="microscope_button">
-      <property name="text">
-       <string>Microscope</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="flashlight_button">
-      <property name="text">
-       <string>Flashlight</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="brush_button">
-      <property name="text">
-       <string>Brush</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="uv_camera_button">
-      <property name="text">
-       <string>UV Camera</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QGraphicsView" name="graphicsView">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>10</y>
-     <width>861</width>
-     <height>411</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QGraphicsView" name="graphicsView_2">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>430</y>
-     <width>311</width>
-     <height>221</height>
-    </rect>
-   </property>
-  </widget>
+  <layout class="QGridLayout" name="gridLayout_7">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QSplitter" name="splitter_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QSplitter" name="splitter_2">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <widget class="QGroupBox" name="cameras_box">
+         <property name="title">
+          <string>Camera View</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_6">
+          <item row="0" column="1">
+           <widget class="QComboBox" name="camera_camboBox">
+            <item>
+             <property name="text">
+              <string>Camera 1</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Camera 2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Camera 3</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Camera 4</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="record_camera">
+              <property name="text">
+               <string>Record</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="take_picture_button">
+            <property name="text">
+             <string>Take Picture</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QGroupBox" name="funnel_cake_box">
+         <property name="title">
+          <string>Funnel Cake</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <widget class="QSplitter" name="splitter">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <widget class="QWidget" name="">
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QPushButton" name="water_pump_button">
+                <property name="text">
+                 <string>Water Pump</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <item>
+                 <widget class="QPushButton" name="run_pump_button">
+                  <property name="text">
+                   <string>Run Pump:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="pump_number">
+                  <property name="text">
+                   <string>1</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QDial" name="pumps_dial">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>6</number>
+             </property>
+             <property name="singleStep">
+              <number>1</number>
+             </property>
+             <property name="wrapping">
+              <bool>true</bool>
+             </property>
+             <property name="notchesVisible">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QGroupBox" name="platform_box">
+           <property name="title">
+            <string>Platform</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_5">
+            <item row="0" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>Platform Height</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="platform_slider">
+                  <property name="maximum">
+                   <number>10</number>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QGridLayout" name="gridLayout_4">
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="flashlight_button">
+                  <property name="text">
+                   <string>Flashlight</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="brush_button">
+                  <property name="text">
+                   <string>Brush</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QPushButton" name="uv_camera_button">
+                  <property name="text">
+                   <string>UV Camera</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QPushButton" name="microscope_button">
+                  <property name="text">
+                   <string>Microscope</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QGroupBox" name="sample_box">
+           <property name="title">
+            <string>Sample</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QPushButton" name="collect_sample_button">
+              <property name="text">
+               <string>Collect Sample</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QTableWidget" name="tableWidget"/>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QGraphicsView" name="graphicsView"/>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGraphicsView" name="graphicsView_2"/>
+       </item>
+       <item row="1" column="1">
+        <widget class="QGraphicsView" name="graphicsView_3"/>
+       </item>
+       <item row="0" column="1">
+        <widget class="QGraphicsView" name="graphicsView_4"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
 </ui>
+

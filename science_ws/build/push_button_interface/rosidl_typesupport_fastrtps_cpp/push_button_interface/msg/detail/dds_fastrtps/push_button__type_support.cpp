@@ -34,14 +34,20 @@ cdr_serialize(
 {
   // Member: collect_sample
   cdr << (ros_message.collect_sample ? true : false);
-  // Member: platform
-  cdr << (ros_message.platform ? true : false);
+  // Member: platform_height
+  cdr << ros_message.platform_height;
   // Member: microscope
   cdr << (ros_message.microscope ? true : false);
   // Member: flashlight
   cdr << (ros_message.flashlight ? true : false);
-  // Member: uv_cam
-  cdr << (ros_message.uv_cam ? true : false);
+  // Member: brush
+  cdr << (ros_message.brush ? true : false);
+  // Member: water_pump
+  cdr << (ros_message.water_pump ? true : false);
+  // Member: uv_camera
+  cdr << (ros_message.uv_camera ? true : false);
+  // Member: pump_pos
+  cdr << ros_message.pump_pos;
   return true;
 }
 
@@ -58,12 +64,8 @@ cdr_deserialize(
     ros_message.collect_sample = tmp ? true : false;
   }
 
-  // Member: platform
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.platform = tmp ? true : false;
-  }
+  // Member: platform_height
+  cdr >> ros_message.platform_height;
 
   // Member: microscope
   {
@@ -79,12 +81,29 @@ cdr_deserialize(
     ros_message.flashlight = tmp ? true : false;
   }
 
-  // Member: uv_cam
+  // Member: brush
   {
     uint8_t tmp;
     cdr >> tmp;
-    ros_message.uv_cam = tmp ? true : false;
+    ros_message.brush = tmp ? true : false;
   }
+
+  // Member: water_pump
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.water_pump = tmp ? true : false;
+  }
+
+  // Member: uv_camera
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.uv_camera = tmp ? true : false;
+  }
+
+  // Member: pump_pos
+  cdr >> ros_message.pump_pos;
 
   return true;
 }
@@ -108,9 +127,9 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: platform
+  // Member: platform_height
   {
-    size_t item_size = sizeof(ros_message.platform);
+    size_t item_size = sizeof(ros_message.platform_height);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -126,9 +145,27 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: uv_cam
+  // Member: brush
   {
-    size_t item_size = sizeof(ros_message.uv_cam);
+    size_t item_size = sizeof(ros_message.brush);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: water_pump
+  {
+    size_t item_size = sizeof(ros_message.water_pump);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: uv_camera
+  {
+    size_t item_size = sizeof(ros_message.uv_camera);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: pump_pos
+  {
+    size_t item_size = sizeof(ros_message.pump_pos);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -158,11 +195,12 @@ max_serialized_size_PushButton(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: platform
+  // Member: platform_height
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   // Member: microscope
@@ -179,11 +217,33 @@ max_serialized_size_PushButton(
     current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: uv_cam
+  // Member: brush
   {
     size_t array_size = 1;
 
     current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: water_pump
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: uv_camera
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: pump_pos
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
   }
 
   return current_alignment - initial_alignment;

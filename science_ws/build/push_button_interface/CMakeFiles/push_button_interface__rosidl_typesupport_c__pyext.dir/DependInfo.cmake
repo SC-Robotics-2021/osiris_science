@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_c.c" "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_c.c.o"
+  "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_c.c" "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/push_button_interface/_push_button_interface_s.ep.rosidl_typesupport_c.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -25,9 +25,9 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__python.dir/DependInfo.cmake"
-  "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__rosidl_typesupport_c.dir/DependInfo.cmake"
-  "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__rosidl_generator_c.dir/DependInfo.cmake"
+  "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__python.dir/DependInfo.cmake"
+  "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__rosidl_typesupport_c.dir/DependInfo.cmake"
+  "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface__rosidl_generator_c.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

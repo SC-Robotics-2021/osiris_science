@@ -41,9 +41,9 @@ convert_ros_message_to_dds(
   dds_message.collect_sample_ =
     ros_message.collect_sample;
 
-  // member.name platform
-  dds_message.platform_ =
-    ros_message.platform;
+  // member.name platform_height
+  dds_message.platform_height_ =
+    ros_message.platform_height;
 
   // member.name microscope
   dds_message.microscope_ =
@@ -53,9 +53,21 @@ convert_ros_message_to_dds(
   dds_message.flashlight_ =
     ros_message.flashlight;
 
-  // member.name uv_cam
-  dds_message.uv_cam_ =
-    ros_message.uv_cam;
+  // member.name brush
+  dds_message.brush_ =
+    ros_message.brush;
+
+  // member.name water_pump
+  dds_message.water_pump_ =
+    ros_message.water_pump;
+
+  // member.name uv_camera
+  dds_message.uv_camera_ =
+    ros_message.uv_camera;
+
+  // member.name pump_pos
+  dds_message.pump_pos_ =
+    ros_message.pump_pos;
 
   return true;
 }
@@ -69,9 +81,9 @@ convert_dds_message_to_ros(
   ros_message.collect_sample =
     dds_message.collect_sample_ == DDS_BOOLEAN_TRUE;
 
-  // member.name platform
-  ros_message.platform =
-    dds_message.platform_ == DDS_BOOLEAN_TRUE;
+  // member.name platform_height
+  ros_message.platform_height =
+    dds_message.platform_height_;
 
   // member.name microscope
   ros_message.microscope =
@@ -81,9 +93,21 @@ convert_dds_message_to_ros(
   ros_message.flashlight =
     dds_message.flashlight_ == DDS_BOOLEAN_TRUE;
 
-  // member.name uv_cam
-  ros_message.uv_cam =
-    dds_message.uv_cam_ == DDS_BOOLEAN_TRUE;
+  // member.name brush
+  ros_message.brush =
+    dds_message.brush_ == DDS_BOOLEAN_TRUE;
+
+  // member.name water_pump
+  ros_message.water_pump =
+    dds_message.water_pump_ == DDS_BOOLEAN_TRUE;
+
+  // member.name uv_camera
+  ros_message.uv_camera =
+    dds_message.uv_camera_ == DDS_BOOLEAN_TRUE;
+
+  // member.name pump_pos
+  ros_message.pump_pos =
+    dds_message.pump_pos_;
 
   return true;
 }

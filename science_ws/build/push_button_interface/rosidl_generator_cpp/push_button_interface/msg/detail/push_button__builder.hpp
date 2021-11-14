@@ -20,16 +20,64 @@ namespace msg
 namespace builder
 {
 
-class Init_PushButton_uv_cam
+class Init_PushButton_pump_pos
 {
 public:
-  explicit Init_PushButton_uv_cam(::push_button_interface::msg::PushButton & msg)
+  explicit Init_PushButton_pump_pos(::push_button_interface::msg::PushButton & msg)
   : msg_(msg)
   {}
-  ::push_button_interface::msg::PushButton uv_cam(::push_button_interface::msg::PushButton::_uv_cam_type arg)
+  ::push_button_interface::msg::PushButton pump_pos(::push_button_interface::msg::PushButton::_pump_pos_type arg)
   {
-    msg_.uv_cam = std::move(arg);
+    msg_.pump_pos = std::move(arg);
     return std::move(msg_);
+  }
+
+private:
+  ::push_button_interface::msg::PushButton msg_;
+};
+
+class Init_PushButton_uv_camera
+{
+public:
+  explicit Init_PushButton_uv_camera(::push_button_interface::msg::PushButton & msg)
+  : msg_(msg)
+  {}
+  Init_PushButton_pump_pos uv_camera(::push_button_interface::msg::PushButton::_uv_camera_type arg)
+  {
+    msg_.uv_camera = std::move(arg);
+    return Init_PushButton_pump_pos(msg_);
+  }
+
+private:
+  ::push_button_interface::msg::PushButton msg_;
+};
+
+class Init_PushButton_water_pump
+{
+public:
+  explicit Init_PushButton_water_pump(::push_button_interface::msg::PushButton & msg)
+  : msg_(msg)
+  {}
+  Init_PushButton_uv_camera water_pump(::push_button_interface::msg::PushButton::_water_pump_type arg)
+  {
+    msg_.water_pump = std::move(arg);
+    return Init_PushButton_uv_camera(msg_);
+  }
+
+private:
+  ::push_button_interface::msg::PushButton msg_;
+};
+
+class Init_PushButton_brush
+{
+public:
+  explicit Init_PushButton_brush(::push_button_interface::msg::PushButton & msg)
+  : msg_(msg)
+  {}
+  Init_PushButton_water_pump brush(::push_button_interface::msg::PushButton::_brush_type arg)
+  {
+    msg_.brush = std::move(arg);
+    return Init_PushButton_water_pump(msg_);
   }
 
 private:
@@ -42,10 +90,10 @@ public:
   explicit Init_PushButton_flashlight(::push_button_interface::msg::PushButton & msg)
   : msg_(msg)
   {}
-  Init_PushButton_uv_cam flashlight(::push_button_interface::msg::PushButton::_flashlight_type arg)
+  Init_PushButton_brush flashlight(::push_button_interface::msg::PushButton::_flashlight_type arg)
   {
     msg_.flashlight = std::move(arg);
-    return Init_PushButton_uv_cam(msg_);
+    return Init_PushButton_brush(msg_);
   }
 
 private:
@@ -68,15 +116,15 @@ private:
   ::push_button_interface::msg::PushButton msg_;
 };
 
-class Init_PushButton_platform
+class Init_PushButton_platform_height
 {
 public:
-  explicit Init_PushButton_platform(::push_button_interface::msg::PushButton & msg)
+  explicit Init_PushButton_platform_height(::push_button_interface::msg::PushButton & msg)
   : msg_(msg)
   {}
-  Init_PushButton_microscope platform(::push_button_interface::msg::PushButton::_platform_type arg)
+  Init_PushButton_microscope platform_height(::push_button_interface::msg::PushButton::_platform_height_type arg)
   {
-    msg_.platform = std::move(arg);
+    msg_.platform_height = std::move(arg);
     return Init_PushButton_microscope(msg_);
   }
 
@@ -90,10 +138,10 @@ public:
   Init_PushButton_collect_sample()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_PushButton_platform collect_sample(::push_button_interface::msg::PushButton::_collect_sample_type arg)
+  Init_PushButton_platform_height collect_sample(::push_button_interface::msg::PushButton::_collect_sample_type arg)
   {
     msg_.collect_sample = std::move(arg);
-    return Init_PushButton_platform(msg_);
+    return Init_PushButton_platform_height(msg_);
   }
 
 private:

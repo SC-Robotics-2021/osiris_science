@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/msg/_push_button_s.c
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/msg/_push_button_s.c
 Python.h
 -
 stdbool.h
 -
 numpy/ndarrayobject.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/msg/numpy/ndarrayobject.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/msg/numpy/ndarrayobject.h
 rosidl_runtime_c/visibility_control.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/msg/rosidl_runtime_c/visibility_control.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/msg/rosidl_runtime_c/visibility_control.h
 push_button_interface/msg/detail/push_button__struct.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/msg/push_button_interface/msg/detail/push_button__struct.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/msg/push_button_interface/msg/detail/push_button__struct.h
 push_button_interface/msg/detail/push_button__functions.h
-/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/msg/push_button_interface/msg/detail/push_button__functions.h
+/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_py/push_button_interface/msg/push_button_interface/msg/detail/push_button__functions.h
 
 /home/parham/ros2_foxy/ros2-linux/include/rosidl_runtime_c/visibility_control.h
 

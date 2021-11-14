@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -Wall -std=gnu++14
 
 CXX_DEFINES = -DROS_PACKAGE_NAME=\"push_button_interface\" -Dpush_button_interface__rosidl_typesupport_cpp_EXPORTS
 
-CXX_INCLUDES = -I/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_cpp -isystem /home/parham/ros2_foxy/ros2-linux/include 
+CXX_INCLUDES = -I/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_cpp -isystem /home/parham/ros2_foxy/ros2-linux/include 
 

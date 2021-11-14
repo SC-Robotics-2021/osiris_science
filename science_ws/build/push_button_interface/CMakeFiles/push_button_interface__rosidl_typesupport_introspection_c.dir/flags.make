@@ -6,5 +6,5 @@ C_FLAGS = -fPIC   -Wall -std=gnu11
 
 C_DEFINES = -DROS_PACKAGE_NAME=\"push_button_interface\" -Dpush_button_interface__rosidl_typesupport_introspection_c_EXPORTS
 
-C_INCLUDES = -I/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_c -I/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_introspection_c -isystem /home/parham/ros2_foxy/ros2-linux/include 
+C_INCLUDES = -I/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_c -I/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_introspection_c -isystem /home/parham/ros2_foxy/ros2-linux/include 
 

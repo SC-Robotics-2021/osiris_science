@@ -15,10 +15,13 @@ module dds_ {
 
 struct PushButton_ {
 boolean collect_sample_;
-boolean platform_;
+long platform_height_;
 boolean microscope_;
 boolean flashlight_;
-boolean uv_cam_;
+boolean brush_;
+boolean water_pump_;
+boolean uv_camera_;
+short pump_pos_;
 
 };
 

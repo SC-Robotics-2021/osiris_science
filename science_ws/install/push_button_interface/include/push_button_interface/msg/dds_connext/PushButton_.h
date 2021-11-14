@@ -9,8 +9,8 @@ For more information, type 'rtiddsgen -help' at a command shell
 or consult the RTI Connext manual.
 */
 
-#ifndef PushButton__1906255193_h
-#define PushButton__1906255193_h
+#ifndef PushButton__1906255254_h
+#define PushButton__1906255254_h
 
 #ifndef NDDS_STANDALONE_TYPE
 #ifndef ndds_cpp_h
@@ -44,10 +44,13 @@ namespace push_button_interface {
                 #endif
 
                 DDS_Boolean   collect_sample_ ;
-                DDS_Boolean   platform_ ;
+                DDS_Long   platform_height_ ;
                 DDS_Boolean   microscope_ ;
                 DDS_Boolean   flashlight_ ;
-                DDS_Boolean   uv_cam_ ;
+                DDS_Boolean   brush_ ;
+                DDS_Boolean   water_pump_ ;
+                DDS_Boolean   uv_camera_ ;
+                DDS_Short   pump_pos_ ;
 
             };
             #if (defined(RTI_WIN32) || defined (RTI_WINCE)) && defined(NDDS_USER_DLL_EXPORT)

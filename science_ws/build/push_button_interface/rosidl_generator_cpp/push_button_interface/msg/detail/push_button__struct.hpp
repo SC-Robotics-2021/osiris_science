@@ -38,10 +38,13 @@ struct PushButton_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->collect_sample = false;
-      this->platform = false;
+      this->platform_height = 0l;
       this->microscope = false;
       this->flashlight = false;
-      this->uv_cam = false;
+      this->brush = false;
+      this->water_pump = false;
+      this->uv_camera = false;
+      this->pump_pos = 0;
     }
   }
 
@@ -52,10 +55,13 @@ struct PushButton_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->collect_sample = false;
-      this->platform = false;
+      this->platform_height = 0l;
       this->microscope = false;
       this->flashlight = false;
-      this->uv_cam = false;
+      this->brush = false;
+      this->water_pump = false;
+      this->uv_camera = false;
+      this->pump_pos = 0;
     }
   }
 
@@ -63,18 +69,27 @@ struct PushButton_
   using _collect_sample_type =
     bool;
   _collect_sample_type collect_sample;
-  using _platform_type =
-    bool;
-  _platform_type platform;
+  using _platform_height_type =
+    int32_t;
+  _platform_height_type platform_height;
   using _microscope_type =
     bool;
   _microscope_type microscope;
   using _flashlight_type =
     bool;
   _flashlight_type flashlight;
-  using _uv_cam_type =
+  using _brush_type =
     bool;
-  _uv_cam_type uv_cam;
+  _brush_type brush;
+  using _water_pump_type =
+    bool;
+  _water_pump_type water_pump;
+  using _uv_camera_type =
+    bool;
+  _uv_camera_type uv_camera;
+  using _pump_pos_type =
+    int16_t;
+  _pump_pos_type pump_pos;
 
   // setters for named parameter idiom
   Type & set__collect_sample(
@@ -83,10 +98,10 @@ struct PushButton_
     this->collect_sample = _arg;
     return *this;
   }
-  Type & set__platform(
-    const bool & _arg)
+  Type & set__platform_height(
+    const int32_t & _arg)
   {
-    this->platform = _arg;
+    this->platform_height = _arg;
     return *this;
   }
   Type & set__microscope(
@@ -101,10 +116,28 @@ struct PushButton_
     this->flashlight = _arg;
     return *this;
   }
-  Type & set__uv_cam(
+  Type & set__brush(
     const bool & _arg)
   {
-    this->uv_cam = _arg;
+    this->brush = _arg;
+    return *this;
+  }
+  Type & set__water_pump(
+    const bool & _arg)
+  {
+    this->water_pump = _arg;
+    return *this;
+  }
+  Type & set__uv_camera(
+    const bool & _arg)
+  {
+    this->uv_camera = _arg;
+    return *this;
+  }
+  Type & set__pump_pos(
+    const int16_t & _arg)
+  {
+    this->pump_pos = _arg;
     return *this;
   }
 
@@ -153,7 +186,7 @@ struct PushButton_
     if (this->collect_sample != other.collect_sample) {
       return false;
     }
-    if (this->platform != other.platform) {
+    if (this->platform_height != other.platform_height) {
       return false;
     }
     if (this->microscope != other.microscope) {
@@ -162,7 +195,16 @@ struct PushButton_
     if (this->flashlight != other.flashlight) {
       return false;
     }
-    if (this->uv_cam != other.uv_cam) {
+    if (this->brush != other.brush) {
+      return false;
+    }
+    if (this->water_pump != other.water_pump) {
+      return false;
+    }
+    if (this->uv_camera != other.uv_camera) {
+      return false;
+    }
+    if (this->pump_pos != other.pump_pos) {
       return false;
     }
     return true;

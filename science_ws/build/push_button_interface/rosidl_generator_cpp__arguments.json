@@ -1,9 +1,9 @@
 {
   "package_name": "push_button_interface",
-  "output_dir": "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_cpp/push_button_interface",
+  "output_dir": "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_cpp/push_button_interface",
   "template_dir": "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_cpp/cmake/../resource",
   "idl_tuples": [
-    "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface:msg/PushButton.idl"
+    "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface:msg/PushButton.idl"
   ],
   "target_dependencies": [
     "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp",
@@ -21,6 +21,6 @@
     "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/srv__builder.hpp.em",
     "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/srv__struct.hpp.em",
     "/home/parham/ros2_foxy/ros2-linux/share/rosidl_generator_cpp/cmake/../resource/srv__traits.hpp.em",
-    "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface/msg/PushButton.idl"
+    "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_adapter/push_button_interface/msg/PushButton.idl"
   ]
 }

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface
+CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface
+CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface
 
 # Utility rule file for push_button_interface_uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/buil
 include CMakeFiles/push_button_interface_uninstall.dir/progress.make
 
 CMakeFiles/push_button_interface_uninstall:
-	/usr/bin/cmake -P /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 push_button_interface_uninstall: CMakeFiles/push_button_interface_uninstall
 push_button_interface_uninstall: CMakeFiles/push_button_interface_uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/push_button_interface_uninstall.dir/clean:
 .PHONY : CMakeFiles/push_button_interface_uninstall.dir/clean
 
 CMakeFiles/push_button_interface_uninstall.dir/depend:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/push_button_interface_uninstall.dir/depend
 

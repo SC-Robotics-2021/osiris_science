@@ -43,17 +43,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface
+CMAKE_SOURCE_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface
+CMAKE_BINARY_DIR = /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface
 
 # Utility rule file for push_button_interface.
 
 # Include the progress variables for this target.
 include CMakeFiles/push_button_interface.dir/progress.make
 
-CMakeFiles/push_button_interface: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface/msg/PushButton.msg
+CMakeFiles/push_button_interface: /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface/msg/PushButton.msg
 
 
 push_button_interface: CMakeFiles/push_button_interface
@@ -71,6 +71,6 @@ CMakeFiles/push_button_interface.dir/clean:
 .PHONY : CMakeFiles/push_button_interface.dir/clean
 
 CMakeFiles/push_button_interface.dir/depend:
-	cd /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/CMakeFiles/push_button_interface.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/push_button_interface.dir/depend
 

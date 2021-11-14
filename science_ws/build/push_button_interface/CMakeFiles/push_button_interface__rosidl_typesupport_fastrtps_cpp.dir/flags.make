@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC   -Wall -Wextra -Wpedantic -Wall -Wextra -Wpedantic -std=gnu++
 
 CXX_DEFINES = -DFOONATHAN_MEMORY=1 -DFOONATHAN_MEMORY_VERSION_MAJOR=0 -DFOONATHAN_MEMORY_VERSION_MINOR=6 -DFOONATHAN_MEMORY_VERSION_PATCH=2 -DROS_PACKAGE_NAME=\"push_button_interface\" -Dpush_button_interface__rosidl_typesupport_fastrtps_cpp_EXPORTS
 
-CXX_INCLUDES = -I/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_generator_cpp -I/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_cpp -isystem /home/parham/ros2_foxy/ros2-linux/include -isystem /home/parham/ros2_foxy/ros2-linux/include/foonathan_memory/comp -isystem /home/parham/ros2_foxy/ros2-linux/include/foonathan_memory 
+CXX_INCLUDES = -I/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_generator_cpp -I/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/rosidl_typesupport_fastrtps_cpp -isystem /home/parham/ros2_foxy/ros2-linux/include -isystem /home/parham/ros2_foxy/ros2-linux/include/foonathan_memory/comp -isystem /home/parham/ros2_foxy/ros2-linux/include/foonathan_memory 
 

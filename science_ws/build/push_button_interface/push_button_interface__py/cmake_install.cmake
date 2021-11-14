@@ -1,8 +1,8 @@
-# Install script for directory: /home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/build/push_button_interface/push_button_interface__py
+# Install script for directory: /home/parham/Dev/ros2_foxy/science/science-gui/science_ws/build/push_button_interface/push_button_interface__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/parham/Dev/ros2_foxy/science/sience_gui/science_ws/install/push_button_interface")
+  set(CMAKE_INSTALL_PREFIX "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/install/push_button_interface")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
