@@ -28,6 +28,10 @@ class MainWindow(QWidget):
         self.ui.water_pump_button.clicked.connect(self.on_water_pump_pressed)
         self.ui.run_pump_button.clicked.connect(self.on_run_pump_pressed)
         self.ui.pumps_dial.valueChanged.connect(self.on_pumps_dial_value_changed)
+        self.ui.camera_camboBox.activated[int].connect(self.on_switch_camera)
+        self.ui.start_record_button.clicked.connect(self.on_start_record_button_pressed)
+        self.ui.take_picture_button.clicked.connect(self.on_take_picture_button_pressed)
+        self.ui.stop_record_button.clicked.connect(self.on_stop_record_button_pressed)
 
         self.motor_num = 1
         self.is_collect_sample_pressed = False
@@ -36,28 +40,10 @@ class MainWindow(QWidget):
         self.is_brush_pressed = False
         self.is_uv_camera_pressed = False
         self.is_water_pump_pressed = False
+        self.camera_list = [[1, False, False, False], [2, False, False, False],
+                            [3, False, False, False], [4, False, False, False]]
         rclpy.init()
         self.push_button_publisher = button_publisher.Publisher()
-
-        # self.ui.cameras_box.setStyleSheet('color: black;'
-        #                                   'background-color: #D7D29C;'
-        #                                   'selection-color: yellow;'
-        #                                   'selection-background-color: blue;')
-        #
-        # self.ui.funnel_cake_box.setStyleSheet('color: black;'
-        #                                        'background-color: #B3FFE7;'
-        #                                        'selection-color: yellow;'
-        #                                        'selection-background-color: blue;')
-        #
-        # self.ui.platform_box.setStyleSheet('color: black;'
-        #                                        'background-color: #B3BAFF;'
-        #                                        'selection-color: yellow;'
-        #                                        'selection-background-color: blue;')
-        #
-        # self.ui.sample_box.setStyleSheet('color: black;'
-        #                                        'background-color: #7A958E;'
-        #                                        'selection-color: yellow;'
-        #                                        'selection-background-color: blue;')
 
     def on_collect_sample_pressed(self):
         if not self.is_collect_sample_pressed:
@@ -125,6 +111,22 @@ class MainWindow(QWidget):
     def on_run_pump_pressed(self):
         self.push_button_publisher.set_cake_pos(self.motor_num)
         rclpy.spin_once(self.push_button_publisher)
+
+    def on_start_record_button_pressed(self):
+        self.camera_list[self.ui.camera_camboBox.currentIndex()][1] = True
+        for i in range(self.camera_list):
+            for j in range(self.camera_list):
+                print(j, sep='')
+            print()
+
+    def on_take_picture_button_pressed(self):
+        self.camera_list[self.ui.camera_camboBox.currentIndex()][1] = True
+
+    def on_stop_record_button_pressed(self):
+        self.camera_list[self.ui.camera_camboBox.currentIndex()][1] = True
+
+    def on_switch_camera(self, index):
+        print(index + 1)
 
 
 if __name__ == "__main__":
