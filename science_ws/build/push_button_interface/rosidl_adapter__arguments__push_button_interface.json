@@ -1,6 +1,0 @@
-{
-  "package_name": "push_button_interface",
-  "non_idl_tuples": [
-    "/home/parham/Dev/ros2_foxy/science/science-gui/science_ws/src/push_button_interface:msg/PushButton.msg"
-  ]
-}
