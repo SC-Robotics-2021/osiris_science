@@ -35,13 +35,8 @@ endif()
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/StationBrush.srv"
-  "srv/StationCollectSample.srv"
-  "srv/StationFlashlight.srv"
   "srv/StationFunnelCake.srv"
-  "srv/StationPlatform.srv"
-  "srv/StationUVLight.srv"
-  "srv/StationWaterPump.srv"
+  "srv/StationStepper.srv"
 )
 
 ament_export_dependencies(rosidl_default_runtime)

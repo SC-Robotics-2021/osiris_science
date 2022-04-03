@@ -1,4 +1,4 @@
-int16 pump_num
+int32 height
 ---
 bool success
 string message

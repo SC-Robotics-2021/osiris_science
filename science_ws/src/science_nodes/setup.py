@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'osiris_science_nodes'
+package_name = 'science_nodes'
 
 setup(
     name=package_name,
