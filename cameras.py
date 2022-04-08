@@ -53,6 +53,9 @@ class Cameras(object):
         if not self.uv_camera_thread._is_shutdown:
             self.uv_camera_sub.snapshot = True
 
+    def get_uv_camera_frame(self):
+        return self.uv_camera_sub.frame
+
     # Microscope functionality
     def start_microscope_streaming(self):
         if not self.microscope_thread._is_shutdown:
@@ -75,6 +78,9 @@ class Cameras(object):
     def take_microscope_snapshot(self):
         if not self.microscope_thread._is_shutdown:
             self.microscope_sub.snapshot = True
+
+    def get_microscope_frame(self):
+        return self.microscope_sub.frame
 
     # IR camera functionality
     def start_ir_camera_streaming(self):
@@ -99,6 +105,9 @@ class Cameras(object):
         if not self.ir_camera_thread._is_shutdown:
             self.ir_camera_sub.snapshot = True
 
+    def get_ir_camera_frame(self):
+        return self.ir_camera_sub.frame
+
     # ZED functionality
     def start_zed_recording(self):
         if not self.zed_thread._is_shutdown:
@@ -111,8 +120,8 @@ class Cameras(object):
         if not self.zed_thread._is_shutdown:
             self.zed_camera_sub.snapshot = True
 
-    def get_frame(self):
-        return self.microscope_sub.frame
+    def get_zed_frame(self):
+        return self.zed_sub.frame
 
     def __del__(self):
         self.uv_camera_cli.__del__()

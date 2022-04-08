@@ -95,8 +95,6 @@ class MainWindow(QWidget):
         # self.thread1 = VideoThread(1)
         # connect its signal to the update_image slot
 
-        c = Thread()
-
 
         self.thread0.change_pixmap_signal.connect(self.update_image)
         # self.thread1.change_pixmap_signal.connect(self.update_microscope)
@@ -112,13 +110,12 @@ class MainWindow(QWidget):
         event.accept()
 
     @pyqtSlot(np.ndarray)
-    def update_image(self, cv_img):
+    def update_images(self):
         """Updates the image_label with a new opencv image"""
-        qt_img = self.convert_cv_qt(cv_img)
-        self.ui.label_2.setPixmap(qt_img)
-        self.ui.label_3.setPixmap(qt_img)
-        self.ui.label_4.setPixmap(qt_img)
-        self.ui.label_5.setPixmap(qt_img)
+        self.ui.label_2.setPixmap(self.convert_cv_qt(self.camera_rover.get_zed_frame()))
+        self.ui.label_3.setPixmap(self.convert_cv_qt(self.camera_rover.get_microscope_frame()))
+        self.ui.label_4.setPixmap(self.convert_cv_qt(self.camera_rover.get_uv_camera_frame()))
+        self.ui.label_5.setPixmap(self.convert_cv_qt(self.camera_rover.get_ir_camera_frame))
 
 
     def convert_cv_qt(self, cv_img):
