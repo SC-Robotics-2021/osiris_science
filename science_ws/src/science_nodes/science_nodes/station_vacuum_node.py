@@ -13,7 +13,7 @@ class VacuumClient(Node):
             self.get_logger().info('vacuum service not available, waiting again...')
         self.vacuum_req = SetBool.Request()
 
-    def send_vacuum_state(self, state):
+    def send_request(self, state):
         self.vacuum_req.data = state
         self.future = self.vacuum_cmd_client.call_async(self.velocity_req)
 

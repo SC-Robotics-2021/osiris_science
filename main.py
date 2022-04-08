@@ -10,12 +10,44 @@ import time
 
 from PyQt5.QtCore import QFile
 from PyQt5.QtWidgets import QApplication, QWidget
-from PyQt5.QtCore import QTimer
-from PyQt5 import uic
+from PyQt5.QtCore import QTimer, pyqtSignal, pyqtSlot, Qt, QThread
+from PyQt5 import uic, QtGui
+from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QVBoxLayout
+from PyQt5.QtGui import QPixmap
+import sys
+import numpy as np
+import cv2
+
 from ui_form import Ui_MainView
 
 from funnel_cake import FunnelCake
-from platform import Platform
+from lowering_platform import Platform
+from cameras import Cameras
+
+
+class VideoThread(QThread):
+    change_pixmap_signal = pyqtSignal(np.ndarray)
+
+    def __init__(self, index):
+        super().__init__()
+        self._run_flag = True
+        self._video_index = index
+        # self.camera = Cameras(self._video_index)
+
+    def run(self):
+        # capture from web cam
+        cap = cv2.VideoCapture(0)
+        while self._run_flag:
+            ret, cv_img = cap.read()
+            if ret:
+                self.change_pixmap_signal.emit(cv_img)
+        # shut down capture system
+        cap.release()
+
+    def stop(self):
+        """Sets run flag to False and waits for thread to finish"""
+        self._run_flag = False
+        self.wait()
 
 
 class MainWindow(QWidget):
@@ -41,6 +73,7 @@ class MainWindow(QWidget):
 
         self.funnel_cake_rover = FunnelCake()
         self.platform_rover = Platform()
+        # self.camera_rover = Camera()
 
         self.is_collect_sample_pressed = False
         self.is_microscope_pressed = False
@@ -55,6 +88,41 @@ class MainWindow(QWidget):
                                 4: self.ui.pump_four_pb,
                                 5: self.ui.pump_five_pb}
         # rclpy.init()
+        # create the video capture thread
+        self.thread0 = VideoThread(0)
+        # self.thread1 = VideoThread(1)
+        # connect its signal to the update_image slot
+        self.thread0.change_pixmap_signal.connect(self.update_image)
+        # self.thread1.change_pixmap_signal.connect(self.update_microscope)
+        # start the thread
+        self.thread0.start()
+        # self.thread1.start()
+
+        self.showMaximized()
+
+    def closeEvent(self, event):
+        self.thread0.stop()
+        self.thread1.stop()
+        event.accept()
+
+    @pyqtSlot(np.ndarray)
+    def update_image(self, cv_img):
+        """Updates the image_label with a new opencv image"""
+        qt_img = self.convert_cv_qt(cv_img)
+        self.ui.label_2.setPixmap(qt_img)
+        self.ui.label_3.setPixmap(qt_img)
+        self.ui.label_4.setPixmap(qt_img)
+        self.ui.label_5.setPixmap(qt_img)
+
+
+    def convert_cv_qt(self, cv_img):
+        """Convert from an opencv image to QPixmap"""
+        rgb_image = cv2.cvtColor(cv_img, cv2.COLOR_BGR2RGB)
+        h, w, ch = rgb_image.shape
+        bytes_per_line = ch * w
+        convert_to_Qt_format = QtGui.QImage(rgb_image.data, w, h, bytes_per_line, QtGui.QImage.Format_RGB888)
+        p = convert_to_Qt_format.scaled(640, 480, Qt.KeepAspectRatio)
+        return QPixmap.fromImage(p)
 
     def on_collect_sample_pressed(self):
         if not self.is_collect_sample_pressed:

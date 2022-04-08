@@ -8,7 +8,7 @@ class FunnelCakeClient(Node):
         super().__init__('funnel_cake_client')
         self.funnel_cake_client = self.create_client(StationFunnelCake, '/osiris/science/funnel_cake/cmd')
         while not self.funnel_cake_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('service not available, waiting again...')
+            self.get_logger().info('funnel cake service not available, waiting again...')
         self.funnel_cake_req = StationFunnelCake.Request()
 
     def send_request(self, position):

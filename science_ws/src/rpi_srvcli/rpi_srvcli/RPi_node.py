@@ -5,6 +5,9 @@ from station_interfaces.srv import StationStepper
 import rclpy
 from rclpy.node import Node
 
+import serial
+from cobs import cobs
+
 
 def calc_funnel_cake_pos(position) -> int:
     angle = position * 72
@@ -68,7 +71,9 @@ class RPiService(Node):
         return response
 
     def funnel_cake_callback(self, request, response):
-        response.funnel_cake_pos = calc_funnel_cake_pos(request.pump_num)
+        response.success = True
+        response.message = 'Success'
+        response.position = calc_funnel_cake_pos(request.pump_num)
         self.get_logger().info('Incoming request\n Pump Position: %d' % request.pump_num)
 
         return response

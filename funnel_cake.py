@@ -1,8 +1,8 @@
 import rclpy
 
-from station_gui_nodes.station_water_pump_node import WaterPumpClient
-from station_gui_nodes.station_collect_sample_node import CollectSampleClient
-from station_gui_nodes.station_funnel_cake_node import FunnelCakeClient
+from science_nodes.station_water_pump_node import WaterPumpClient
+from science_nodes.station_vacuum_node import VacuumClient
+from science_nodes.station_funnel_cake_node import FunnelCakeClient
 
 
 class FunnelCake(object):
@@ -20,7 +20,7 @@ class FunnelCake(object):
 
         rclpy.init()
         self.water_pump_cli = WaterPumpClient()
-        self.collect_sample_cli = CollectSampleClient()
+        self.collect_sample_cli = VacuumClient()
         self.funnel_cake_cli = FunnelCakeClient()
 
     def rotate_funnel_index(self, index,):
