@@ -15,40 +15,43 @@ class IRCameraClient(Node):
         super().__init__('ir_camera_client')
         # create client to control camera
         self.cli = self.create_client(SetBool, '/osiris/science/ir_camera/cmd')
+        self.request = SetBool.Request()
 
-    def send_request(self, status):
+    def send_request(self, state):
         """
         ROS2 request function. Sends request command via ROS2 service.
-        :param status: Device to be requested by service
+        :param state: Device to be requested by service
         """
-        request = SetBool.Request()
-        request.data = status
+        self.request.data = state
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Service not available, waiting again...')
-        self.future = self.cli.call_async(request)
+        self.future = self.cli.call_async(self.request)
         self.get_logger().info('Request sent')
 
-    def run_node(self):
+    def run(self):
         """
         ROS2 spin function. Allows for activation of node class as external dependency.
         :return done: Indicates if requested service is done.
         :rtype: bool
         """
-        rclpy.spin_once(self)
-        done = False
-        if self.future.done():
-            try:
-                response = self.future.result()
-            except Exception as e:
-                self.get_logger().info(f'{e}')
-            else:
-                self.get_logger().info(f'{response.message}')
-            done = True
-        return done
+        while rclpy.ok():
+            rclpy.spin_once(self)
+            if self.future.done():
+                try:
+                    response = self.future.result()
+                except Exception as e:
+                    self.get_logger().info(f'{e}')
+                else:
+                    self.get_logger().info(
+                        f'Result of /osiris/science/ir_camera/cmd:'
+                        f' state - {self.request.data}'
+                        f' success - {response.success}'
+                        f' message - {response.message}')
+                break
 
-    def destroy_node(self):
+    def __del__(self):
         """
-        Shutdown function. Destroys node explicitly.
+        Destructor function. Shuts down node explicitly.
         """
         self.get_logger().info('Shutting down node')
         super().destroy_node()
@@ -77,8 +80,9 @@ def main(args=None):
         ir_camera_client.get_logger().info(f'{e})')
     except KeyboardInterrupt:
         print('\n')
-    ir_camera_client.destroy_node()
-    rclpy.shutdown()
+    finally:
+        ir_camera_client.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':

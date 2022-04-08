@@ -1,8 +1,7 @@
 import rclpy
-
-from science_nodes.station_water_pump_node import WaterPumpClient
-from science_nodes.station_vacuum_node import VacuumClient
-from science_nodes.station_funnel_cake_node import FunnelCakeClient
+from science_nodes.water_pump_client import WaterPumpClient
+from science_nodes.vacuum_client import VacuumClient
+from science_nodes.funnel_cake_client import FunnelCakeClient
 
 
 class FunnelCake(object):
@@ -23,7 +22,7 @@ class FunnelCake(object):
         self.collect_sample_cli = VacuumClient()
         self.funnel_cake_cli = FunnelCakeClient()
 
-    def rotate_funnel_index(self, index,):
+    def rotate_funnel_index(self, index):
         self.funnel_list_prev_index = self.funnel_index
         self.funnel_index = index
         if self.funnel_index == 6:

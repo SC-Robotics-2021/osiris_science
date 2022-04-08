@@ -1,6 +1,6 @@
-from science_nodes.station_stepper_node import StepperClient
+from science_nodes.stepper_motor_client import StepperMotorClient
 from science_nodes.station_flashlight_node import FlashlightClient
-from science_nodes.station_uv_light_node import UVLightClient
+from science_nodes.uv_light_client import UVLightClient
 
 
 class Platform:
@@ -10,14 +10,14 @@ class Platform:
         self._brush_on = False
         self._platform_height = 0
 
-        self.platform_cli = StepperClient()
+        self.stepper_motor = StepperMotorClient()
         self.flashlight_cli = FlashlightClient()
         self.uv_light_cli = UVLightClient()
 
     def set_platform_height(self, height):
         self._platform_height = height
-        self.platform_cli.send_request(self._platform_height)
-        self.platform_cli.run()
+        self.stepper_motor.send_request(self._platform_height)
+        self.stepper_motor.run()
 
     def turn_brush_on(self):
         self._brush_on = True
@@ -48,3 +48,8 @@ class Platform:
         self._uv_light_on = False
         self.uv_light_cli.send_request(self._uv_light_on)
         self.uv_light_cli.run()
+
+    def __del__(self):
+        self.uv_light_cli.__del__()
+        self.stepper_motor.__del__()
+        # flashlight destructor

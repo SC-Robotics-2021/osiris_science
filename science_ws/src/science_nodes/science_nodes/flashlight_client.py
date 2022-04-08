@@ -8,7 +8,7 @@ class FlashlightClient(Node):
         super().__init__('flashlight_client')
         self.flashlight_client = self.create_client(SetBool, '/osiris/science/flashlight/cmd')
         while not self.flashlight_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('flash light service not available, waiting again...')
+            self.get_logger().info('Flash light service not available, waiting again...')
         self.flashlight_req = SetBool.Request()
 
     def send_request(self, state):

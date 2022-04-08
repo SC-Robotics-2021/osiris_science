@@ -1,5 +1,5 @@
 """
-Author: Ro Sharaf
+Author: Ro Sharaf, Austin Lake
 Program: science gui and Command & Control
 Date: 3/15/2022
 """
@@ -17,6 +17,7 @@ from PyQt5.QtGui import QPixmap
 import sys
 import numpy as np
 import cv2
+from threading import Thread
 
 from ui_form import Ui_MainView
 
@@ -25,29 +26,29 @@ from lowering_platform import Platform
 from cameras import Cameras
 
 
-class VideoThread(QThread):
-    change_pixmap_signal = pyqtSignal(np.ndarray)
-
-    def __init__(self, index):
-        super().__init__()
-        self._run_flag = True
-        self._video_index = index
-        # self.camera = Cameras(self._video_index)
-
-    def run(self):
-        # capture from web cam
-        cap = cv2.VideoCapture(0)
-        while self._run_flag:
-            ret, cv_img = cap.read()
-            if ret:
-                self.change_pixmap_signal.emit(cv_img)
-        # shut down capture system
-        cap.release()
-
-    def stop(self):
-        """Sets run flag to False and waits for thread to finish"""
-        self._run_flag = False
-        self.wait()
+# class VideoThread(QThread):
+#     change_pixmap_signal = pyqtSignal(np.ndarray)
+#
+#     def __init__(self, index):
+#         super().__init__()
+#         self._run_flag = True
+#         self._video_index = index
+#         # self.camera = Cameras(self._video_index)
+#
+#     def run(self):
+#         # capture from web cam
+#         cap = cv2.VideoCapture(0)
+#         while self._run_flag:
+#             ret, cv_img = cap.read()
+#             if ret:
+#                 self.change_pixmap_signal.emit(cv_img)
+#         # shut down capture system
+#         cap.release()
+#
+#     def stop(self):
+#         """Sets run flag to False and waits for thread to finish"""
+#         self._run_flag = False
+#         self.wait()
 
 
 class MainWindow(QWidget):
@@ -71,9 +72,10 @@ class MainWindow(QWidget):
         self.ui.take_picture_button.clicked.connect(self.on_take_picture_button_pressed)
         self.ui.stop_record_button.clicked.connect(self.on_stop_record_button_pressed)
 
+        rclpy.init()
         self.funnel_cake_rover = FunnelCake()
         self.platform_rover = Platform()
-        # self.camera_rover = Camera()
+        self.camera_rover = Camera()
 
         self.is_collect_sample_pressed = False
         self.is_microscope_pressed = False
@@ -87,11 +89,15 @@ class MainWindow(QWidget):
                                 3: self.ui.pump_three_pb,
                                 4: self.ui.pump_four_pb,
                                 5: self.ui.pump_five_pb}
-        # rclpy.init()
+
         # create the video capture thread
-        self.thread0 = VideoThread(0)
+        # self.thread0 = VideoThread(0)
         # self.thread1 = VideoThread(1)
         # connect its signal to the update_image slot
+
+        c = Thread()
+
+
         self.thread0.change_pixmap_signal.connect(self.update_image)
         # self.thread1.change_pixmap_signal.connect(self.update_microscope)
         # start the thread
