@@ -1,7 +1,6 @@
-import rclpy
-from science_nodes.water_pump_client import WaterPumpClient
-from science_nodes.vacuum_client import VacuumClient
-from science_nodes.funnel_cake_client import FunnelCakeClient
+from science_clients.water_pump_client import WaterPumpClient
+from science_clients.vacuum_client import VacuumClient
+from science_clients.funnel_cake_client import FunnelCakeClient
 
 
 class FunnelCake(object):
@@ -17,10 +16,9 @@ class FunnelCake(object):
         self.water_pump_on = False
         self.vacuum_on = False
 
-        rclpy.init()
-        self.water_pump_cli = WaterPumpClient()
-        self.collect_sample_cli = VacuumClient()
-        self.funnel_cake_cli = FunnelCakeClient()
+        self.funnel_cake_client = FunnelCakeClient()
+        self.water_pump_client = WaterPumpClient()
+        self.vacuum_client = VacuumClient()
 
     def rotate_funnel_index(self, index):
         self.funnel_list_prev_index = self.funnel_index
@@ -37,20 +35,25 @@ class FunnelCake(object):
 
     def turn_water_pump_on(self):
         self.water_pump_on = True
-        self.water_pump_cli.send_request(self.water_pump_on)
-        self.water_pump_cli.run_node()
+        self.water_pump_client.send_request(self.water_pump_on)
+        self.water_pump_client.run_node()
 
     def turn_water_pump_off(self):
         self.water_pump_on = False
-        self.water_pump_cli.send_request(self.water_pump_on)
-        self.water_pump_cli.run_node()
+        self.water_pump_client.send_request(self.water_pump_on)
+        self.water_pump_client.run_node()
 
     def turn_vacuum_on(self):
         self.vacuum_on = True
-        self.collect_sample_cli.send_request(self.vacuum_on)
-        self.collect_sample_cli.run_node()
+        self.vacuum_client.send_request(self.vacuum_on)
+        self.vacuum_client.run_node()
 
     def turn_vacuum_off(self):
         self.vacuum_on = False
-        self.collect_sample_cli.send_request(self.vacuum_on)
-        self.collect_sample_cli.run_node()
+        self.vacuum_client.send_request(self.vacuum_on)
+        self.vacuum_client.run_node()
+
+    def close(self):
+        self.funnel_cake_client.destroy_node()
+        self.water_pump_client.destroy_node()
+        self.vacuum_client.destroy_node()

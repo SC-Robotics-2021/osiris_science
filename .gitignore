@@ -3,3 +3,5 @@ science_ws/install
 science_ws/log
 ui_form.py
 test_serial.py
+.idea/
+__pycache__

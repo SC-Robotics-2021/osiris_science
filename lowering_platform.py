@@ -1,55 +1,65 @@
-from science_nodes.stepper_motor_client import StepperMotorClient
-from science_nodes.station_flashlight_node import FlashlightClient
-from science_nodes.uv_light_client import UVLightClient
+from science_clients.stepper_motor_client import StepperMotorClient
+from science_clients.flashlight_client import FlashlightClient
+from science_clients.uv_light_client import UVLightClient
+from science_clients.brush_client import BrushClient
 
 
 class Platform:
     def __init__(self):
-        self._uv_light_on = False
-        self._flashlight_on = False
-        self._brush_on = False
-        self._platform_height = 0
+        self.uv_light_on = False
+        self.flashlight_on = False
+        self.brush_on = False
+        self.platform_height = 0
 
-        self.stepper_motor = StepperMotorClient()
-        self.flashlight_cli = FlashlightClient()
-        self.uv_light_cli = UVLightClient()
+        self.stepper_motor_client = StepperMotorClient()
+        self.brush_client = BrushClient()
+        self.flashlight_client = FlashlightClient()
+        self.uv_light_client = UVLightClient()
 
     def set_platform_height(self, height):
-        self._platform_height = height
-        self.stepper_motor.send_request(self._platform_height)
-        self.stepper_motor.run()
+        if self.platform_height != height:
+            self.platform_height = height
+            self.stepper_motor_client.send_request(self.platform_height)
+            self.stepper_motor_client.run()
 
     def turn_brush_on(self):
-        self._brush_on = True
-        self.brush_cli.send_request(self._brush_on)
-        self.brush_cli.run()
+        if self.brush_on:
+            self.brush_on = True
+            self.brush_client.send_request(self.brush_on)
+            self.brush_client.run()
 
     def turn_brush_off(self):
-        self._brush_on = False
-        self.brush_cli.send_request(self._brush_on)
-        self.brush_cli.run()
+        if self.brush_on:
+            self.brush_on = False
+            self.brush_client.send_request(self.brush_on)
+            self.brush_client.run()
 
     def turn_flashlight_on(self):
-        self._flashlight_on = True
-        self.flashlight_cli.send_request(self._flashlight_on)
-        self.flashlight_cli.run()
+        if not self.flashlight_on:
+            self.flashlight_on = True
+            self.flashlight_cli.send_request(self.flashlight_on)
+            self.flashlight_cli.run()
 
     def turn_flashlight_off(self):
-        self._flashlight_on = False
-        self.flashlight_cli.send_request(self._flashlight_on)
-        self.flashlight_cli.run()
+        if self.flashlight_on:
+            self.flashlight_on = False
+            self.flashlight_cli.send_request(self.flashlight_on)
+            self.flashlight_cli.run()
 
     def turn_uv_light_on(self):
-        self._uv_light_on = True
-        self.uv_light_cli.send_request(self._uv_light_on)
-        self.uv_light_cli.run()
+        if not self.uv_light_on:
+            self.uv_light_on = True
+            self.uv_light_client.send_request(self.uv_light_on)
+            self.uv_light_client.run()
 
     def turn_uv_light_off(self):
-        self._uv_light_on = False
-        self.uv_light_cli.send_request(self._uv_light_on)
-        self.uv_light_cli.run()
+        if self.uv_light_on:
+            self.uv_light_on = False
+            self.uv_light_client.send_request(self.uv_light_on)
+            self.uv_light_client.run()
 
-    def __del__(self):
-        self.uv_light_cli.__del__()
-        self.stepper_motor.__del__()
-        # flashlight destructor
+    def close(self):
+        self.stepper_motor_client.destroy_node()
+        self.flashlight_client.destroy_node()
+        self.brush_client.destroy_node()
+        self.uv_light_client.destroy_node()
