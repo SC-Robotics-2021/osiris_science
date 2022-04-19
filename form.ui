@@ -43,12 +43,12 @@
          </item>
          <item>
           <property name="text">
-           <string>NoIR Camera</string>
+           <string>IR Camera</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>Zed Camera</string>
+           <string>ZED2i</string>
           </property>
          </item>
         </widget>
@@ -284,31 +284,31 @@
      </widget>
      <widget class="QWidget" name="layoutWidget">
       <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>ZED2i</string>
+         </property>
+        </widget>
+       </item>
        <item row="0" column="1">
+        <widget class="QLabel" name="label_3">
+         <property name="text">
+          <string>Microscope</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
         <widget class="QLabel" name="label_4">
          <property name="text">
-          <string>TextLabel</string>
+          <string>UV Camera</string>
          </property>
         </widget>
        </item>
        <item row="1" column="1">
         <widget class="QLabel" name="label_5">
          <property name="text">
-          <string>TextLabel</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>TextLabel</string>
+          <string>IR Camera</string>
          </property>
         </widget>
        </item>

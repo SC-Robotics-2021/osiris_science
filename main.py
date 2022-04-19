@@ -9,15 +9,14 @@ import rclpy
 import sys
 import time
 
-from PyQt5.QtCore import QFile
-from PyQt5.QtWidgets import QApplication, QWidget
-from PyQt5.QtCore import QTimer, pyqtSignal, pyqtSlot, Qt
+from PyQt5.QtCore import QFile, QTimer, pyqtSignal, pyqtSlot, Qt, QThread
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout
 from PyQt5 import uic, QtGui
-from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QVBoxLayout
 from PyQt5.QtGui import QPixmap
 import sys
 import numpy as np
 import cv2
+
 
 from ui_form import Ui_MainView
 
@@ -51,6 +50,9 @@ class MainWindow(QWidget):
         self.platform_controller = Platform()
         self.camera_controller = Cameras()
 
+        self.camera_list = [[1, False, False, False], [2, False, False, False],
+                            [3, False, False, False], [4, False, False, False]]
+
         self.is_collect_sample_pressed = False
         self.is_microscope_pressed = False
         self.is_uv_camera_pressed = False
@@ -68,18 +70,22 @@ class MainWindow(QWidget):
         
         self.showMaximized()
 
+        self.frame_updater = QTimer()
+        self.frame_updater.timeout.connect(self.update_frames)
+        self.frame_updater.start(30)
+
     def closeEvent(self, event):
+        self.frame_updater.stop()
         self.camera_controller.close()
         self.platform_controller.close()
         event.accept()
 
-    @pyqtSlot(np.ndarray)
-    def update_images(self):
+    def update_frames(self):
         """Updates the image_label with a new opencv image"""
         self.ui.label_2.setPixmap(self.convert_cv_qt(self.camera_controller.get_zed_frame()))
         if self.is_microscope_pressed:
             self.ui.label_3.setPixmap(self.convert_cv_qt(self.camera_controller.get_microscope_frame()))
-        if self.is_uv_camera_pressed:
+        if self.on_uv_camera_pressed:
             self.ui.label_4.setPixmap(self.convert_cv_qt(self.camera_controller.get_uv_camera_frame()))
         if self.is_ir_camera_pressed:
             self.ui.label_5.setPixmap(self.convert_cv_qt(self.camera_controller.get_ir_camera_frame()))
@@ -194,19 +200,15 @@ class MainWindow(QWidget):
 def main():
     app = QApplication(sys.argv)
     rclpy.init()
-    window_open = False
     try:
         window = MainWindow()
         window.resize(1500, 800)
         window.show()
-        window_open = True
     except KeyboardInterrupt:
         print('\n')
     except Exception as e:
         print(f'{e}')
     finally:
-        if window_open:
-            window.camera_controller.close()
         sys.exit(app.exec_())
 
 
