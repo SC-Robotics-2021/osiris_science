@@ -190,7 +190,7 @@ class MainWindow(QWidget):
 
     def on_take_picture_button_pressed(self):
         self.camera_list[self.ui.camera_camboBox.currentIndex()][2] = True
-        cam_index = self.camera_list[self.ui.camera_camboBox.currentIndex()][0]
+        cam_index = self.ui.camera_camboBox.currentIndex()
         if cam_index == 0:
             self.camera_controller.take_microscope_snapshot()
         elif cam_index == 1:
