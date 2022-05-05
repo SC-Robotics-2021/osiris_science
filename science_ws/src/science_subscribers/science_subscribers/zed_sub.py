@@ -28,7 +28,7 @@ class ZEDSub(Node):
         frame_width = 640
         frame_height = 480
         self.frame = np.zeros([frame_width, frame_height, 3], dtype=np.uint8)
-        self.media_path = os.path.expanduser(f'~/Videos/osiris_drive/zed2i/')
+        self.media_path = os.path.expanduser(f'~/Videos/osiris_science/zed2i/')
         try:
             os.makedirs(self.media_path, exist_ok=True)
         except OSError as e:
