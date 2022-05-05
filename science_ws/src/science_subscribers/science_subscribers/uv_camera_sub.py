@@ -26,8 +26,8 @@ class UVCameraSub(Node):
                                                      self.receive_frame, qos_profile=qos_profile_sensor_data,
                                                      callback_group=self.callback_group)
         self.bridge = CvBridge()
-        frame_width = 640
-        frame_height = 480
+        frame_width = 320
+        frame_height = 240
         self.frame = np.zeros([frame_width, frame_height, 3], dtype=np.uint8)
         self.media_path = os.path.expanduser(f'~/Videos/osiris_science/uv_camera/')
         try:

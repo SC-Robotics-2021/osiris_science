@@ -24,8 +24,8 @@ class IRCameraSub(Node):
                                                      self.receive_frame, qos_profile=qos_profile_sensor_data,
                                                      callback_group=self.callback_group)
         self.bridge = CvBridge()
-        frame_width = 640
-        frame_height = 480
+        frame_width = 320
+        frame_height = 240
         self.frame = np.zeros([frame_width, frame_height, 3], dtype=np.uint8)
         self.media_path = os.path.expanduser(f'~/Videos/osiris_science/ir_camera/')
         try:
@@ -33,7 +33,7 @@ class IRCameraSub(Node):
         except OSError as e:
             self.get_logger().info(f'{e}')
         now = datetime.now().strftime('%m-%d-%Y_%H:%M:%S')
-        self.out = cv2.VideoWriter(os.path.join(self.media_path, 'UV_Camera_' + now + '.mp4'),
+        self.out = cv2.VideoWriter(os.path.join(self.media_path, 'IR_Camera_' + now + '.mp4'),
                                    cv2.VideoWriter_fourcc(*'mp4v'), 30, (frame_width, frame_height))
         self.snapshot = False
 
