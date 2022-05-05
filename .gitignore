@@ -4,4 +4,6 @@ science_ws/log
 ui_form.py
 test_serial.py
 .idea/
-__pycache__
+.idea/workspace.xml
+__pycache__/
+__pycache__/cameras.cpython-38.pyc
