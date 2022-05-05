@@ -136,22 +136,28 @@ class MainWindow(QWidget):
 
     def on_microscope_pressed(self):
         if not self.is_microscope_pressed:
+            self.camera_controller.start_microscope_streaming()
             self.ui.microscope_button.setStyleSheet('background-color: #B3BAFF;')
         else:
+            self.camera_controller.stop_microscope_streaming()
             self.ui.microscope_button.setStyleSheet('background-color: white;')
         self.is_microscope_pressed = not self.is_microscope_pressed
 
     def on_uv_camera_pressed(self):
         if not self.is_uv_camera_pressed:
+            self.camera_controller.start_uv_camera_streaming()
             self.ui.uv_camera_button.setStyleSheet('background-color: #B3BAFF;')
         else:
+            self.camera_controller.stop_uv_camera_streaming()
             self.ui.uv_camera_button.setStyleSheet('background-color: white;')
         self.is_uv_camera_pressed = not self.is_uv_camera_pressed
 
     def on_ir_camera_pressed(self):
         if not self.is_ir_camera_pressed:
+            self.camera_controller.start_ir_camera_streaming()
             self.ui.ir_camera_button.setStyleSheet('background-color: #B3BAFF;')
         else:
+            self.camera_controller.stop_ir_camera_streaming()
             self.ui.ir_camera_button.setStyleSheet('background-color: white;')
         self.is_ir_camera_pressed = not self.is_ir_camera_pressed
 

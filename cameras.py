@@ -22,10 +22,6 @@ class Cameras(object):
         self.ir_camera_client = IRCameraClient()
         self.ir_camera_sub = IRCameraSub()
 
-        self.microscope_on = False
-        self.uv_camera_on = False
-        self.ir_camera_on = False
-
         self.camera_executor = MultiThreadedExecutor()
         self.camera_executor.add_node(self.zed_sub)
         self.camera_executor.add_node(self.microscope_sub)
@@ -41,58 +37,43 @@ class Cameras(object):
         return self.zed_sub.frame
 
     def start_microscope_streaming(self):
-        if not self.microscope_on:
-            self.microscope_on = True
-            self.microscope_client.send_request(self.microscope_on)
-            self.microscope_client.run()
+        self.microscope_client.send_request(True)
+        self.microscope_client.run()
 
     def stop_microscope_streaming(self):
-        if self.microscope_on:
-            self.microscope_on = False
-            self.microscope_client.send_request(self.microscope_on)
-            self.microscope_client.run()
+        self.microscope_client.send_request(False)
+        self.microscope_client.run()
 
     def take_microscope_snapshot(self):
-        if self.microscope_on:
-            self.microscope_sub.snapshot = True
+        self.microscope_sub.snapshot = True
 
     def get_microscope_frame(self):
         return self.microscope_sub.frame
 
     def start_uv_camera_streaming(self):
-        if not self.uv_camera_on:
-            self.uv_camera_on = True
-            self.uv_camera_client.send_request(self.uv_camera_on)
-            self.uv_camera_client.run()
+        self.uv_camera_client.send_request(True)
+        self.uv_camera_client.run()
 
     def stop_uv_camera_streaming(self):
-        if self.uv_camera_on:
-            self.uv_camera_on = False
-            self.uv_camera_client.send_request(self.uv_camera_on)
-            self.uv_camera_client.run()
+        self.uv_camera_client.send_request(False)
+        self.uv_camera_client.run()
 
     def take_uv_camera_snapshot(self):
-        if self.uv_camera_on:
-            self.uv_camera_sub.snapshot = True
+        self.uv_camera_sub.snapshot = True
 
     def get_uv_camera_frame(self):
         return self.uv_camera_sub.frame
 
     def start_ir_camera_streaming(self):
-        if not self.ir_camera_on:
-            self.ir_camera_on = True
-            self.ir_camera_client.send_request(self.ir_camera_on)
-            self.ir_camera_client.run()
+        self.ir_camera_client.send_request(True)
+        self.ir_camera_client.run()
 
     def stop_ir_camera_streaming(self):
-        if self.ir_camera_on:
-            self.ir_camera_on = False
-            self.ir_camera_client.send_request(self.ir_camera_on)
-            self.ir_camera_client.run()
+        self.ir_camera_client.send_request(False)
+        self.ir_camera_client.run()
 
     def take_ir_camera_snapshot(self):
-        if self.ir_camera_on:
-            self.ir_camera_sub.snapshot = True
+        self.ir_camera_sub.snapshot = True
 
     def get_ir_camera_frame(self):
         return self.ir_camera_sub.frame
