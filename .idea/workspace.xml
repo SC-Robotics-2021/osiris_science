@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ddbaacc-81be-4f10-989e-5f1bb17c482b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/form.ui" beforeDir="false" afterPath="$PROJECT_DIR$/form.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/funnel_cake.py" beforeDir="false" afterPath="$PROJECT_DIR$/funnel_cake.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.pyproject" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.pyproject.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/platform.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/science_ws/src/rpi_srvcli/rpi_srvcli/RPi_node.py" beforeDir="false" afterPath="$PROJECT_DIR$/science_ws/src/rpi_srvcli/rpi_srvcli/RPi_node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/science_ws/src/science_nodes/science_nodes/station_funnel_cake_node.py" beforeDir="false" afterPath="$PROJECT_DIR$/science_ws/src/science_nodes/science_nodes/station_funnel_cake_node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/science_ws/src/science_nodes/science_nodes/station_vacuum_node.py" beforeDir="false" afterPath="$PROJECT_DIR$/science_ws/src/science_nodes/science_nodes/station_vacuum_node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/science_ws/src/station_interfaces/srv/StationFunnelCake.srv" beforeDir="false" afterPath="$PROJECT_DIR$/science_ws/src/station_interfaces/srv/StationFunnelCake.srv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/science_ws/src/science_subscribers/science_subscribers/ir_camera_sub.py" beforeDir="false" afterPath="$PROJECT_DIR$/science_ws/src/science_subscribers/science_subscribers/ir_camera_sub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/science_ws/src/science_subscribers/science_subscribers/microscope_sub.py" beforeDir="false" afterPath="$PROJECT_DIR$/science_ws/src/science_subscribers/science_subscribers/microscope_sub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/science_ws/src/science_subscribers/science_subscribers/uv_camera_sub.py" beforeDir="false" afterPath="$PROJECT_DIR$/science_ws/src/science_subscribers/science_subscribers/uv_camera_sub.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/science_ws/src/science_subscribers/science_subscribers/zed_sub.py" beforeDir="false" afterPath="$PROJECT_DIR$/science_ws/src/science_subscribers/science_subscribers/zed_sub.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +30,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1wvk7Nv8rCWx2Lub69dBD9CsZXP" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,7 +41,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../stream_test" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ros2-test/src/urdf_tutorial/urdf/osiris_description.urdf" />
   </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="button_subscriber" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
@@ -116,6 +113,26 @@
       <workItem from="1649280335969" duration="14388000" />
       <workItem from="1649314447258" duration="6719000" />
       <workItem from="1649379687765" duration="5560000" />
+      <workItem from="1649399494856" duration="68000" />
+      <workItem from="1649399564624" duration="14000" />
+      <workItem from="1649400458538" duration="888000" />
+      <workItem from="1649402028869" duration="12550000" />
+      <workItem from="1649532621449" duration="14752000" />
+      <workItem from="1649628291689" duration="581000" />
+      <workItem from="1649632808822" duration="620000" />
+      <workItem from="1649792713228" duration="1342000" />
+      <workItem from="1649886974395" duration="23000" />
+      <workItem from="1649887031646" duration="7000" />
+      <workItem from="1650133428470" duration="10414000" />
+      <workItem from="1650148362159" duration="2467000" />
+      <workItem from="1650150840497" duration="9089000" />
+      <workItem from="1650314801689" duration="12919000" />
+      <workItem from="1650338356287" duration="3048000" />
+      <workItem from="1650471793455" duration="602000" />
+      <workItem from="1650490169343" duration="760000" />
+      <workItem from="1650936963336" duration="628000" />
+      <workItem from="1651093644797" duration="613000" />
+      <workItem from="1651717584177" duration="5706000" />
     </task>
     <servers />
   </component>
