@@ -3,7 +3,7 @@ science_ws/install
 science_ws/log
 ui_form.py
 test_serial.py
-.idea/
-.idea/workspace.xml
-__pycache__/
-__pycache__/cameras.cpython-38.pyc
+.idea
+__pycache__
+science_recordings
+science_ws/src/science_subscribers/science_subscribers/__pycache__/*

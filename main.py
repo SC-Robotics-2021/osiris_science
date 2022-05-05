@@ -85,7 +85,7 @@ class MainWindow(QWidget):
         self.ui.label_2.setPixmap(self.convert_cv_qt(self.camera_controller.get_zed_frame()))
         if self.is_microscope_pressed:
             self.ui.label_3.setPixmap(self.convert_cv_qt(self.camera_controller.get_microscope_frame()))
-        if self.on_uv_camera_pressed:
+        if self.is_uv_camera_pressed:
             self.ui.label_4.setPixmap(self.convert_cv_qt(self.camera_controller.get_uv_camera_frame()))
         if self.is_ir_camera_pressed:
             self.ui.label_5.setPixmap(self.convert_cv_qt(self.camera_controller.get_ir_camera_frame()))
