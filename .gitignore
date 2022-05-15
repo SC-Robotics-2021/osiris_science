@@ -6,4 +6,4 @@ test_serial.py
 .idea
 __pycache__
 science_recordings
-science_ws/src/science_subscribers/science_subscribers/__pycache__/*
+science_ws/src/*/*/__pycache__

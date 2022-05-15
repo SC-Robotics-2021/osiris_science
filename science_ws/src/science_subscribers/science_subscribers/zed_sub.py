@@ -2,7 +2,7 @@ import rclpy
 from rclpy.node import Node
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.qos import qos_profile_sensor_data
-from sensor_msgs.msg import Image
+from sensor_msgs.msg import CompressedImage
 import cv2
 from cv_bridge import CvBridge
 import os
@@ -22,13 +22,13 @@ class ZEDSub(Node):
         """
         super().__init__('zed_sub')
         self.callback_group = ReentrantCallbackGroup()
-        self.subscription = self.create_subscription(Image, 'zed2i/zed_node/stereo/image_rect_color',
+        self.subscription = self.create_subscription(CompressedImage, '/osiris/drive/zed/images',
                                                      self.receive_frame, qos_profile=qos_profile_sensor_data,
                                                      callback_group=self.callback_group)
         self.bridge = CvBridge()
         frame_width = 320
         frame_height = 240
-        self.frame = np.zeros([frame_width, frame_height, 3], dtype=np.uint8)
+        self.frame = np.zeros([frame_height, frame_width, 4], dtype=np.uint8)
         self.media_path = os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), 'science_recordings', 'zed2i')
         try:
             os.makedirs(self.media_path, exist_ok=True)
@@ -43,8 +43,7 @@ class ZEDSub(Node):
         """
         ROS2 subscriber callback. Receives frame via ROS2 topic. Saves image to mp4 if requested
         """
-        self.frame = cv2.resize(self.bridge.imgmsg_to_cv2(frame), (self.frame_width, self.frame_height),
-                                interpolation=cv2.INTER_AREA)
+        self.frame = self.bridge.imgmsg_to_cv2(frame)
         self.out.write(self.frame)
         self.get_logger().info('Receiving ZED frame')
         if self.snapshot:
