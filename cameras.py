@@ -12,6 +12,7 @@ from threading import Thread
 class Cameras(object):
     def __init__(self):
         self.zed_sub = ZEDSub()
+        self.zed_sub.science_gui = True
 
         self.microscope_client = MicroscopeClient()
         self.microscope_sub = MicroscopeSub()
@@ -31,7 +32,7 @@ class Cameras(object):
         self.camera_thread.start()
 
     def take_zed_snapshot(self):
-        self.zed_camera_sub.snapshot = True
+        self.zed_sub.snapshot = True
 
     def get_zed_frame(self):
         return self.zed_sub.frame

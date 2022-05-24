@@ -30,7 +30,7 @@ class UVCameraSub(Node):
         frame_width = 320
         frame_height = 240
         self.frame = np.zeros([frame_width, frame_height, 3], dtype=np.uint8)
-        self.media_path = os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), 'science_recordings', 'uv_camera')
+        self.media_path = os.path.join(os.path.dirname(os.path.realpath(sys.argv[0]))   , 'science_recordings', 'uv_camera')
         try:
             os.makedirs(self.media_path, exist_ok=True)
         except OSError as e:

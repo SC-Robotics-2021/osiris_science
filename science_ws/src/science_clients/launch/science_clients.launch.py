@@ -9,7 +9,7 @@ def generate_launch_description():
     description = LaunchDescription()
 
     stepper_motor_client = Node(
-        package='lowering_platform_clients',
+        package='science_clients',
         executable='stepper_motor_client',
         name='stepper_motor_client'
     )
@@ -21,25 +21,25 @@ def generate_launch_description():
     )
 
     uv_camera_client = Node(
-        package='lowering_platform_clients',
+        package='science_clients',
         executable='uv_camera_client',
         name='uv_camera_client'
     )
 
     ir_camera_client = Node(
-        package='lowering_platform_clients',
+        package='science_clients',
         executable='ir_camera_client',
         name='ir_camera_client'
     )
 
     uv_light_client = Node(
-        package='lowering_platform_clients',
+        package='science_clients',
         executable='uv_light_client',
         name='uv_light_client'
     )
 
     brush_client = Node(
-        package='lowering_platform_clients',
+        package='science_clients',
         executable='brush_client',
         name='brush_client'
     )

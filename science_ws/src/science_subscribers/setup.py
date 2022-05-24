@@ -22,10 +22,10 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'zed_sub = lowering_platform_clients.zed_sub:main',
-            'microscope_sub = lowering_platform_clients.microscope_sub:main',
-            'uv_camera_sub = lowering_platform_clients.uv_camera_sub:main',
-            'ir_camera_sub = lowering_platform_clients.ir_camera_sub:main',
+            'zed_sub = science_subscribers.zed_sub:main',
+            'microscope_sub = science_subscribers.microscope_sub:main',
+            'uv_camera_sub = science_subscribers.uv_camera_sub:main',
+            'ir_camera_sub = science_subscribers.ir_camera_sub:main',
         ],
     },
 )

@@ -22,12 +22,12 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'stepper_motor_client = lowering_platform_clients.stepper_motor_client:main',
-            'microscope_client = lowering_platform_clients.microscope_client:main',
-            'uv_camera_client = lowering_platform_clients.uv_camera_client:main',
-            'ir_camera_client = lowering_platform_clients.ir_camera_client:main',
-            'uv_light_client = lowering_platform_clients.uv_light_client:main',
-            'brush_client = lowering_platform_clients.brush_client:main',
+            'stepper_motor_client = science_clients.stepper_motor_client:main',
+            'microscope_client = science_clients.microscope_client:main',
+            'uv_camera_client = science_clients.uv_camera_client:main',
+            'ir_camera_client = science_clients.ir_camera_client:main',
+            'uv_light_client = science_clients.uv_light_client:main',
+            'brush_client = science_clients.brush_client:main',
         ],
     },
 )

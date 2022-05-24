@@ -26,8 +26,8 @@ class ZEDSub(Node):
                                                      self.receive_frame, qos_profile=qos_profile_sensor_data,
                                                      callback_group=self.callback_group)
         self.bridge = CvBridge()
-        frame_width = 320
-        frame_height = 240
+        frame_width = 640
+        frame_height = 360
         self.frame = np.zeros([frame_height, frame_width, 4], dtype=np.uint8)
         self.media_path = os.path.join(os.path.dirname(os.path.realpath(sys.argv[0])), 'science_recordings', 'zed2i')
         try:
@@ -38,14 +38,18 @@ class ZEDSub(Node):
         self.out = cv2.VideoWriter(os.path.join(self.media_path, 'ZED2i_'+now+'.mp4'),
                                    cv2.VideoWriter_fourcc(*'mp4v'), 30, (frame_width, frame_height))
         self.snapshot = False
+        self.science_gui = False
 
     def receive_frame(self, frame):
         """
         ROS2 subscriber callback. Receives frame via ROS2 topic. Saves image to mp4 if requested
         """
-        self.frame = self.bridge.imgmsg_to_cv2(frame)
+        self.frame = self.bridge.compressed_imgmsg_to_cv2(frame)
         self.out.write(self.frame)
         self.get_logger().info('Receiving ZED frame')
+        if self.science_gui:
+            cv2.imshow('Drive View', self.frame)
+            cv2.waitKey(1)
         if self.snapshot:
             now = datetime.now().strftime('%m-%d-%Y_%H:%M:%S')
             cv2.imwrite(os.path.join(self.media_path, 'ZED2i_' + now + '.jpeg'), self.frame)
@@ -59,6 +63,7 @@ def main(args=None):
     """
     rclpy.init(args=args)
     zed_sub = ZEDSub()
+    cv2.namedWindow('Drive View', cv2.WINDOW_KEEPRATIO)
     try:
         rclpy.spin(zed_sub)
     except Exception as e:
@@ -66,6 +71,8 @@ def main(args=None):
     except KeyboardInterrupt:
         print('\n')
     finally:
+        if zed_sub.gui:
+            cv2.destroyAllWindows()
         zed_sub.out.release()
         zed_sub.destroy_node()
         rclpy.shutdown()
