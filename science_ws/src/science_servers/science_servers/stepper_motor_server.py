@@ -1,6 +1,8 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.callback_groups import ReentrantCallbackGroup
 from science_interfaces.srv import StepperMotor
+from std_srvs.srv import Trigger
 from ticlib import TicUSB
 from time import sleep
 import os
@@ -17,7 +19,9 @@ class StepperMotorServer(Node):
         Class constructor to set server parameters
         """
         super().__init__('stepper_motor_server')
-        self.service = self.create_service(StepperMotor, '/osiris/science/stepper_motor/cmd', self.move_platform)
+        self.callback_group = ReentrantCallbackGroup()
+        self.service = self.create_service(StepperMotor, '/osiris/science/stepper_motor/cmd', self.move_platform,
+                                           callback_group=self.callback_group)
         self.driver = TicUSB()
         self.driver.set_step_mode(32)
         self.driver.set_current_limit(2800)
@@ -32,6 +36,10 @@ class StepperMotorServer(Node):
         self.bottom_limit = False
         self.driver.deenergize()
         self.driver.enter_safe_start()
+        self.cancel = False
+
+    def cancel_movement(self):
+        self.cancel = True
 
     def move_platform(self, request, response):
         try:
@@ -44,7 +52,7 @@ class StepperMotorServer(Node):
                 self.get_logger().info(f'Current height: {response.height}')
                 direction = int(np.heaviside(self.target-self.driver.get_current_position(), 0))
                 self.get_logger().info(f'Direction: {direction}')
-                self.get_logger().info(f'Target: {self.driver.get_target_position()}')
+                self.get_logger().info(f'Target: {self.target}')
                 self.get_logger().info('execute initiated...')
             else:
                 response.success = False
@@ -54,25 +62,48 @@ class StepperMotorServer(Node):
                 return response
             self.driver.energize()
             self.driver.exit_safe_start()
-            while self.driver.get_current_position() != self.target:
-                self.driver.go_home(direction)
-                if self.driver.get_current_position() % self.step_factor == 0:
-                    response.height = int(self.driver.get_current_position() // self.step_factor)
-                    self.get_logger().info(f'Current height: {self.driver.get_current_position()}')
-                self.limit_check()
-                if self.top_limit and not direction:
-                    break
-                elif self.bottom_limit and direction:
-                    break
+            if direction:
+                while self.driver.get_current_position() < self.target:
+                    if self.cancel:
+                        self.driver.halt_and_set_position(self.driver.get_current_position())
+                        self.driver.deenergize()
+                        self.driver.enter_safe_start()
+                        self.cancel = False
+                        response.message = 'Platform movement cancel prematurely'
+                        break
+                    self.driver.go_home(direction)
+                    if self.driver.get_current_position() % self.step_factor == 0:
+                        response.height = int(self.driver.get_current_position() // self.step_factor)
+                        self.get_logger().info(f'Current height: {self.driver.get_current_position()}')
+                    self.limit_check()
+                    if self.top_limit and not direction:
+                        break
+            else:
+                while self.driver.get_current_position() > self.target:
+                    if self.cancel:
+                        self.driver.halt_and_set_position(self.driver.get_current_position())
+                        self.driver.deenergize()
+                        self.driver.enter_safe_start()
+                        self.cancel = False
+                        response.message = 'Platform movement cancel prematurely'
+                        break
+                    self.driver.go_home(direction)
+                    if self.driver.get_current_position() % self.step_factor == 0:
+                        response.height = int(self.driver.get_current_position() // self.step_factor)
+                        self.get_logger().info(f'Current height: {self.driver.get_current_position()}')
+                    self.limit_check()
+                    if self.bottom_limit and direction:
+                        break
+
         except Exception as e:
-            response.success = False
+            response.success = True
             response.message = str(e)
             self.get_logger().error('Driver error')
         finally:
             response.height = int(self.driver.get_current_position() // self.step_factor)
             self.driver.deenergize()
             self.driver.enter_safe_start()
-        return response
+            return response
 
     def limit_check(self):
         self.top_limit = not bool(int(str(format(self.driver.get_digital_readings()[0], '05b')[0])))
