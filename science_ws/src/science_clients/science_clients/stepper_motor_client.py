@@ -1,7 +1,6 @@
 import rclpy
 from rclpy.node import Node
-from rclpy.action import ActionClient
-from science_interfaces.action import StepperMotor
+from science_interfaces.srv import StepperMotor
 
 
 class StepperMotorClient(Node):
@@ -13,23 +12,23 @@ class StepperMotorClient(Node):
         Class constructor to set up the node
         """
         super().__init__('stepper_motor_client')
-        self.client = ActionClient(self, StepperMotor, '/osiris/science/stepper_motor/cmd')
-        self.goal = StepperMotor.Goal()
+        self.client = self.create_client(StepperMotor, '/osiris/science/stepper_motor/cmd')
+        self.request = StepperMotor.Request()
 
     def send_request(self, height):
         """
         ROS2 request function. Sends request command via ROS2 service.
         :param height: Device to be requested by service
         """
-        self.goal.height = height
-        while not self.client.wait_for_server(timeout_sec=1.0):
-            self.get_logger().info('Stepper motor service not available, waiting again...')
-        self.future = self.client.call_async(self.goal)
+        self.request.height = height
+        while not self.client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Stepper motor not available, waiting again...')
+        self.future = self.client.call_async(self.request)
         self.get_logger().info('Request sent')
 
     def run(self):
         """
-        ROS2 spin function. Allows for activation of node class as external dependency.
+
         """
         while rclpy.ok():
             rclpy.spin_once(self)
@@ -40,7 +39,7 @@ class StepperMotorClient(Node):
                     self.get_logger().info(f'{e}')
                 else:
                     self.get_logger().info(f'Result of /osiris/science/stepper_motor/cmd:' +
-                                           f'\n\tstate - {self.request.height}' +
+                                           f'\n\tstate - {response.height}' +
                                            f'\n\tsuccess - {response.success}' +
                                            f'\n\tmessage - {response.message}')
                 break
@@ -56,13 +55,17 @@ def main(args=None):
     proceed = 'proceed'
     try:
         while proceed != '':
-            height = None
-            while height is None:
-                height = input('Enter a height value as an integer from 0 to 200: ')
+            height = 'prompt'
+            while height == 'prompt':
+                height = input('Enter a height value as an integer from 0 to 200. To exit, enter EXIT in all caps: ')
                 try:
+                    if height == 'EXIT':
+                        break
                     height = int(height)
                 except ValueError:
-                    height = None
+                    height = 'prompt'
+            if height == 'EXIT':
+                break
             if height < 0:
                 height = 0
             elif height > 200:

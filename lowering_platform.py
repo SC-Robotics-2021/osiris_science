@@ -9,7 +9,6 @@ class Platform:
         self.uv_light_on = False
         self.flashlight_on = False
         self.brush_on = False
-        self.platform_height = 0
 
         self.stepper_motor_client = StepperMotorClient()
         self.brush_client = BrushClient()
@@ -17,10 +16,8 @@ class Platform:
         self.uv_light_client = UVLightClient()
 
     def set_platform_height(self, height):
-        if self.platform_height != height:
-            self.platform_height = height
-            self.stepper_motor_client.send_request(self.platform_height)
-            self.stepper_motor_client.run()
+        self.stepper_motor_client.send_request(height)
+        self.stepper_motor_client.run()
 
     def turn_brush_on(self):
         if self.brush_on:

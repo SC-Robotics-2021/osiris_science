@@ -10,6 +10,9 @@
     <height>603</height>
    </rect>
   </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
   <property name="windowTitle">
    <string>MainView</string>
   </property>
@@ -53,28 +56,10 @@
          </item>
         </widget>
        </item>
-       <item row="0" column="2">
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QPushButton" name="start_record_button">
-           <property name="text">
-            <string>Start Recording</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="take_picture_button">
+       <item row="1" column="1">
+        <widget class="QPushButton" name="snap_shot">
          <property name="text">
-          <string>Take Picture</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QPushButton" name="stop_record_button">
-         <property name="text">
-          <string>Stop Recording</string>
+          <string>Snap Shot</string>
          </property>
         </widget>
        </item>
@@ -119,24 +104,10 @@
            </item>
           </layout>
          </widget>
-         <widget class="QDial" name="pumps_dial">
-          <property name="minimum">
-           <number>1</number>
-          </property>
-          <property name="maximum">
-           <number>6</number>
-          </property>
-          <property name="singleStep">
-           <number>1</number>
-          </property>
-          <property name="wrapping">
-           <bool>true</bool>
-          </property>
-          <property name="notchesVisible">
-           <bool>true</bool>
-          </property>
-         </widget>
         </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QDial" name="dial"/>
        </item>
       </layout>
      </widget>
@@ -171,6 +142,32 @@
                 <property name="maximum">
                  <number>200</number>
                 </property>
+                <property name="sliderPosition">
+                 <number>100</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>turret speed</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSlider" name="turret_speed">
+                <property name="minimum">
+                 <number>1500</number>
+                </property>
+                <property name="maximum">
+                 <number>2600</number>
+                </property>
+                <property name="sliderPosition">
+                 <number>2048</number>
+                </property>
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -182,13 +179,6 @@
           </item>
           <item row="1" column="0">
            <layout class="QGridLayout" name="gridLayout_4">
-            <item row="1" column="1">
-             <widget class="QPushButton" name="uv_light_button">
-              <property name="text">
-               <string>UV Light</string>
-              </property>
-             </widget>
-            </item>
             <item row="1" column="0">
              <widget class="QPushButton" name="flashlight_button">
               <property name="text">
@@ -210,6 +200,13 @@
               </property>
              </widget>
             </item>
+            <item row="1" column="1">
+             <widget class="QPushButton" name="uv_light_button">
+              <property name="text">
+               <string>UV Light</string>
+              </property>
+             </widget>
+            </item>
             <item row="2" column="0">
              <widget class="QPushButton" name="ir_camera_button">
               <property name="text">
@@ -218,9 +215,9 @@
              </widget>
             </item>
             <item row="0" column="0">
-             <widget class="QPushButton" name="brush_button">
+             <widget class="QPushButton" name="set_height_button">
               <property name="text">
-               <string>Brush</string>
+               <string>Set Height</string>
               </property>
              </widget>
             </item>
@@ -242,22 +239,8 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
-           <widget class="QProgressBar" name="pump_one_pb">
-            <property name="value">
-             <number>0</number>
-            </property>
-           </widget>
-          </item>
           <item row="2" column="0">
            <widget class="QProgressBar" name="pump_two_pb">
-            <property name="value">
-             <number>0</number>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QProgressBar" name="pump_three_pb">
             <property name="value">
              <number>0</number>
             </property>
@@ -267,6 +250,20 @@
            <widget class="QPushButton" name="collect_sample_button">
             <property name="text">
              <string>Collect Sample</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QProgressBar" name="pump_one_pb">
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QProgressBar" name="pump_three_pb">
+            <property name="value">
+             <number>0</number>
             </property>
            </widget>
           </item>

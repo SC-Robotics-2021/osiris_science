@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+source science_ws/install/local_setup.zsh
+export ROS_DOMAIN_ID=4
+ros2 run science_servers uv_camera_server

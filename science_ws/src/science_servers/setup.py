@@ -25,12 +25,13 @@ setup(
     entry_points={
         'console_scripts': [
             'stepper_motor_server = science_servers.stepper_motor_server:main',
-            'uv_camera_server = science_servers.uv_camera_server:main',
-            'uv_light_server = science_servers.uv_light_server:main',
-            'microscope_server = science_servers.microscope_server:main',
-            'ir_camera_server = science_servers.ir_camera_server:main',
-            'brush_server = science_servers.brush_server:main',
-            'zed_server = science_servers.zed_server:main',
+            # 'uv_camera_server = science_servers.uv_camera_server:main',
+            # 'uv_light_server = science_servers.uv_light_server:main',
+            # 'microscope_server = science_servers.microscope_server:main',
+            # 'ir_camera_server = science_servers.ir_camera_server:main',
+            # 'brush_server = science_servers.brush_server:main',
+            # 'zed_server = science_servers.zed_server:main',
+            'turret_server = science_servers.turret_server:main',
         ],
     },
 )
