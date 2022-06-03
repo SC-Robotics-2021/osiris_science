@@ -24,7 +24,10 @@ class StepperMotorServer(Node):
                                            callback_group=self.callback_group)
         self.driver = TicUSB()
         self.driver.set_step_mode(32)
-        self.driver.set_current_limit(2800)
+        self.driver.set_current_limit(39)
+        self.driver.get_current_limit()
+        self.driver.get_step_mode()
+
         self.step_factor = 25  # number of steps per height value
         self.driver.energize()
         self.driver.exit_safe_start()
@@ -37,6 +40,7 @@ class StepperMotorServer(Node):
         self.driver.deenergize()
         self.driver.enter_safe_start()
         self.cancel = False
+        self.driver.clear_driver_error()
 
     def cancel_movement(self):
         self.cancel = True
@@ -54,6 +58,7 @@ class StepperMotorServer(Node):
                 self.get_logger().info(f'Direction: {direction}')
                 self.get_logger().info(f'Target: {self.target}')
                 self.get_logger().info('execute initiated...')
+                response.message = 'Movement complete'
             else:
                 response.success = False
                 response.message = 'Stepper motor already at requested height'
@@ -64,22 +69,8 @@ class StepperMotorServer(Node):
             self.driver.exit_safe_start()
             if direction:
                 while self.driver.get_current_position() < self.target:
-                    if self.cancel:
-                        self.driver.halt_and_set_position(self.driver.get_current_position())
-                        self.driver.deenergize()
-                        self.driver.enter_safe_start()
-                        self.cancel = False
-                        response.message = 'Platform movement cancel prematurely'
-                        break
-                    self.driver.go_home(direction)
-                    if self.driver.get_current_position() % self.step_factor == 0:
-                        response.height = int(self.driver.get_current_position() // self.step_factor)
-                        self.get_logger().info(f'Current height: {self.driver.get_current_position()}')
-                    self.limit_check()
-                    if self.top_limit and not direction:
-                        break
-            else:
-                while self.driver.get_current_position() > self.target:
+                    self.driver.reset_command_timeout()
+                    self.exit_safe_start
                     if self.cancel:
                         self.driver.halt_and_set_position(self.driver.get_current_position())
                         self.driver.deenergize()
@@ -94,7 +85,23 @@ class StepperMotorServer(Node):
                     self.limit_check()
                     if self.bottom_limit and direction:
                         break
-
+            else:
+                while self.driver.get_current_position() > self.target:
+                    self.driver.reset_command_timeout()
+                    if self.cancel:
+                        self.driver.halt_and_set_position(self.driver.get_current_position())
+                        self.driver.deenergize()
+                        self.driver.enter_safe_start()
+                        self.cancel = False
+                        response.message = 'Platform movement cancel prematurely'
+                        break
+                    self.driver.go_home(direction)
+                    if self.driver.get_current_position() % self.step_factor == 0:
+                        response.height = int(self.driver.get_current_position() // self.step_factor)
+                        self.get_logger().info(f'Current height: {self.driver.get_current_position()}')
+                    self.limit_check()
+                    if self.top_limit and not direction:
+                        break
         except Exception as e:
             response.success = True
             response.message = str(e)

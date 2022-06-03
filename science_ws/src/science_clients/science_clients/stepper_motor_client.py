@@ -61,9 +61,9 @@ class StepperMotorClient(Node):
                         self.get_logger().info(f'{e}')
                     else:
                         self.get_logger().info(f'Result of /osiris/science/stepper_motor/cmd:' +
-                                               f'\n\theight - {response.height}' +
-                                               f'\n\tsuccess - {response.success}' +
-                                               f'\n\tmessage - {response.message}')
+                                               f'\n\t\t\t\t\theight - {response.height}' +
+                                               f'\n\t\t\t\t\tsuccess - {response.success}' +
+                                               f'\n\t\t\t\t\tmessage - {response.message}')
                     break
 
 
@@ -91,8 +91,8 @@ def main(args=None):
             else:
                 if height < 0:
                     height = 0
-                elif height > 200:
-                    height = 200
+                elif height > 300:
+                    height = 300
                 stepper_motor_client.move_request(height)
                 stepper_motor_client.run()
             proceed = input('\nEnter any character(s) to continue sending height commands: ')
