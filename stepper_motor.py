@@ -53,8 +53,8 @@ def sudo(args=None):
 
 
 if __name__ == '__main__':
-    #if os.geteuid() != 0:
-    #    sudo()
-    #else:
-    #    main()
+    if os.geteuid() != 0:
+       sudo()
+    else:
+       main()
     main()
