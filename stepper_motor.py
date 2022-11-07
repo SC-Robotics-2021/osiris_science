@@ -41,7 +41,7 @@ def main():
     try:
         while rclpy.ok():
             state = not state
-    except Exception:
+    except Exception as e: 
         stepper_motor_controller.stepper_motor_server.get_logger().info(f'{e}')
     finally:
         stepper_motor_controller.close()
