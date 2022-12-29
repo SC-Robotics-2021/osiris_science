@@ -1,0 +1,6 @@
+FROM osrf/ros2:foxy-desktop
+COPY . .
+RUN colcon build --symlink-install
+RUN source ./install/setup.bash
+
+CMD ["python3", "stepper_motor.py"] 
