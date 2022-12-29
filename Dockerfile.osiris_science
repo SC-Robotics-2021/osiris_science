@@ -23,5 +23,5 @@ RUN apt install python3-colcon-common-extensions -y
 
 RUN colcon build --symlink-install
 
-ENTRYPOINT ["/root/osiris_science/ros2_entrypoint.sh"]
+ENTRYPOINT ["/root/osiris_science/entrypoint.sh"]
 CMD ["bash"]
