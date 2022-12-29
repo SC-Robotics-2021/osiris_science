@@ -16,9 +16,9 @@ setup(
     author='Parham Sharafoleslami',
     author_email='parham2002sh@gmail.com',
     maintainer='Austin Lake',
-    maintainer_email='alake4@ivc.edu',
+    maintainer_email='austinlake04@berkeley.edu',
     description='This package contains ROS2 clients to issue commands to the science package components',
-    license='Apache License 2.0',
+    license='BSD-3-Clause License',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [

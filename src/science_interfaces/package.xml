@@ -6,8 +6,9 @@
   <description>'This package contains ROS2 action files that specify the format of command messages to the science package components'</description>
   <author email="parham2002sh@gmail.com">Parham Sharafoleslami</author>
   <maintainer email="parham2002sh@gmail.com">Parham Sharafoleslami</maintainer>
-  <maintainer email="alake4@ivc.edu">Austin Lake</maintainer>
-  <license>Apache License 2.0</license>
+  <author email="austinlake04@berkeley.edu">Austin Lake</author>
+  <maintainer email="austinlake04@berkeley.edu">Austin Lake</maintainer>
+  <license>BSD-3-Clause License</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

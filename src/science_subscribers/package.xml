@@ -4,9 +4,9 @@
   <name>science_subscribers</name>
   <version>1.0.0</version>
   <description>This package contains ROS2 subscribers to receive frames from the science package cameras</description>
-  <author email="alake4@ivc.edu">Austin Lake</author>
-  <maintainer email="alake4@ivc.edu">Austin Lake</maintainer>
-  <license>Apache License 2.0</license>
+  <author email="austinlake04@berkeley.edu">Austin Lake</author>
+  <maintainer email="austinlake04@berkeley.edu">Austin Lake</maintainer>
+  <license>BSD-3-Clause License</license>
 
   <depend>rclpy</depend>
 

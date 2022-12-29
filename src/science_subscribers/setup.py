@@ -14,11 +14,11 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     author='Austin Lake',
-    author_email='alake4@ivc.edu',
+    author_email='austinlake04@berkeley.edu',
     maintainer='Austin Lake',
-    maintainer_email='alake4@ivc.edu',
+    maintainer_email='austinlake04@berkeley.edu',
     description='This package contains ROS2 subscribers to receive frames from the science package cameras',
-    license='Apache License 2.0',
+    license='BSD-3-Clause License',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [

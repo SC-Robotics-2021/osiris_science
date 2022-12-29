@@ -5,8 +5,9 @@
   <version>1.0.0</version>
   <description>This package contains ROS2 service and action server nodes to execute functionality of lowering platform components in the science package.
   </description>
-  <maintainer email="alake4@ivc.edu">Austin Lake</maintainer>
-  <license>MIT License</license>
+  <author email="austinlake04@berkeley.edu">Austin Lake</author>
+  <maintainer email="austinlake04@berkeley.edu">Austin Lake</maintainer>
+  <license>BSD-3-Clause License</license>
 
   <exec_depend>science_interfaces</exec_depend>
 

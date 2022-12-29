@@ -17,10 +17,12 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
+    author='Austin Lake',
+    author_email='austinlake04@berkeley.edu',
     maintainer='Austin Lake',
-    maintainer_email='alake4@ivc.edu',
+    maintainer_email='austinlake04@berkeley.edu',
     description='This package contains ROS2 server nodes to execute functionality of lowering platform components in the science package.',
-    license='MIT License',
+    license='BSD-3-Clause License',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [

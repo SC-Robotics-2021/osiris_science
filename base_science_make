@@ -1,5 +1,0 @@
-#!/bin/zsh
-
-source science_ws/install/local_setup.zsh
-export ROS_DOMAIN_ID=4
-python3 main.py
