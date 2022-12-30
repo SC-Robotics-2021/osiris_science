@@ -1,4 +1,0 @@
-int16 target
----
-bool success
-string message

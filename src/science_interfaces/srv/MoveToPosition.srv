@@ -1,5 +1,5 @@
-uint8 height
+uint8 position
 ---
 bool success
----
+uint8 position
 string message

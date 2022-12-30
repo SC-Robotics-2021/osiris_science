@@ -1,5 +1,0 @@
-int16 height
----
-bool success
-int16 height
-string message

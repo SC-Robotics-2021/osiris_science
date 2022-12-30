@@ -8,10 +8,10 @@ def generate_launch_description():
     """
     description = LaunchDescription()
 
-    stepper_motor_client = Node(
+    lowering_platform_client = Node(
         package='science_clients',
-        executable='stepper_motor_client',
-        name='stepper_motor_client'
+        executable='lowering_platform_client',
+        name='lowering_platform_client'
     )
 
     microscope_client = Node(
@@ -44,11 +44,18 @@ def generate_launch_description():
         name='brush_client'
     )
 
-    description.add_action(stepper_motor_client)
+    funnel_cake_client = Node(
+        package='science_clients',
+        executable='funnel_cake_client',
+        name='funnel_cake_client'
+    )
+
+    description.add_action(lowering_platform_client)
     description.add_action(microscope_client)
     description.add_action(uv_camera_client)
     description.add_action(ir_camera_client)
     description.add_action(uv_light_client)
     description.add_action(brush_client)
+    description.add_action(funnel_cake_client)
 
     return description

@@ -1,5 +1,0 @@
-int16 pump_num
----
-bool success
-int16 position
-string message

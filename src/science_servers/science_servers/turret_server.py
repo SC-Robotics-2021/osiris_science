@@ -12,9 +12,9 @@ def jrk2cmd(*args):
     return subprocess.check_output(['jrk2cmd'] + list(args))
 
 
-class TurretServer(Node):
+class FunnelCakeServer(Node):
     """
-    Subclass of ROS2 Node class. Accesses USB camera and publishes video feed
+    Subclass of ROS2 Node class. Accesses JRK's for turret control
     """
     def __init__(self):
         """
@@ -22,6 +22,7 @@ class TurretServer(Node):
         """
         super().__init__('turret_server')
         self.service = self.create_service(Turret, '/osiris/science/turret/cmd', self.send_request)
+        self.active = True
 
     def is_jrk_ready(self):
         return True
@@ -35,11 +36,10 @@ class TurretServer(Node):
                 response.message = f'Success'
             else:
                 response.success = False
-                response.message = f'JRK is not ready not exist'
+                response.message = f'JRK is not ready/not exist'
         except:
             response.success = False
             response.message = f'Something went wrong'
-
         return response
 
 
@@ -49,13 +49,13 @@ def main(args=None):
     :param args: ROS2 command line arguments
     """
     rclpy.init(args=args)
-    turret_server = TurretServer()
+    turret_server = FunnelCakeServer()
     try:
         rclpy.spin(turret_server)
-    except Exception as e:
-        turret_server.get_logger().info(f'{e})')
     except KeyboardInterrupt:
         print('\n')
+    except:
+        turret_server.get_logger().error('Device failed!')
     finally:
         turret_server.destroy_node()
         rclpy.shutdown()
