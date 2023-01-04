@@ -3,7 +3,7 @@ build/
 install/
 log/
 
-.vscode/
+.vscode
 
 ui_form.py
 test_serial.py
