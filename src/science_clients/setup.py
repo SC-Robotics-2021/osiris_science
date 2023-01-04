@@ -22,13 +22,15 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'lowering_platform_client = lowering_platform_client.lowering_platform_client:main',
+            'lowering_platform_client = science_clients.lowering_platform_client:main',
             'microscope_client = science_clients.microscope_client:main',
             'uv_camera_client = science_clients.uv_camera_client:main',
             'ir_camera_client = science_clients.ir_camera_client:main',
             'uv_light_client = science_clients.uv_light_client:main',
             'brush_client = science_clients.brush_client:main',
-            'funnel_cake_client = funnel_cake_client.funnel_cake_client:main',
+            'funnel_cake_client = science_clients.funnel_cake_client:main',
+            'vacuum_client = science_clients.vacuum_client:main',
+            'water_pump_client = science_clients.water_pump_client:main',
         ],
     },
 )

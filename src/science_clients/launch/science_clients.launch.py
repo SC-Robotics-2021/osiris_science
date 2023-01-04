@@ -50,6 +50,18 @@ def generate_launch_description():
         name='funnel_cake_client'
     )
 
+    vacuum_client = Node(
+        package='science_clients',
+        executable='vacuum_client',
+        name='vacuum_client'
+    )
+
+    water_pump_client = Node(
+        package='science_clients',
+        executable='water_pump_client',
+        name='water_pump_client'
+    )
+
     description.add_action(lowering_platform_client)
     description.add_action(microscope_client)
     description.add_action(uv_camera_client)
@@ -57,5 +69,7 @@ def generate_launch_description():
     description.add_action(uv_light_client)
     description.add_action(brush_client)
     description.add_action(funnel_cake_client)
+    description.add_action(vacuum_client)
+    description.add_action(water_pump_client)
 
     return description

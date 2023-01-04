@@ -4,7 +4,7 @@ package_name = 'science_subscribers'
 
 setup(
     name=package_name,
-    version='1.0.0',
+    version='2.0.0',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -22,7 +22,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'zed_sub = science_subscribers.zed_sub:main',
             'microscope_sub = science_subscribers.microscope_sub:main',
             'uv_camera_sub = science_subscribers.uv_camera_sub:main',
             'ir_camera_sub = science_subscribers.ir_camera_sub:main',

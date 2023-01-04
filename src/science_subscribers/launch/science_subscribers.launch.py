@@ -8,12 +8,6 @@ def generate_launch_description():
     """
     description = LaunchDescription()
 
-    zed_sub = Node(
-        package='science_subscribers',
-        executable='zed_sub',
-        name='zed_sub'
-    )
-
     microscope_sub = Node(
         package='science_subscribers',
         executable='microscope_sub',
@@ -32,7 +26,6 @@ def generate_launch_description():
         name='ir_camera_sub'
     )
 
-    description.add_action(zed_sub)
     description.add_action(microscope_sub)
     description.add_action(uv_camera_sub)
     description.add_action(ir_camera_sub)

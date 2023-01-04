@@ -1,8 +1,7 @@
-from server_template import *
+from template_servers import *
 
 def main():
-    gpio_server = GPIO(subsystem='science', component_name='brush', pin=14)
-    boot(gpio_server)
+    boot(GPIOServer(subsystem='science', component_name='brush', pin=14))
 
 if __name__ == '__main__':
     main()

@@ -35,9 +35,7 @@ endif()
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  "srv/FunnelCake.srv"
-  "srv/Turret.srv"
-  "srv/StepperMotor.srv"
+  "srv/MoveToPosition.srv"
 )
 
 ament_export_dependencies(rosidl_default_runtime)

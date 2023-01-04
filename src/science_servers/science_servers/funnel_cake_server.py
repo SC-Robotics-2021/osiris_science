@@ -1,7 +1,7 @@
 from template_servers import *
 
 def main():
-    boot(GPIOServer(subsystem='science', component_name='water_pump', pin=14))
+    boot(FunnelCakeServer(subsystem='science', component_name='funnel_cake'))
 
 if __name__ == '__main__':
     main()

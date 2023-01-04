@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>science_interfaces</name>
-  <version>1.0.0</version>
+  <version>2.0.0</version>
   <description>'This package contains ROS2 action files that specify the format of command messages to the science package components'</description>
   <author email="parham2002sh@gmail.com">Parham Sharafoleslami</author>
   <maintainer email="parham2002sh@gmail.com">Parham Sharafoleslami</maintainer>

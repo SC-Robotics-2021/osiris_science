@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>science_servers</name>
-  <version>1.0.0</version>
+  <version>2.0.0</version>
   <description>This package contains ROS2 service and action server nodes to execute functionality of lowering platform components in the science package.
   </description>
   <author email="austinlake04@berkeley.edu">Austin Lake</author>

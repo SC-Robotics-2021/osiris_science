@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>science_subscribers</name>
-  <version>1.0.0</version>
+  <version>2.0.0</version>
   <description>This package contains ROS2 subscribers to receive frames from the science package cameras</description>
   <author email="austinlake04@berkeley.edu">Austin Lake</author>
   <maintainer email="austinlake04@berkeley.edu">Austin Lake</maintainer>

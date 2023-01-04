@@ -9,52 +9,46 @@ def generate_launch_description():
     """
     description = LaunchDescription()
 
-    # stepper_motor_server = Node(
-    #     package='science_servers',
-    #     executable='stepper_motor_server',
-    #     name='stepper_motor_server'
-    # )
-
-    # uv_camera_server = Node(
-    #     package='science_servers',
-    #     executable='uv_camera_server',
-    #     name='uv_camera_server'
-    # )
-
-    # uv_light_server = Node(
-    #     package='science_servers',
-    #     executable='uv_light_server',
-    #     name='uv_light_server'
-    # )
-
-    # microscope_server = Node(
-    #     package='science_servers',
-    #     executable='microscope_server',
-    #     name='microscope_server'
-    # )
-
-    # ir_camera_server = Node(
-    #     package='science_servers',
-    #     executable='ir_camera_server',
-    #     name='ir_camera_server'
-    # )
-
-    # brush_server = Node(
-    #     package='science_servers',
-    #     executable='brush_server',
-    #     name='brush_server'
-    # )
-
-    turret_server = Node(
+    lowering_platform_server = Node(
         package='science_servers',
-        executable='turret_server',
-        name='turret_server'
+        executable='lowering_platform_server',
+        name='lowering_platform_server'
     )
 
-    platform_server = Node(
+    uv_camera_server = Node(
         package='science_servers',
-        executable='stepper_motor_server',
-        name='stepper_motor_server'
+        executable='uv_camera_server',
+        name='uv_camera_server'
+    )
+
+    uv_light_server = Node(
+        package='science_servers',
+        executable='uv_light_server',
+        name='uv_light_server'
+    )
+
+    microscope_server = Node(
+        package='science_servers',
+        executable='microscope_server',
+        name='microscope_server'
+    )
+
+    ir_camera_server = Node(
+        package='science_servers',
+        executable='ir_camera_server',
+        name='ir_camera_server'
+    )
+
+    brush_server = Node(
+        package='science_servers',
+        executable='brush_server',
+        name='brush_server'
+    )
+
+    funnel_cake_server = Node(
+        package='science_servers',
+        executable='funnel_cake_server',
+        name='funnel_cake_server'
     )
 
     vacuum_server = Node(
@@ -63,21 +57,20 @@ def generate_launch_description():
         name='vacuum_server'
     )
 
-    water_server = Node(
+    water_pump_server = Node(
         package='science_servers',
-        executable='water_server',
-        name='water_server'
+        executable='water_pump_server',
+        name='water_pump_server'
     )
 
-    # description.add_action(stepper_motor_server)
-    # description.add_action(uv_camera_server)
-    # description.add_action(uv_light_server)
-    # description.add_action(microscope_server)
-    # description.add_action(ir_camera_server)
-    description.add_action(turret_server)
-    description.add_action(platform_server)
+    description.add_action(lowering_platform_server)
+    description.add_action(uv_camera_server)
+    description.add_action(uv_light_server)
+    description.add_action(microscope_server)
+    description.add_action(ir_camera_server)
+    description.add_action(funnel_cake_server)
     description.add_action(vacuum_server)
-    description.add_action(water_server)
-    # description.add_action(brush_server)
+    description.add_action(water_pump_server)
+    description.add_action(brush_server)
 
     return description

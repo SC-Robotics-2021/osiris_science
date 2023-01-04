@@ -1,7 +1,8 @@
-import template_clients.action_client as action_client
+from template_clients import *
 
 def main():
-    action_client.boot(subsystem='science', component_name='funnel_cake', max_position=200)
+    boot(ActionClient(subsystem='science', component_name='funnel_cake'))
     
 if __name__ == '__main__':
     main()
+    

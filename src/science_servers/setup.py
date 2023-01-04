@@ -7,7 +7,7 @@ science_interfaces = 'science_interfaces'
 
 setup(
     name=science_servers,
-    version='1.0.0',
+    version='2.0.0',
     packages=[science_servers],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -26,14 +26,16 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'stepper_motor_server = science_servers.stepper_motor_server:main',
-            # 'uv_camera_server = science_servers.uv_camera_server:main',
-            # 'uv_light_server = science_servers.uv_light_server:main',
-            # 'microscope_server = science_servers.microscope_server:main',
-            # 'ir_camera_server = science_servers.ir_camera_server:main',
-            # 'brush_server = science_servers.brush_server:main',
-            # 'zed_server = science_servers.zed_server:main',
-            'turret_server = science_servers.turret_server:main',
+            'lowering_platform_server = science_servers.lowering_platform_server:main',
+            'uv_camera_server = science_servers.uv_camera_server:main',
+            'uv_light_server = science_servers.uv_light_server:main',
+            'microscope_server = science_servers.microscope_server:main',
+            'ir_camera_server = science_servers.ir_camera_server:main',
+            'brush_server = science_servers.brush_server:main',
+            'funnel_cake_server = science_servers.funnel_cake_server:main',
+            'vacuum_server = science_servers.vacuum_server:main',
+            'water_pump_server = science_servers.water_pump_server:main',
+
         ],
     },
 )
