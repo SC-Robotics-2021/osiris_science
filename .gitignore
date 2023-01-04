@@ -1,9 +1,12 @@
-science_ws/build
-science_ws/install
-science_ws/log
+# colcon build files
+build/
+install/
+log/
+
+.vscode/
+
 ui_form.py
 test_serial.py
 .idea
 __pycache__
 science_recordings
-science_ws/src/*/*/__pycache__
