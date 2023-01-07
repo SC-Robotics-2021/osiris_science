@@ -3,10 +3,12 @@ from rclpy.node import Node
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.qos import qos_profile_sensor_data
 from sensor_msgs.msg import CompressedImage
+import sys
 import cv2
 import os
 from cv_bridge import CvBridge
 from datetime import datetime
+import numpy as np
 
 class CameraSubscriber(Node):
     """
@@ -51,12 +53,11 @@ class CameraSubscriber(Node):
             cv2.imwrite(os.path.join(self.media_path, ''+datetime.now().strftime('%m-%d-%Y_%H:%M:%S')+'.jpg'), self.frame)
             self.snapshot = False
 
-def boot(subscriber=CameraSubscriber(subsystem='placeholder', component_name='placeholder')):
+def boot(subscriber):
     """
     Initializes and spins ROS2 node. Camera capture and node are ended explicitly before shutdown
     :param args: ROS2 command line arguments
     """
-    rclpy.init()
     cv2.namedWindow(f'{subscriber.component_name.title()}', cv2.WINDOW_NORMAL)
     try:
         rclpy.spin(subscriber)

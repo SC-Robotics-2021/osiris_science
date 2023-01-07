@@ -1,7 +1,8 @@
-from template_subscribers import *
+from science_subscribers.template_subscribers import *
 
 
 def main():
+    rclpy.init()
     boot(CameraSubscriber(subsystem='science', component_name='ir_camera'))
 
 

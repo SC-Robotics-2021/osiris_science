@@ -33,7 +33,7 @@ class Server(Node):
         self.subsystem = subsystem
         self.component_name = component_name.replace("_", " ")
         self.service = self.create_service(service, f'/{subsystem}/{component_name}/cmd', self.recieve_request)
-        self.active = False
+        self.active = True
 
     def recieve_request(self, request, response):
         """
@@ -68,13 +68,12 @@ class GPIOServer(Server):
         """
         super().__init__(subsystem, component_name, pin, service)
         self.pin = pin
-        self.active = False
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(self.pin, GPIO.OUT)
         GPIO.output(self.pin, GPIO.LOW)
 
 
-class CameraServer(Node):
+class CameraServer(Server):
     """
     Subclass of ROS2 Node class. Accesses USB camera and publishes video feed
     """
@@ -82,7 +81,7 @@ class CameraServer(Node):
         """
         Class constructor.
         """
-        super().__init__(f'{component_name}_server')
+        super().__init__(subsystem, component_name)
         self.publisher = self.create_publisher(CompressedImage, f'/{subsystem}/{component_name}/images',
                                                qos_profile=qos_profile_sensor_data)
         timer_period = 1/30
@@ -92,12 +91,12 @@ class CameraServer(Node):
         self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, camera_settings['resolution'][0])
         self.bridge = CvBridge()
 
-    def publish_image(self):
+    def publish_frame(self):
         """
         Publisher callback function. Called every 0.01 seconds and publishes current frame to ROS2 topic.
         """
         if self.active:
-            if self.count_subscribers(f'/{self.subsystem}/{self.component_name}/images') > 0:
+            if self.count_subscribers(f'/{self.subsystem}/{self.component_name.replace(" ", "_")}/images') > 0:
                 success, frame = self.camera.read()
                 if success:
                     self.get_logger().info(f'Publishing {self.component_name} camera frame')
@@ -151,6 +150,7 @@ class LoweringPlatformServer(Node):
         Class constructor to set server parameters
         """
         super().__init__('stepper_motor_server')
+        self.component_name = 'stepper motor'
         self.callback_group = ReentrantCallbackGroup()
         self.service = self.create_service(MoveToPosition, '/science/stepper_motor/cmd', self.move,
                                            callback_group=self.callback_group)
@@ -240,21 +240,21 @@ def boot(server):
     Main function. Initializes and spins ROS2 node. Node is ended explicitly before shutdown
     :param args: ROS2 command line arguments
     """
-    try:
-        assert(type(server) in [GPIOServer, CameraServer, LoweringPlatformServer, FunnelCakeServer])
-        rclpy.spin(server)
-    except AssertionError:
-        print('Invalid Server Type')
-    except KeyboardInterrupt:
-        print('\n')
-    except:
-        server.get_logger().error('Device failed')
-    finally:
-        if type(server) == GPIOServer:
-            GPIO.cleanup()
-        elif type(server) == LoweringPlatformServer:
-            server.driver.deenergize()
-            server.driver.enter_safe_start()
-
-        server.destroy_node()
-        rclpy.shutdown()
+    rclpy.spin(server)
+    # try:
+    #     assert(type(server) in [GPIOServer, CameraServer, LoweringPlatformServer, FunnelCakeServer])
+    #     rclpy.spin(server)
+    # except AssertionError:
+    #     print('Invalid Server Type')
+    # except KeyboardInterrupt:
+    #     print('\n')
+    # except:
+    #     server.get_logger().error('Device failed')
+    # finally:
+    #     if type(server) == GPIOServer:
+    #         GPIO.cleanup()
+    #     elif type(server) == LoweringPlatformServer:
+    #         server.driver.deenergize()
+    #         server.driver.enter_safe_start()
+    #     server.destroy_node()
+    #     rclpy.shutdown()
