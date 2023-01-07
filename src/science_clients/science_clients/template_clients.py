@@ -114,15 +114,13 @@ def boot(client): # replace with ActionClient as needed
                     state = input(f'Enter 1 to turn the {client.component_name} on, or 0 to turn it off: ')
                 client.send_request(bool(state))
             elif type(client) == ActionClient:
-                position = 'prompt'
-                while position == 'prompt':
-                    position = input(f'Enter a position value as an integer from 0 to {client.max_position}. Press Ctrl+C to exit: ')
+                prompt = True
+                while prompt:
                     try:
-                        position = int(position)
-                        print('breaking prompt loop')
-                        break                    
+                        position = int(input(f'Enter a position value as an integer from 0 to {client.max_position}. Press Ctrl+C to exit: '))
+                        prompt = False                    
                     except ValueError:
-                        position = 'prompt'
+                        position = True
                 if position < 0:
                     position = 0
                     client.get_logger().warn('Position value cannot be negative. Setting to 0.')
@@ -131,8 +129,7 @@ def boot(client): # replace with ActionClient as needed
                     client.get_logger().warn(f'Position value cannot be greater than {client.max_position}. Setting to {client.max_position}.')
                 client.send_request(position)
             client.run()
-            proceed = input(f'\nEnter any character(s) to continue sending position commands {client.component_name}: ')
-            proceed = bool(proceed)
+            proceed = (input(f'\nEnter any character(s) to continue sending position commands {client.component_name}: ') != '')
     except AssertionError:
         assert(type(client) in [ServiceClient, ActionClient])
     except KeyboardInterrupt:
