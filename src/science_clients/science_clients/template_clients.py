@@ -8,14 +8,14 @@ class ServiceClient(Node):
     """
     Subclass of ROS2 Node. Issues control commands to vacuum component.
     """
-    def __init__(self, subsystem, component_name):
+    def __init__(self, subsystem, component_name, action=SetBool):
         """
         Class constructor to set up the node
         """
         super().__init__(f'{component_name}_client')
         self.subsystem = subsystem
         self.component_name = component_name.replace("_", " ")
-        self.client = self.create_client(SetBool, f'/{subsystem}/{component_name}/cmd')
+        self.client = self.create_client(action, f'/{subsystem}/{component_name}/cmd')
         self.request = SetBool.Request()
 
     def send_request(self, state):
@@ -52,13 +52,14 @@ class ActionClient(ServiceClient):
     """
     Subclass of ROS2 Node. Issues control commands to stepper motor component.
     """
-    def __init__(self, subsystem, component_name, action):
+    def __init__(self, subsystem, component_name, max_position, action=MoveToPosition):
         """
         Class constructor to set up the node
         """
         super().__init__(subsystem, component_name, action)
+        self.max_position = max_position
         self.action = action
-        self.cancel_client = self.create_client(action, f'/{subsystem}/{component_name}/cancel')
+        self.cancel_client = self.create_client(Trigger, f'/{subsystem}/{component_name}/cancel')
 
     def cancel_request(self):
         self.cancel_future = self.cancel_client.call_async(self.action.Request())
@@ -98,40 +99,45 @@ class ActionClient(ServiceClient):
                                                f'\n\t\t\t\t\tmessage - {response.message}')
                     break
 
-def boot(client=ServiceClient(subsystem='placeholder', component_name='placeholder', max_position=0)): # replace with ActionClient as needed
+def boot(client): # replace with ActionClient as needed
     """
     Initializes and spins ROS2 node. Ask user to enter boolean value to simulate GUI control.
 
     :param args: ROS2 command line arguments
     """
-    rclpy.init()
     proceed = True
     try:
-            while proceed:
-                if type(client) == ServiceClient:
+        while proceed:
+            if type(client) == ServiceClient:
+                state = input(f'Enter 1 to turn the {client.component_name} on, or 0 to turn it off: ')
+                while state != '0' or state != '1':
                     state = input(f'Enter 1 to turn the {client.component_name} on, or 0 to turn it off: ')
-                    while state != '0' or state != '1':
-                        state = input(f'Enter 1 to turn the {client.component_name} on, or 0 to turn it off: ')
-                    client.send_request(bool(state))
-                elif type(client) == ActionClient:
-                    while position == 'prompt':
-                        position = input(f'Enter a position value as an integer from 0 to {client.max_position}.\nPress Ctrl+C to exit: ')
-                        try:
-                            position = int(position)
-                            break                    
-                        except ValueError:
-                            position = input(f'Enter a position value as an integer from 0 to {client.max_position}.\nPress Ctrl+C to exit: ')
-                    else:
-                        if position < 0:
-                            position = 0
-                        elif position > client.max_position:
-                            position = client.max_position
-                        client.send_request(position)
-                client.run()
-                proceed = (input(f'\nEnter any character(s) to continue sending position commands {client.component_name}: ')!='')
+                client.send_request(bool(state))
+            elif type(client) == ActionClient:
+                position = 'prompt'
+                while position == 'prompt':
+                    position = input(f'Enter a position value as an integer from 0 to {client.max_position}. Press Ctrl+C to exit: ')
+                    try:
+                        position = int(position)
+                        print('breaking prompt loop')
+                        break                    
+                    except ValueError:
+                        position = 'prompt'
+                if position < 0:
+                    position = 0
+                    client.get_logger().warn('Position value cannot be negative. Setting to 0.')
+                elif position > client.max_position:
+                    position = client.max_position
+                    client.get_logger().warn(f'Position value cannot be greater than {client.max_position}. Setting to {client.max_position}.')
+                client.send_request(position)
+            client.run()
+            proceed = input(f'\nEnter any character(s) to continue sending position commands {client.component_name}: ')
+            proceed = bool(proceed)
+    except AssertionError:
+        assert(type(client) in [ServiceClient, ActionClient])
     except KeyboardInterrupt:
         print('\n')
     except:
-        client.get_logger().exception('Device crashed!')
+        client.get_logger().error('Device crashed!')
     finally:
         rclpy.shutdown()

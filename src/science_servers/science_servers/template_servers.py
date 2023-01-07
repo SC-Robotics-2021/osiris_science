@@ -5,7 +5,10 @@ from sensor_msgs.msg import CompressedImage
 from std_srvs.srv import SetBool
 import cv2
 from cv_bridge import CvBridge
-import RPi.GPIO as GPIO
+try:
+    import RPi.GPIO as GPIO
+except RuntimeError:
+    pass
 import numpy as np
 import sys
 import yaml
@@ -232,14 +235,16 @@ class LoweringPlatformServer(Node):
             return response
 
 
-def boot(server=GPIOServer(subsystem='placeholder', component_name='placeholder', pin=0)):
+def boot(server):
     """
     Main function. Initializes and spins ROS2 node. Node is ended explicitly before shutdown
     :param args: ROS2 command line arguments
     """
-    rclpy.init()
     try:
+        assert(type(server) in [GPIOServer, CameraServer, LoweringPlatformServer, FunnelCakeServer])
         rclpy.spin(server)
+    except AssertionError:
+        print('Invalid Server Type')
     except KeyboardInterrupt:
         print('\n')
     except:

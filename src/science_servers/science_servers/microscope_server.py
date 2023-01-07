@@ -1,6 +1,7 @@
-from template_servers import *
+from science_servers.template_servers import *
 
 def main():
+    rclpy.init()
     camera_settings = {'device_num': 2, 'fps': 30, 'resolution': (320, 240)}
     boot(CameraServer(subsystem='science', component_name='microscope', camera_settings=camera_settings))
 
